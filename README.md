@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # mobalworld
 
 Mobal Mobal 의 마음의 편지 위로 서비스 ! 
@@ -22,4 +22,3 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 =======
 # TeamMobal_FrontEnd
->>>>>>> e75d9a73300cc7cc1b050d74fe90a6ea13d770be

@@ -4,6 +4,8 @@ import 'package:mobalworld/login/add_google_info.dart';
 import 'package:mobalworld/login/login.dart';
 import 'package:mobalworld/src/ui/main_loading.dart';
 
+import 'master_key.dart';
+
 class JoinMakePage extends StatefulWidget {
   const JoinMakePage({Key? key}) : super(key: key);
 
@@ -24,9 +26,9 @@ class _JoinMakePageState extends State<JoinMakePage> {
               ),
               Container(
                   child: Icon(
-                Icons.water_drop_outlined,
-                size: 60,
-              )),
+                    Icons.water_drop_outlined,
+                    size: 60,
+                  )),
               Container(
                 alignment: Alignment.bottomCenter,
                 child: const Text(
@@ -167,7 +169,8 @@ class _JoinMakePageState extends State<JoinMakePage> {
                     ),
                   ),
                 ),
-              )
+              ),
+              MasterKey(margin: 5),
             ],
           ),
         ),

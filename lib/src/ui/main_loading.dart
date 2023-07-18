@@ -17,7 +17,7 @@ class _LoadingPageState extends State<LoadingPage> {
     super.initState();
     Timer(
       Duration(seconds: 3),
-      () => Navigator.push(
+          () => Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => LoginPage()),
       ),
@@ -34,9 +34,9 @@ class _LoadingPageState extends State<LoadingPage> {
           children: [
             Container(
                 child: Icon(
-              Icons.water_drop_outlined,
-              size: 60,
-            )),
+                  Icons.water_drop_outlined,
+                  size: 60,
+                )),
             Container(
               alignment: Alignment.bottomCenter,
               child: const Text(

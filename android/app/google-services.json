@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "53239051223-743e043ukqs3lsc5rhlu13o7mmn38a8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mobalworld",
+            "certificate_hash": "eabac8de0a81a72625e81dfb0858fc14c9e77d5e"
+          }
+        },
+        {
           "client_id": "53239051223-7voqqlfc868bqqmfgf5f9umqf98cg464.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

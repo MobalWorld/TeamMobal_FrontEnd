@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import '../home/home.dart';
 import '../main.dart';
 import '../src/ui/join_make_page.dart';
+import '../src/ui/master_key.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -42,13 +43,13 @@ class _LoginPageState extends State<LoginPage> {
     final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
     if (googleUser != null) {
       final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
+      await googleUser.authentication;
       final OAuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
       final UserCredential userCredential =
-          await auth.signInWithCredential(credential);
+      await auth.signInWithCredential(credential);
       final User? user = userCredential.user;
       return user;
     }
@@ -58,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
   Future<void> _checkUser(String email) async {
     final usersRef = await FirebaseFirestore.instance.collection('user');
     QuerySnapshot querySnapshot =
-        await usersRef.where('Email', isEqualTo: email).limit(1).get();
+    await usersRef.where('Email', isEqualTo: email).limit(1).get();
 
     // 쿼리 결과 확인
     if (querySnapshot.docs.length > 0) {
@@ -159,40 +160,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
             ),
-            DropdownButton<String>(
-              hint: Text('페이지 이동'),
-              items: [
-                DropdownMenuItem(
-                  value: 'joinmake',
-                  child: Text('JoinMake'),
-                ),
-                DropdownMenuItem(
-                  value: 'loading',
-                  child: Text(
-                    'loading',
-                  ),
-                ),
-                DropdownMenuItem(
-                  value: 'info',
-                  child: Text(
-                    'add_info',
-                  ),
-                )
-              ],
-              onChanged: (String? value) {
-                if (value == 'joinmake') {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => JoinMakePage()));
-                } else if (value == 'loading') {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoadingPage()));
-                }  else if (value == 'info') {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => GoogleAdditionalPage()));
-                }
-              },
-            ),
-
+            MasterKey(margin: 300)
           ],
         ),
       ),

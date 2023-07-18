@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">53239051223-33fqth214kn9t97mi8ranolmfhlls1cq.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">53239051223</string>
+    <string name="google_api_key" translatable="false">AIzaSyBB8bN2fhugKeuTZRBNXp81x9FFIkGWqAs</string>
+    <string name="google_app_id" translatable="false">1:53239051223:android:a11cc09ff21287986dd192</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBB8bN2fhugKeuTZRBNXp81x9FFIkGWqAs</string>
+    <string name="google_storage_bucket" translatable="false">mobalworld.appspot.com</string>
+    <string name="project_id" translatable="false">mobalworld</string>
+</resources>

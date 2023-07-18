@@ -8,6 +8,9 @@ Mobal Mobal 의 마음의 편지 위로 서비스 !
 >> 정현이도 왔다감  
 >> 방명록 작성해주세요
 
+#진행상황
+>> 07/18 프론트 다시 시작  
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

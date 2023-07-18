@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:mobalworld/src/ui/storagebox_btn.dart';
 import 'package:mobalworld/src/ui/toung.dart';
 
+import '../../appbar page/alarm.dart';
+import '../../appbar page/storage.dart';
+import '../../appbar page/temporary_storage.dart';
+import '../../appbar page/worry_storage.dart';
 import '../../login/add_google_info.dart';
 import '../../login/login.dart';
 import 'group_main.dart';
+import 'group_select.dart';
 import 'join_make_page.dart';
 import 'main_loading.dart';
 
@@ -62,6 +67,36 @@ class MasterKey extends StatelessWidget {
                     'GroupMain',
                   ),
                 ),
+                DropdownMenuItem(
+                  value: 'groupselect',
+                  child: Text(
+                    'GroupSelect',
+                  ),
+                ),
+                DropdownMenuItem(
+                  value: 'alarm',
+                  child: Text(
+                    'Alarm',
+                  ),
+                ),
+                DropdownMenuItem(
+                  value: 'storage',
+                  child: Text(
+                    'storage',
+                  ),
+                ),
+                DropdownMenuItem(
+                  value: 'temporary',
+                  child: Text(
+                    'temporary',
+                  ),
+                ),
+                DropdownMenuItem(
+                  value: 'worry',
+                  child: Text(
+                    'worry',
+                  ),
+                ),
               ],
               onChanged: (String? value) {
                 if (value == 'joinmake') {
@@ -89,6 +124,21 @@ class MasterKey extends StatelessWidget {
                 } else if (value == 'groupmain') {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => GroupMain()));
+                } else if (value == 'groupselect') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => grouptselect()));
+                } else if (value == 'alarm') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => alarmpage()));
+                } else if (value == 'storage') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => storagepage()));
+                } else if (value == 'temporary') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => temporay_storagepage()));
+                } else if (value == 'worry') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => worry_storagepage()));
                 }
               },
             ),

@@ -4,8 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import 'Group/group_select.dart';
 import 'bottom.dart';
-import 'group_select.dart';
+import 'Group/group_select.dart';
 // import 'setting.dart';
 
 class WorryWriting extends StatefulWidget {
@@ -33,7 +34,11 @@ class _WorryWritingState extends State<WorryWriting> {
               '취소',
               style: TextStyle(color: Colors.black, fontSize: 14.sp),
             ),
-            onPressed: () {},
+
+            //pop말고 다른거 필요하시면 바꿀것
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
           centerTitle: true,
           title: Text(

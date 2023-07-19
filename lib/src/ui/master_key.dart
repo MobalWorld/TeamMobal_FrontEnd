@@ -2,19 +2,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobalworld/src/ui/storagebox_btn.dart';
-import 'package:mobalworld/src/ui/toung.dart';
+import 'package:mobalworld/src/ui/Setting/toung.dart';
 import 'package:mobalworld/src/ui/worry_Writing.dart';
+// import문에서 첫번째 .. : ㅣ
+import "../../src/ui/appbar page/alarm.dart";
+import "../../src/ui/appbar page/storage.dart";
+import "../../src/ui/appbar page/temporary_storage.dart";
+import "../../src/ui/appbar page/worry_storage.dart";
 
-import '../../appbar page/alarm.dart';
-import '../../appbar page/storage.dart';
-import '../../appbar page/temporary_storage.dart';
-import '../../appbar page/worry_storage.dart';
-import '../../login/add_google_info.dart';
-import '../../login/login.dart';
-import 'group_main.dart';
-import 'group_select.dart';
+import '../../src/ui/login/add_google_info.dart';
+import '../../src/ui/login/login.dart';
+
+import 'Group/group_main.dart';
+import 'Group/group_select.dart';
 import 'join_make_page.dart';
-import 'main_loading.dart';
+import 'Setting/main_loading.dart';
 
 class MasterKey extends StatelessWidget {
   const MasterKey({Key? key, required this.margin}) : super(key: key);

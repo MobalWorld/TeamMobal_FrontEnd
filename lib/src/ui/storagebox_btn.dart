@@ -74,11 +74,12 @@ class _StorageboxState extends State<Storagebox> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(
-            Icons.airline_seat_legroom_normal_sharp,
+          icon: Icon(Icons.arrow_back_ios_new,
             size: 30.sp,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           color: Colors.black,
         ),
         elevation: 0.0,

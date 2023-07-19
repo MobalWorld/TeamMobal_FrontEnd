@@ -4,6 +4,7 @@
             "outputFile": "com.example.mobalworld.app-mergeDebugResources-26:/values-de/values-de.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "/Users/anjeonghyeon/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/res/values-de/values.xml",
                     "from": {
                         "startLines": "4",
@@ -22,6 +23,26 @@
                 },
                 {
                     "source": "/Users/anjeonghyeon/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/res/values-de/values.xml",
+=======
+                    "source": "/Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/res/values-de/values-de.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "24",
+                        "startColumns": "4",
+                        "startOffsets": "2822",
+                        "endColumns": "100",
+                        "endOffsets": "2918"
+                    }
+                },
+                {
+                    "source": "/Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/res/values-de/values.xml",
+>>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +76,24 @@
                     }
                 },
                 {
-                    "source": "/Users/anjeonghyeon/.gradle/caches/transforms-3/1d32f1ac090ea59f1545a84a600c3617/transformed/browser-1.4.0/res/values-de/values-de.xml",
+                    "source": "/Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/res/values-de/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "140",
+                        "endOffsets": "335"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1117",
+                        "endColumns": "144",
+                        "endOffsets": "1257"
+                    }
+                },
+                {
+                    "source": "/Users/yeonhyeeun/.gradle/caches/transforms-3/1d32f1ac090ea59f1545a84a600c3617/transformed/browser-1.4.0/res/values-de/values-de.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

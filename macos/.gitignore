@@ -1,6 +1,8 @@
 # Flutter-related
 **/Flutter/ephemeral/
 **/Pods/
+.flutter-plugins-dependencies
+.flutter-plugins
 
 # Xcode-related
 **/dgph

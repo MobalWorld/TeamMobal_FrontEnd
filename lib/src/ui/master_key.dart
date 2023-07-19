@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobalworld/src/ui/group_make.dart';
 import 'package:mobalworld/src/ui/storagebox_btn.dart';
 import 'package:mobalworld/src/ui/toung.dart';
 import 'package:mobalworld/src/ui/worry_Writing.dart';
@@ -104,7 +105,12 @@ class MasterKey extends StatelessWidget {
                     'worry_writing',
                   ),
                 ),
-
+                DropdownMenuItem(
+                  value: 'group_make',
+                  child: Text(
+                    'group_make',
+                  ),
+                ),
               ],
               onChanged: (String? value) {
                 if (value == 'joinmake') {
@@ -150,6 +156,9 @@ class MasterKey extends StatelessWidget {
                 } else if (value == 'worry_writing') {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => WorryWriting()));
+                } else if (value == 'group_make') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => GroupMake()));
                 }
               },
             ),

@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -42,16 +48,6 @@ class DefaultFirebaseOptions {
         );
     }
   }
-
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDMaBylnPQ-0Dr_znSjs2IIOWmD60BtQnY',
-    appId: '1:53239051223:web:8aebc7b46e7208546dd192',
-    messagingSenderId: '53239051223',
-    projectId: 'mobalworld',
-    authDomain: 'mobalworld.firebaseapp.com',
-    storageBucket: 'mobalworld.appspot.com',
-    measurementId: 'G-6XD5DXVQ01',
-  );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBB8bN2fhugKeuTZRBNXp81x9FFIkGWqAs',
@@ -70,16 +66,5 @@ class DefaultFirebaseOptions {
     androidClientId: '53239051223-1d6fmgs9344st4ca8svdugl00uukjou7.apps.googleusercontent.com',
     iosClientId: '53239051223-vgjah3p8p4eh9ijsj2sfrk5ivmkabnoj.apps.googleusercontent.com',
     iosBundleId: 'com.example.mobalworld',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyA7X5jqv0OpU0d8q9VztCWXuWgf2XOt6Dg',
-    appId: '1:53239051223:ios:c61604acbbd95d8f6dd192',
-    messagingSenderId: '53239051223',
-    projectId: 'mobalworld',
-    storageBucket: 'mobalworld.appspot.com',
-    androidClientId: '53239051223-1d6fmgs9344st4ca8svdugl00uukjou7.apps.googleusercontent.com',
-    iosClientId: '53239051223-j397826bbr0shdmofdpoplnrgllk0tol.apps.googleusercontent.com',
-    iosBundleId: 'com.example.mobalworld.RunnerTests',
   );
 }

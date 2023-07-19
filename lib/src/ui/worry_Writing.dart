@@ -4,8 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import 'Group/group_select.dart';
 import 'bottom.dart';
-import 'group_select.dart';
+import 'Group/group_select.dart';
 // import 'setting.dart';
 
 class WorryWriting extends StatefulWidget {
@@ -33,7 +34,77 @@ class _WorryWritingState extends State<WorryWriting> {
               '취소',
               style: TextStyle(color: Colors.black, fontSize: 14.sp),
             ),
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    color: Colors.white,
+                    height: 0.3.sh,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: double.infinity,
+                          height: 0.1.sh,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                              elevation: MaterialStateProperty.all<double>(0),
+                            ),
+                            onPressed: () {
+                              Get.to(GroupSelect());
+                            },
+                            child: Text(
+                              '작성취소',
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 0.1.sh,
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                              elevation: MaterialStateProperty.all<double>(0),
+                            ),
+                            onPressed: () {
+                              // Get.to(Setting());
+                            },
+                            child: Text(
+                              '임시저장',
+                              style: TextStyle(color: Colors.blue[300]),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 0.1.sh,
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.white),
+                              elevation: MaterialStateProperty.all<double>(0),
+                            ),
+                            onPressed: () {
+                              Get.to(WorryWriting());
+                            },
+                            child: Text(
+                              '취소',
+                              style: TextStyle(
+                                  color: Colors.black, fontSize: 14.sp),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              );
+            },
           ),
           centerTitle: true,
           title: Text(
@@ -48,76 +119,78 @@ class _WorryWritingState extends State<WorryWriting> {
                 style: TextStyle(color: Colors.red[400], fontSize: 15.sp),
               ),
               onPressed: () {
-                showModalBottomSheet(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return Container(
-                      color: Colors.white,
-                      height: 0.3.sh,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: double.infinity,
-                            height: 0.1.sh,
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.white),
-                                elevation: MaterialStateProperty.all<double>(0),
-                              ),
-                              onPressed: () {
-                                Get.to(GroupSelect());
-                              },
-                              child: Text(
-                                '작성취소',
-                                style: TextStyle(color: Colors.red),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 0.1.sh,
-                            width: double.infinity,
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.white),
-                                elevation: MaterialStateProperty.all<double>(0),
-                              ),
-                              onPressed: () {
-                                // Get.to(Setting());
-                              },
-                              child: Text(
-                                '임시저장',
-                                style: TextStyle(color: Colors.blue[300]),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 0.1.sh,
-                            width: double.infinity,
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all(Colors.white),
-                                elevation: MaterialStateProperty.all<double>(0),
-                              ),
-                              onPressed: () {
-                                Get.to(WorryWriting());
-                              },
-                              child: Text(
-                                '취소',
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 14.sp),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                );
+                Navigator.pop(context);
               },
+              //   showModalBottomSheet(
+              //     context: context,
+              //     builder: (BuildContext context) {
+              //       return Container(
+              //         color: Colors.white,
+              //         height: 0.3.sh,
+              //         child: Column(
+              //           mainAxisAlignment: MainAxisAlignment.center,
+              //           children: [
+              //             SizedBox(
+              //               width: double.infinity,
+              //               height: 0.1.sh,
+              //               child: ElevatedButton(
+              //                 style: ButtonStyle(
+              //                   backgroundColor:
+              //                       MaterialStateProperty.all(Colors.white),
+              //                   elevation: MaterialStateProperty.all<double>(0),
+              //                 ),
+              //                 onPressed: () {
+              //                   Get.to(GroupSelect());
+              //                 },
+              //                 child: Text(
+              //                   '작성취소',
+              //                   style: TextStyle(color: Colors.red),
+              //                 ),
+              //               ),
+              //             ),
+              //             SizedBox(
+              //               height: 0.1.sh,
+              //               width: double.infinity,
+              //               child: ElevatedButton(
+              //                 style: ButtonStyle(
+              //                   backgroundColor:
+              //                       MaterialStateProperty.all(Colors.white),
+              //                   elevation: MaterialStateProperty.all<double>(0),
+              //                 ),
+              //                 onPressed: () {
+              //                   // Get.to(Setting());
+              //                 },
+              //                 child: Text(
+              //                   '임시저장',
+              //                   style: TextStyle(color: Colors.blue[300]),
+              //                 ),
+              //               ),
+              //             ),
+              //             SizedBox(
+              //               height: 0.1.sh,
+              //               width: double.infinity,
+              //               child: ElevatedButton(
+              //                 style: ButtonStyle(
+              //                   backgroundColor:
+              //                       MaterialStateProperty.all(Colors.white),
+              //                   elevation: MaterialStateProperty.all<double>(0),
+              //                 ),
+              //                 onPressed: () {
+              //                   Get.to(WorryWriting());
+              //                 },
+              //                 child: Text(
+              //                   '취소',
+              //                   style: TextStyle(
+              //                       color: Colors.black, fontSize: 14.sp),
+              //                 ),
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       );
+              //     },
+              //   );
+              // },
             ),
           ],
         ),

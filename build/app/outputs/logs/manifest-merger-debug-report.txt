@@ -1,6 +1,5 @@
 -- Merging decision tree log ---
 application
-<<<<<<< HEAD
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:2:5-32:19
 MERGED from [:firebase_auth] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_auth] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
@@ -50,55 +49,9 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/anje
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/anjeonghyeon/.gradle/caches/transforms-3/10697f1a58a798152a3751ba4816acc3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.10.1] /Users/anjeonghyeon/.gradle/caches/transforms-3/cf4c6e90a983959953359d35dfba4e2a/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
-=======
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:2:5-32:19
-MERGED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-17:19
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-17:19
-MERGED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:28:5-73:19
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:28:5-73:19
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:15:5-23:19
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:15:5-23:19
-MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:22:5-30:19
-MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:22:5-30:19
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6993649d122ba4b267dbed12d2e1ff05/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6993649d122ba4b267dbed12d2e1ff05/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:24:5-37:19
-MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:24:5-37:19
-MERGED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/948e290c7a283f63a10a63459c1cf99a/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/948e290c7a283f63a10a63459c1cf99a/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ce174c9fdac338845db412e33831e7f9/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ce174c9fdac338845db412e33831e7f9/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.play:integrity:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/469ae88d525c88b41cd142191a4af6e6/transformed/jetified-integrity-1.1.0/AndroidManifest.xml:5:5-6:19
-MERGED from [com.google.android.play:integrity:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/469ae88d525c88b41cd142191a4af6e6/transformed/jetified-integrity-1.1.0/AndroidManifest.xml:5:5-6:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/931658e246b9d98c6e4278886f52366b/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/931658e246b9d98c6e4278886f52366b/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6feb4d3ec5ec758ed4bcd55c6544c1ab/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6feb4d3ec5ec758ed4bcd55c6544c1ab/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:20:5-24:19
-MERGED from [androidx.core:core:1.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/10697f1a58a798152a3751ba4816acc3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/10697f1a58a798152a3751ba4816acc3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-	android:appComponentFactory
-		ADDED from [androidx.core:core:1.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
 	android:name
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
 manifest
-<<<<<<< HEAD
 ADDED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:1:1-33:12
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:1:1-33:12
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:1:1-33:12
@@ -162,79 +115,21 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/anjeo
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-=======
-ADDED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-MERGED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-MERGED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-19:12
-MERGED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [:google_sign_in_android] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:desktop_webview_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/desktop_webview_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f78167bf1e7d78bd49933dfdf98b02f5/transformed/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:17:1-75:12
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:2:1-10:12
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/fee2c687881b07b45fdc79ddebd334d4/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:2:1-25:12
-MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:15:1-32:12
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6993649d122ba4b267dbed12d2e1ff05/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:15:1-39:12
-MERGED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/1fa8ac47ac5af9a332d7697f3b1a3a31/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/yeonhyeeun/.gradle/caches/transforms-3/6ff75458b416b6f1c23ccb78b1e4f1f5/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/948e290c7a283f63a10a63459c1cf99a/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ce174c9fdac338845db412e33831e7f9/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:15:1-25:12
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/9da30981aedcdabbdf49e29a12fa66b2/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.play:integrity:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/469ae88d525c88b41cd142191a4af6e6/transformed/jetified-integrity-1.1.0/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/931658e246b9d98c6e4278886f52366b/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6feb4d3ec5ec758ed4bcd55c6544c1ab/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/cd7ed895d483ec792f6a8eaa926b14b4/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/b2ef32e69f14c72fec34a0a17f639c8a/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.browser:browser:1.4.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/1d32f1ac090ea59f1545a84a600c3617/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/b4041f80db635c366a1582c7615a3f79/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/54460c6f3ee3b7245b3139d7aae3b081/transformed/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f6afe53e753481917160c7430dbc0e6d/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6a61ee68c3290575565b51b1a5b872b1/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/fdeaf8b9fa59d192c1318978ee443007/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ff9622f1c252c67bb8a1a8cbf10ca6f6/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/28ffb2189eabb61985052127b50a4c1c/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/3344a6bc4fc0b3beccb2ca83502543ae/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/c4eeee4992ea5333eb3629531c942779/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f9a5701bcb00ff85e2a1948abf21f8dc/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:15:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/20fe2106c38907870d01864564ea504f/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/10697f1a58a798152a3751ba4816acc3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ab7e20393b0b6227845024fcb2eb719c/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/efc87c8b39fd3164dc464217c219f995/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [io.grpc:grpc-android:1.52.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/fc6846c47e91866eb4a7f93ce7f9ef05/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/4fa8a6d59005eb5ec91b2c33a6745fa0/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/c6a2258bcd9d71e4272c1711a07b9229/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml:1:1-7:12
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
 	package
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:1:1-33:12
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:1:1-33:12
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:1-33:12
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:1:1-33:12
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-sdk
-<<<<<<< HEAD
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
@@ -350,117 +245,15 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/anjeo
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/4fa8a6d59005eb5ec91b2c33a6745fa0/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml
-=======
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
-MERGED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:google_sign_in_android] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:google_sign_in_android] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:desktop_webview_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/desktop_webview_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:desktop_webview_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/desktop_webview_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f78167bf1e7d78bd49933dfdf98b02f5/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f78167bf1e7d78bd49933dfdf98b02f5/transformed/multidex-2.0.0/AndroidManifest.xml:20:5-43
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:21:5-23:64
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:21:5-23:64
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:5:5-44
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/fee2c687881b07b45fdc79ddebd334d4/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/fee2c687881b07b45fdc79ddebd334d4/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6993649d122ba4b267dbed12d2e1ff05/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6993649d122ba4b267dbed12d2e1ff05/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/1fa8ac47ac5af9a332d7697f3b1a3a31/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/1fa8ac47ac5af9a332d7697f3b1a3a31/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/yeonhyeeun/.gradle/caches/transforms-3/6ff75458b416b6f1c23ccb78b1e4f1f5/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/yeonhyeeun/.gradle/caches/transforms-3/6ff75458b416b6f1c23ccb78b1e4f1f5/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/948e290c7a283f63a10a63459c1cf99a/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/948e290c7a283f63a10a63459c1cf99a/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ce174c9fdac338845db412e33831e7f9/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ce174c9fdac338845db412e33831e7f9/transformed/jetified-firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/9da30981aedcdabbdf49e29a12fa66b2/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/9da30981aedcdabbdf49e29a12fa66b2/transformed/jetified-firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.play:integrity:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/469ae88d525c88b41cd142191a4af6e6/transformed/jetified-integrity-1.1.0/AndroidManifest.xml:4:5-44
-MERGED from [com.google.android.play:integrity:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/469ae88d525c88b41cd142191a4af6e6/transformed/jetified-integrity-1.1.0/AndroidManifest.xml:4:5-44
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/931658e246b9d98c6e4278886f52366b/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/931658e246b9d98c6e4278886f52366b/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6feb4d3ec5ec758ed4bcd55c6544c1ab/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6feb4d3ec5ec758ed4bcd55c6544c1ab/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/cd7ed895d483ec792f6a8eaa926b14b4/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/cd7ed895d483ec792f6a8eaa926b14b4/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.loader:loader:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/b2ef32e69f14c72fec34a0a17f639c8a/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/b2ef32e69f14c72fec34a0a17f639c8a/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.browser:browser:1.4.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/1d32f1ac090ea59f1545a84a600c3617/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.4.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/1d32f1ac090ea59f1545a84a600c3617/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/b4041f80db635c366a1582c7615a3f79/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/b4041f80db635c366a1582c7615a3f79/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/54460c6f3ee3b7245b3139d7aae3b081/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/54460c6f3ee3b7245b3139d7aae3b081/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f6afe53e753481917160c7430dbc0e6d/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f6afe53e753481917160c7430dbc0e6d/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6a61ee68c3290575565b51b1a5b872b1/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/6a61ee68c3290575565b51b1a5b872b1/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/fdeaf8b9fa59d192c1318978ee443007/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/fdeaf8b9fa59d192c1318978ee443007/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ff9622f1c252c67bb8a1a8cbf10ca6f6/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ff9622f1c252c67bb8a1a8cbf10ca6f6/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/28ffb2189eabb61985052127b50a4c1c/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/28ffb2189eabb61985052127b50a4c1c/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/3344a6bc4fc0b3beccb2ca83502543ae/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/3344a6bc4fc0b3beccb2ca83502543ae/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/c4eeee4992ea5333eb3629531c942779/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/c4eeee4992ea5333eb3629531c942779/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f9a5701bcb00ff85e2a1948abf21f8dc/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f9a5701bcb00ff85e2a1948abf21f8dc/transformed/jetified-firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/20fe2106c38907870d01864564ea504f/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/20fe2106c38907870d01864564ea504f/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/10697f1a58a798152a3751ba4816acc3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/10697f1a58a798152a3751ba4816acc3/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ab7e20393b0b6227845024fcb2eb719c/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/ab7e20393b0b6227845024fcb2eb719c/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/efc87c8b39fd3164dc464217c219f995/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/efc87c8b39fd3164dc464217c219f995/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [io.grpc:grpc-android:1.52.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/fc6846c47e91866eb4a7f93ce7f9ef05/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
-MERGED from [io.grpc:grpc-android:1.52.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/fc6846c47e91866eb4a7f93ce7f9ef05/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/4fa8a6d59005eb5ec91b2c33a6745fa0/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/4fa8a6d59005eb5ec91b2c33a6745fa0/transformed/jetified-protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/c6a2258bcd9d71e4272c1711a07b9229/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/c6a2258bcd9d71e4272c1711a07b9229/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml
-INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
 	tools:overrideLibrary
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:23:9-61
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:23:9-61
 	android:targetSdkVersion
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-<<<<<<< HEAD
 ADDED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml:6:5-66
 MERGED from [:firebase_dynamic_links] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:firebase_dynamic_links] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
@@ -472,69 +265,55 @@ MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/anjeonghyeon/
 MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:13:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/anjeonghyeon/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/anjeonghyeon/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:7:5-67
-=======
-ADDED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml:6:5-66
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
-MERGED from [:google_sign_in_android] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
-MERGED from [:google_sign_in_android] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:25:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:7:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:13:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:13:5-67
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
 	android:name
-		ADDED from /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/debug/AndroidManifest.xml:6:22-64
+		ADDED from /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/debug/AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:19
-MERGED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:19
-MERGED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:66:9-72:19
-MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:66:9-72:19
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:16:9-22:19
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:16:9-22:19
-MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:23:9-29:19
-MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:23:9-29:19
-MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:32:9-36:35
-MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:32:9-36:35
+ADDED from [:firebase_auth] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:cloud_firestore] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_dynamic_links] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:19
+MERGED from [:firebase_dynamic_links] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:19
+MERGED from [:firebase_core] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:23:9-29:19
+MERGED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:23:9-29:19
+MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:32:9-36:35
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:68:13-37
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:68:13-37
 	tools:targetApi
-		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:36:13-32
+		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:36:13-32
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:34:13-43
+		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:34:13-43
 	android:name
-		ADDED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+		ADDED from [:firebase_auth] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar
-ADDED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_auth] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_auth] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:firebase_auth] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+		ADDED from [:firebase_auth] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar
-ADDED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+ADDED from [:cloud_firestore] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+		ADDED from [:cloud_firestore] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [:cloud_firestore] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
+		ADDED from [:cloud_firestore] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.dynamiclinks.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-15:85
+ADDED from [:firebase_dynamic_links] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-15:85
 	android:value
-		ADDED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:15:17-82
+		ADDED from [:firebase_dynamic_links] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:15:17-82
 	android:name
-		ADDED from [:firebase_dynamic_links] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:14:17-131
+		ADDED from [:firebase_dynamic_links] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_dynamic_links/intermediates/merged_manifest/debug/AndroidManifest.xml:14:17-131
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
-ADDED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+ADDED from [:firebase_core] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+		ADDED from [:firebase_core] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 	android:name
-<<<<<<< HEAD
 		ADDED from [:firebase_core] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
 ADDED from [:image_picker_android] /Users/anjeonghyeon/Desktop/Reproject/MobalWorld/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
@@ -580,101 +359,73 @@ MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/anjeonghyeon/
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/anjeonghyeon/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:8:5-79
 MERGED from [io.grpc:grpc-android:1.52.1] /Users/anjeonghyeon/.gradle/caches/transforms-3/fc6846c47e91866eb4a7f93ce7f9ef05/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.52.1] /Users/anjeonghyeon/.gradle/caches/transforms-3/fc6846c47e91866eb4a7f93ce7f9ef05/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
-=======
-		ADDED from [:firebase_core] /Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:8:5-79
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/yeonhyeeun/.gradle/caches/transforms-3/1448caaf4f7be631319d6eff758e5572/transformed/jetified-recaptcha-18.1.2/AndroidManifest.xml:8:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:12:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:12:5-79
-MERGED from [io.grpc:grpc-android:1.52.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/fc6846c47e91866eb4a7f93ce7f9ef05/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
-MERGED from [io.grpc:grpc-android:1.52.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/fc6846c47e91866eb4a7f93ce7f9ef05/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:26:22-76
 activity#com.google.firebase.auth.internal.GenericIdpActivity
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:29:9-46:20
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:29:9-46:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:31:13-46
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:31:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:33:13-44
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:33:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:32:13-36
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:32:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:34:13-72
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:34:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:30:13-80
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:30:13-80
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:35:13-45:29
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:35:13-45:29
 action#android.intent.action.VIEW
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:17-69
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:25-66
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:36:25-66
 category#android.intent.category.DEFAULT
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:17-76
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:27-73
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:38:27-73
 category#android.intent.category.BROWSABLE
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:17-78
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:17-78
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:27-75
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:39:27-75
 data
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:41:17-44:51
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:41:17-44:51
 	android:path
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:43:21-37
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:43:21-37
 	android:host
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:42:21-49
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:42:21-49
 	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:44:21-48
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:44:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:47:9-64:20
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:47:9-64:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:49:13-46
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:49:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:51:13-44
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:51:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:50:13-36
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:50:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:52:13-72
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:52:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:48:13-79
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:48:13-79
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:53:13-63:29
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:53:13-63:29
 meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:69:13-71:85
+ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:69:13-71:85
 	android:value
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:71:17-82
+		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:71:17-82
 	android:name
-<<<<<<< HEAD
 		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:70:17-109
-=======
-		ADDED from [com.google.firebase:firebase-auth:22.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/d327f3d07ac34d9569bcb39119395394/transformed/jetified-firebase-auth-22.1.0/AndroidManifest.xml:70:17-109
-uses-library#androidx.window.extensions
-ADDED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
-	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
-	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
-uses-library#androidx.window.sidecar
-ADDED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
-	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
-	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/yeonhyeeun/.gradle/caches/transforms-3/60762251fae452debfca1bd89aea51ff/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:19:13-21:85
+ADDED from [com.google.firebase:firebase-firestore:24.7.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:19:13-21:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:21:17-82
+		ADDED from [com.google.firebase:firebase-firestore:24.7.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:21:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:24.7.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:20:17-111
+		ADDED from [com.google.firebase:firebase-firestore:24.7.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/203114798427aa32c857f81d88a3fed2/transformed/jetified-firebase-firestore-24.7.0/AndroidManifest.xml:20:17-111
 meta-data#com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar
-ADDED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:26:13-28:85
+ADDED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:26:13-28:85
 	android:value
-		ADDED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:28:17-82
+		ADDED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:28:17-82
 	android:name
-<<<<<<< HEAD
 		ADDED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:27:17-133
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/anjeonghyeon/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
@@ -684,21 +435,17 @@ ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/anjeonghyeo
 		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/anjeonghyeon/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/anjeonghyeon/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-=======
-		ADDED from [com.google.firebase:firebase-dynamic-links:21.1.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/37efb27e9c639881364b624ea640ee7c/transformed/jetified-firebase-dynamic-links-21.1.0/AndroidManifest.xml:27:17-133
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:25:9-30:39
+ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:25:9-30:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:27:13-72
+		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:27:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:29:13-37
+		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:29:13-37
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:28:13-43
+		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:28:13-43
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:30:13-36
+		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:30:13-36
 	android:name
-<<<<<<< HEAD
 		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/anjeonghyeon/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:26:13-77
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:18.2.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
@@ -792,40 +539,3 @@ action#androidx.profileinstaller.action.BENCHMARK_OPERATION
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/ac8a98c9ae98a2bb84ebae6f8884cabe/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
 	android:name
 		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/anjeonghyeon/.gradle/caches/transforms-3/ac8a98c9ae98a2bb84ebae6f8884cabe/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-=======
-		ADDED from [com.google.firebase:firebase-common:20.3.3] /Users/yeonhyeeun/.gradle/caches/transforms-3/3618683101bc29552dc8ddc57307002d/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:26:13-77
-activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
-ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:23:9-27:75
-	android:excludeFromRecents
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:25:13-46
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:26:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:27:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:24:13-93
-service#com.google.android.gms.auth.api.signin.RevocationBoundService
-ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:33:9-37:51
-	android:exported
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:35:13-36
-	android:visibleToInstantApps
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:37:13-48
-	android:permission
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:36:13-107
-	android:name
-		ADDED from [com.google.android.gms:play-services-auth:20.6.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/aa0b10315acee214254a51558a53fc37/transformed/jetified-play-services-auth-20.6.0/AndroidManifest.xml:34:13-89
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/yeonhyeeun/.gradle/caches/transforms-3/98b6d664ee16f42c34c8c46876d87ea2/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.2.0] /Users/yeonhyeeun/.gradle/caches/transforms-3/f078ced41725d16639c1fb3511a34895/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a

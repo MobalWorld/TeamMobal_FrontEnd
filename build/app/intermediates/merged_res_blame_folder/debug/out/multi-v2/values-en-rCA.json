@@ -4,7 +4,6 @@
             "outputFile": "com.example.mobalworld.app-mergeDebugResources-26:/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-<<<<<<< HEAD
                     "source": "/Users/anjeonghyeon/.gradle/caches/transforms-3/cf4c6e90a983959953359d35dfba4e2a/transformed/core-1.10.1/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -29,15 +28,6 @@
                         "startOffsets": "55,153,250,359",
                         "endColumns": "97,96,108,98",
                         "endOffsets": "148,245,354,453"
-=======
-                    "source": "/Users/yeonhyeeun/.gradle/caches/transforms-3/782481524675b5e826749c7ea85d5ccf/transformed/core-1.6.0/res/values-en-rCA/values-en-rCA.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
->>>>>>> bdf7077c5ea189e0fbc80c218868301d9dfdb84a
                     },
                     "to": {
                         "startLines": "9,10,11,12",
@@ -45,16 +35,6 @@
                         "startOffsets": "773,871,968,1077",
                         "endColumns": "97,96,108,98",
                         "endOffsets": "866,963,1072,1171"
-                    }
-                },
-                {
-                    "source": "/Users/yeonhyeeun/.gradle/caches/transforms-3/1d32f1ac090ea59f1545a84a600c3617/transformed/browser-1.4.0/res/values-en-rCA/values-en-rCA.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,153,250,359",
-                        "endColumns": "97,96,108,98",
-                        "endOffsets": "148,245,354,453"
                     }
                 }
             ]

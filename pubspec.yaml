@@ -43,6 +43,9 @@ dependencies:
   flutter_screenutil: ^5.8.4
   get: ^4.6.5
   firebase_ui_auth: ^1.6.1
+  google_fonts: ^5.1.0
+  image_picker: ^1.0.1
+  dotted_border: ^2.0.0+3
 
 dev_dependencies:
   flutter_test:

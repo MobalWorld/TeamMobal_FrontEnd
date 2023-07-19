@@ -21,7 +21,7 @@ class _LoadingPageState extends State<LoadingPage> {
       Duration(seconds: 1),
           () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => GroupSelect()),
+        MaterialPageRoute(builder: (context) => LoginPage()),
       ),
     );
   }

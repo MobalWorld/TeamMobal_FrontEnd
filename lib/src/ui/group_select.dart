@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
-class grouptselect extends StatefulWidget {
-  const grouptselect({super.key});
+class GroupSelect extends StatefulWidget {
+  const GroupSelect({super.key});
 
   @override
-  State<grouptselect> createState() => _grouptselectState();
+  State<GroupSelect> createState() => _GroupSelectState();
 }
 
-class _grouptselectState extends State<grouptselect> {
+class _GroupSelectState extends State<GroupSelect> {
 
   @override
   Widget build(BuildContext context) {
@@ -182,6 +183,7 @@ class _grouptselectState extends State<grouptselect> {
 
         ),
         ],),
+      bottomNavigationBar: bottomWidget(),
 
     );
   }

@@ -3,15 +3,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
-class temporay_storagepage extends StatefulWidget {
-  const temporay_storagepage({super.key});
+class Temporay_StoragePage extends StatefulWidget {
+  const Temporay_StoragePage({super.key});
 
   @override
-  State<temporay_storagepage> createState() => _temporay_storagepageState();
+  State<Temporay_StoragePage> createState() => _Temporay_StoragePageState();
 }
 
-class _temporay_storagepageState extends State<temporay_storagepage> {
+class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -168,6 +169,7 @@ class _temporay_storagepageState extends State<temporay_storagepage> {
 
         ),
         ],),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

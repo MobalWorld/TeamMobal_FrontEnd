@@ -1,17 +1,18 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
 import 'master_key.dart';
 
-class toungpage extends StatefulWidget {
-  const toungpage({super.key});
+class ToungPage extends StatefulWidget {
+  const ToungPage({super.key});
 
   @override
-  State<toungpage> createState() => _toungpageState();
+  State<ToungPage> createState() => _ToungPageState();
 }
 
-class _toungpageState extends State<toungpage> {
+class _ToungPageState extends State<ToungPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +34,7 @@ class _toungpageState extends State<toungpage> {
           MasterKey(margin: 0),
         ],
       ),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

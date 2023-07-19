@@ -2,15 +2,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
-class alarmpage extends StatefulWidget {
-  const alarmpage({super.key});
+class AlarmPage extends StatefulWidget {
+  const AlarmPage({super.key});
 
   @override
-  State<alarmpage> createState() => _alarmpageState();
+  State<AlarmPage> createState() => _AlarmPageState();
 }
 
-class _alarmpageState extends State<alarmpage> {
+class _AlarmPageState extends State<AlarmPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -176,6 +177,7 @@ class _alarmpageState extends State<alarmpage> {
 
         ),
         ],),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

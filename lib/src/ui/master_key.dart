@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobalworld/src/ui/storagebox_btn.dart';
 import 'package:mobalworld/src/ui/toung.dart';
+import 'package:mobalworld/src/ui/worry_Writing.dart';
 
 import '../../appbar page/alarm.dart';
 import '../../appbar page/storage.dart';
@@ -97,6 +98,12 @@ class MasterKey extends StatelessWidget {
                     'worry',
                   ),
                 ),
+                DropdownMenuItem(
+                  value: 'worry_writing',
+                  child: Text(
+                    'worry_writing',
+                  ),
+                ),
               ],
               onChanged: (String? value) {
                 if (value == 'joinmake') {
@@ -120,25 +127,28 @@ class MasterKey extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => LoginPage()));
                 } else if (value == 'toung') {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => toungpage()));
+                      MaterialPageRoute(builder: (context) => ToungPage()));
                 } else if (value == 'groupmain') {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => GroupMain()));
                 } else if (value == 'groupselect') {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => grouptselect()));
+                      MaterialPageRoute(builder: (context) => GroupSelect()));
                 } else if (value == 'alarm') {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => alarmpage()));
+                      MaterialPageRoute(builder: (context) => AlarmPage()));
                 } else if (value == 'storage') {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => storagepage()));
+                      MaterialPageRoute(builder: (context) => StoragePage()));
                 } else if (value == 'temporary') {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => temporay_storagepage()));
+                      MaterialPageRoute(builder: (context) => Temporay_StoragePage()));
                 } else if (value == 'worry') {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => worry_storagepage()));
+                      MaterialPageRoute(builder: (context) => Worry_StoragePage()));
+                } else if (value == 'worry_writing') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => WorryWriting()));
                 }
               },
             ),

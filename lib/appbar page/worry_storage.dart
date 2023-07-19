@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
-class worry_storagepage extends StatefulWidget {
-  const worry_storagepage({super.key});
+class Worry_StoragePage extends StatefulWidget {
+  const Worry_StoragePage({super.key});
 
   @override
-  State<worry_storagepage> createState() => _worry_storagepageState();
+  State<Worry_StoragePage> createState() => _Worry_StoragePageState();
 }
 
-class _worry_storagepageState extends State<worry_storagepage> {
+class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
   @override
   Widget build(BuildContext context) {
@@ -526,6 +527,7 @@ class _worry_storagepageState extends State<worry_storagepage> {
 
         ),
         ],),
+      bottomNavigationBar: bottomWidget(),
 
     );
   }

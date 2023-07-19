@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mobalworld/home/home.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 import 'package:provider/provider.dart';
 
 import '../main.dart';
@@ -540,44 +541,47 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
 
                     SizedBox(height: 76.0),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
                           alignment: Alignment.center,
-                          child: ElevatedButton(
-                            child: const Text(
-                              '회원가입',
-                              style: TextStyle(
-                                  fontFamily: 'gangwon',
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 22
+                          child: SizedBox(
+                            // width: double.infinity,
+                            child: ElevatedButton(
+                              child: const Text(
+                                '회원가입',
+                                style: TextStyle(
+                                    fontFamily: 'gangwon',
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 22
+                                ),
                               ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              primary: Color(0xFFE6CCAD),
-                              minimumSize: const Size(360, 45),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12), // 버튼의 모서리를 둥글게 설정
+                              style: ElevatedButton.styleFrom(
+                                primary: Color(0xFFE6CCAD),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12), // 버튼의 모서리를 둥글게 설정
+                                ),
                               ),
+                              onPressed: () {
+                                if(_uidinvalid && smscheck) {
+                                 // 여기에 회원가입 submit 버튼
+                                  _registerUser(Provider.of<Email>(context, listen: false).getEmail(), _nicknameController.text, phoneNumberController1.text+phoneNumberController2.text);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            HomePage(),
+                                    ),
+                                  );
+                                }
+                                else{
+                                  setState(() {
+                                    _uidinvalid = false;
+                                  });
+                                }
+                              },
                             ),
-                            onPressed: () {
-                              if(_uidinvalid && smscheck) {
-                               // 여기에 회원가입 submit 버튼
-                                _registerUser(Provider.of<Email>(context, listen: false).getEmail(), _nicknameController.text, phoneNumberController1.text+phoneNumberController2.text);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          HomePage(),
-                                  ),
-                                );
-                              }
-                              else{
-                                setState(() {
-                                  _uidinvalid = false;
-                                });
-                              }
-                            },
                           ),
                         ),
 
@@ -590,6 +594,7 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
           ),
 
         ),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

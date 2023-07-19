@@ -1,7 +1,7 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
 import 'master_key.dart';
 
@@ -27,13 +27,12 @@ class _StorageboxState extends State<Storagebox> {
       // 버튼 높이
       height: Getheight(0.02.sh),
       child: ElevatedButton(
-        onPressed: () {
-        },
+        onPressed: () {},
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(beige),
           foregroundColor: MaterialStateProperty.all(Colors.black),
           padding: //패딩
-          MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+              MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
           textStyle: MaterialStateProperty.all(TextStyle(
             fontSize: FontSize(15.sp),
             fontWeight: FontWeight.w700,
@@ -45,7 +44,7 @@ class _StorageboxState extends State<Storagebox> {
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius:
-              BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
+                  BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
             ),
           ),
         ),
@@ -71,61 +70,59 @@ class _StorageboxState extends State<Storagebox> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      backgroundColor: Colors.white,
+      appBar: AppBar(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          leading: IconButton(
-            icon: Icon(
-              Icons.airline_seat_legroom_normal_sharp,
-              size: 30.sp,
-            ),
-            onPressed: () {},
-            color: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            Icons.airline_seat_legroom_normal_sharp,
+            size: 30.sp,
           ),
-          elevation: 0.0,
+          onPressed: () {},
+          color: Colors.black,
         ),
-        body: SafeArea(
-
-          child: SingleChildScrollView(
-            padding:
-            EdgeInsets.symmetric(horizontal: 0.03.sh, vertical: 0.02.sh),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/walrus.png'),
-                  radius: 40,
-                ),
-                SizedBox(
-                  height: 0.015.sh,
-                ),
-                Text(
-                  '바다 코끼리',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
-                ),
-                SizedBox(
-                  height: 0.03.sh,
-                ),
-                SizedBox(
-                  // 바다 코끼리와 위로 보관함 사이 여백 박스
-                  height: 0.1.sh,
-                ),
-                getButton(hint: "위로 보관함"),
-                SizedBox(
-                  height: 0.03.sh,
-                ),
-                getButton(hint: "나의 고민 보관함"),
-                SizedBox(
-                  height: 0.03.sh,
-                ),
-                getButton(hint: "임시 보관함"),
-                MasterKey(margin: 50)
-              ],
-            ),
-
+        elevation: 0.0,
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(horizontal: 0.03.sh, vertical: 0.02.sh),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage('assets/walrus.png'),
+                radius: 40,
+              ),
+              SizedBox(
+                height: 0.015.sh,
+              ),
+              Text(
+                '바다 코끼리',
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
+              SizedBox(
+                height: 0.03.sh,
+              ),
+              SizedBox(
+                // 바다 코끼리와 위로 보관함 사이 여백 박스
+                height: 0.1.sh,
+              ),
+              getButton(hint: "위로 보관함"),
+              SizedBox(
+                height: 0.03.sh,
+              ),
+              getButton(hint: "나의 고민 보관함"),
+              SizedBox(
+                height: 0.03.sh,
+              ),
+              getButton(hint: "임시 보관함"),
+              MasterKey(margin: 50)
+            ],
           ),
-        ));
+        ),
+      ),
+      bottomNavigationBar: bottomWidget(),
+    );
   }
 }

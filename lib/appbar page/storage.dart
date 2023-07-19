@@ -2,15 +2,16 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
-class storagepage extends StatefulWidget {
-  const storagepage({super.key});
+class StoragePage extends StatefulWidget {
+  const StoragePage({super.key});
 
   @override
-  State<storagepage> createState() => _storagepageState();
+  State<StoragePage> createState() => _StoragePageState();
 }
 
-class _storagepageState extends State<storagepage> {
+class _StoragePageState extends State<StoragePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,7 +167,9 @@ class _storagepageState extends State<storagepage> {
 
 
         ),
-        ],),
+        ],
+      ),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

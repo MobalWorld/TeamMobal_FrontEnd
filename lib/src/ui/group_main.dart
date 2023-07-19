@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/ui/bottom.dart';
 
 class GroupMain extends StatefulWidget {
   const GroupMain({Key? key}) : super(key: key);
@@ -232,6 +233,7 @@ class _GroupMainState extends State<GroupMain> {
             )
           ],
         ),
+        bottomNavigationBar: bottomWidget(),
       ),
     );
   }

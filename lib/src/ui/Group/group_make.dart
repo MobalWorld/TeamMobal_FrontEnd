@@ -1,10 +1,8 @@
-import 'dart:io';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:image_picker/image_picker.dart';
 
 class GroupMake extends StatefulWidget {
   const GroupMake({Key? key}) : super(key: key);
@@ -42,7 +40,7 @@ class _GroupMakeState extends State<GroupMake> {
         child: Column(
           children: [
             SizedBox(
-              height: 60,
+              height: 40,
             ),
             Container(
               child: Column(
@@ -50,7 +48,7 @@ class _GroupMakeState extends State<GroupMake> {
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
-                    child: Text('편지함 이름',style: GoogleFonts.notoSans(textStyle: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,))),
+                    child: Text('편지함 이름',style: GoogleFonts.notoSans(textStyle: TextStyle(fontWeight: FontWeight.w600,fontSize: 20,))),
                   ),
                   SizedBox(height: 5,),
                   Padding(
@@ -90,14 +88,14 @@ class _GroupMakeState extends State<GroupMake> {
                 ],
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 20,),
             Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
-                    child: Text('편지함 소개',style: GoogleFonts.notoSans(textStyle: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,))),
+                    child: Text('편지함 소개',style: GoogleFonts.notoSans(textStyle: TextStyle(fontWeight: FontWeight.w600,fontSize: 20,))),
                   ),
                   SizedBox(height: 5,),
                   Padding(
@@ -137,14 +135,14 @@ class _GroupMakeState extends State<GroupMake> {
                 ],
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 15,),
             Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
-                    child: Text('대표 사진',style: GoogleFonts.notoSans(textStyle: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,))),
+                    child: Text('대표 사진',style: GoogleFonts.notoSans(textStyle: TextStyle(fontWeight: FontWeight.w600,fontSize: 20,))),
                   ),
                   SizedBox(height: 5,),
                   Padding(
@@ -186,6 +184,15 @@ class _GroupMakeState extends State<GroupMake> {
                 ],
               ),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 0.02.sh,vertical: 0.01.sh),
+                  child: ElevatedButton(onPressed: () {}, child: Text('만들기',style: GoogleFonts.notoSans (textStyle: TextStyle(color: Colors.black),)), style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFFCCAA9)),),
+                ),
+              ],
+            )
           ],
         ),
       ),

@@ -10,7 +10,7 @@ Mobal Mobal 의 마음의 편지 위로 서비스 !
 
 #진행상황
 >> 07/18 프론트 다시 시작  
-
+>> 07/19 금요일까지 모든 프론트 완성하기  
 ## Getting Started
 
 This project is a starting point for a Flutter application.

@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mobalworld/login/add_google_info.dart';
-import 'package:mobalworld/login/login.dart';
-import 'package:mobalworld/src/ui/main_loading.dart';
 
+
+//import 'package:mobalworld/src/ui/Setting/main_loading.dart';
+
+import 'login/add_google_info.dart';
+import 'login/login.dart';
 import 'master_key.dart';
 
 class JoinMakePage extends StatefulWidget {

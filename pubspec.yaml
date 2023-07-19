@@ -43,6 +43,7 @@ dependencies:
   flutter_screenutil: ^5.8.4
   get: ^4.6.5
   firebase_ui_auth: ^1.6.1
+  custom_pin_screen: "^0.3.0"
 
 dev_dependencies:
   flutter_test:

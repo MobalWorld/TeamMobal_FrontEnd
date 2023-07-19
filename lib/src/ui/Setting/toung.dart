@@ -27,6 +27,7 @@ class _ToungPageState extends State<ToungPage> {
                   fontSize: 30,
                   color: Colors.black,
                   fontWeight: FontWeight.w900,
+                  fontFamily: 'KOTRA HOPE',
                 ),
               ),
             ],

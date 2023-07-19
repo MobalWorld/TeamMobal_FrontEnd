@@ -30,14 +30,16 @@ class _JoinMakePageState extends State<JoinMakePage> {
                   child: Icon(
                     Icons.water_drop_outlined,
                     size: 60,
+                    color: Color(0xFFFCCAA9),
                   )),
               Container(
                 alignment: Alignment.bottomCenter,
                 child: const Text(
                   '마음의 편지',
                   style: TextStyle(
+                    color: Colors.black87,
                     fontSize: 40,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                     fontFamily: 'KOTRA HOPE',
                   ),
                 ),

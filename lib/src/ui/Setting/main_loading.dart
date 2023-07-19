@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../Group/group_select.dart';
 import '../login/login.dart';
 
 
@@ -17,10 +18,10 @@ class _LoadingPageState extends State<LoadingPage> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 3),
+      Duration(seconds: 1),
           () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => GroupSelect()),
       ),
     );
   }
@@ -36,19 +37,24 @@ class _LoadingPageState extends State<LoadingPage> {
             Container(
                 child: Icon(
                   Icons.water_drop_outlined,
-                  size: 60,
+                  size: 160,
+                  color: Color(0xFFFCCAA9),
                 )),
             Container(
               alignment: Alignment.bottomCenter,
               child: const Text(
                 '마음의 편지',
                 style: TextStyle(
+                  color: Colors.black87,
                   fontSize: 40,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w400,
                   fontFamily: 'KOTRA HOPE',
                 ),
               ),
             ),
+            SizedBox(
+              height: 150,
+            )
           ],
         ),
       ),

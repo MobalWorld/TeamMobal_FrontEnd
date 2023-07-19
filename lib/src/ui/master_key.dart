@@ -35,7 +35,7 @@ class MasterKey extends StatelessWidget {
                 DropdownMenuItem(
                   //로그인 페이지
                   value: 'login',
-                  child: Text('Login'),
+                  child: Text('Google Login'),
                 ),
                 DropdownMenuItem(
                   //마음의 편지 편지함 시작 페이지

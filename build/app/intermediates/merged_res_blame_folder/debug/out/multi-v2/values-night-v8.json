@@ -4,7 +4,7 @@
             "outputFile": "com.example.mobalworld.app-mergeDebugResources-15:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/anjeonghyeon/Desktop/Reproject/MobalWorld/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/yeonhyeeun/Desktop/TeamMobal_FrontEnd/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

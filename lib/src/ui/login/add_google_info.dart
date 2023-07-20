@@ -3,11 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobalworld/home/home.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
 import 'package:provider/provider.dart';
 
+import '../../../home/home.dart';
 import '../../../main.dart';
+import '../bottom.dart';
 
 class GoogleAdditionalPage extends StatefulWidget {
   const GoogleAdditionalPage({Key? key}) : super(key: key);

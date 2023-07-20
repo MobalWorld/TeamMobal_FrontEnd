@@ -24,28 +24,29 @@ class _GroupSelectState extends State<GroupSelect> {
           toolbarHeight: 75,
           backgroundColor: Colors.white,
 
-          leading: Row(
-            children: [
-              SizedBox(
-                width: 0.02.sh,
-              ),
-              CircleAvatar(
+          leading: Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: CircleAvatar(
                 backgroundImage: AssetImage('assets/peng1.jpg'),
                 radius: 20, //프로필 사진 원 사이즈
               ),
-            ],
+            ),
           ),
           title: Row(
             children: [
               //나중에 회원 이름 data 넣기
-              Text("안녕하세요 남극펭귄님",
-                style:TextStyle(
+              Text(
+                "안녕하세요 남극펭귄님",
+                style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 21,
-                  color: Colors.black, ),
-              ),],
+                  color: Colors.black,
+                ),
+              ),
+            ],
           ),
-
           // 우측 아이콘 - 알림 기능
           actions:[
             IconButton(onPressed: () {},

@@ -117,7 +117,7 @@ class MasterKey extends StatelessWidget {
                   //고민 작성 페이지
                   value: 'worry_writing',
                   child: Text(
-                    'worry_writing',
+                    'worry_Writing',
                   ),
                 ),
                 DropdownMenuItem(

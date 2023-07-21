@@ -30,7 +30,7 @@ class _GroupSelectState extends State<GroupSelect> {
             child: Padding(
               padding: EdgeInsets.only(left: 20),
               child: CircleAvatar(
-                backgroundImage: AssetImage('assets/peng1.jpg'),
+                backgroundImage: AssetImage('assets/images/peng1.jpg'),
                 radius: 20, //프로필 사진 원 사이즈
               ),
             ),
@@ -95,11 +95,11 @@ class _GroupSelectState extends State<GroupSelect> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/hgu.png'),
+                  backgroundImage: AssetImage('assets/images/hgu.png'),
                   radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
                 //맨 우측에 오는 ... 버튼
-                trailing: Icon(Icons.more_horiz),
+                trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {},),
               ),
               // 각 팀 타일 사이에 구분선 추가
               Divider(
@@ -130,11 +130,11 @@ class _GroupSelectState extends State<GroupSelect> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/fubao.webp'),
+                  backgroundImage: AssetImage('assets/images/fubao.webp'),
                   radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
                 //맨 우측에 오는 ... 버튼
-                trailing: Icon(Icons.more_horiz),
+                trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {},),
               ),
 
               // 각 팀 타일 사이에 구분선 추가
@@ -167,11 +167,11 @@ class _GroupSelectState extends State<GroupSelect> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/peng2.jpg'),
+                  backgroundImage: AssetImage('assets/images/peng2.jpg'),
                   radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
                 //맨 우측에 오는 ... 버튼
-                trailing: Icon(Icons.more_horiz),
+                trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {},),
               ),
               // 각 팀 타일 사이에 구분선 추가
               Divider(

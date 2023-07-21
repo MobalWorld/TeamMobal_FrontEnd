@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/ui/appbar%20page/alarm.dart';
 
 import '../bottom.dart';
 import 'group_main.dart';
@@ -53,7 +56,9 @@ class _GroupSelectState extends State<GroupSelect> {
           ),
           // 우측 아이콘 - 알림 기능
           actions:[
-            IconButton(onPressed: () {},
+            IconButton(onPressed: () {
+              Get.to(AlarmPage());
+            },
                 icon: Icon(Icons.notifications,
                   color: Colors.black, size: 30,
                 )
@@ -236,11 +241,9 @@ class _GroupSelectState extends State<GroupSelect> {
           ),
 
           // 새로운 리스트 항목 넣기
-
-
         ),
         ],),
-      //bottomNavigationBar: bottomWidget(),
+      bottomNavigationBar: bottomWidget(),
 
     );
   }

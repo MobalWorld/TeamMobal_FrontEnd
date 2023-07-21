@@ -180,6 +180,7 @@ class _AlarmPageState extends State<AlarmPage> {
 
         ),
         ],),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

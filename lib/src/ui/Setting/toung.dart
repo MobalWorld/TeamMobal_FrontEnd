@@ -35,6 +35,7 @@ class _ToungPageState extends State<ToungPage> {
           MasterKey(margin: 0),
         ],
       ),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

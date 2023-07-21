@@ -45,7 +45,9 @@ class _MyPageState extends State<MyPage> {
             Icons.arrow_back_ios_new,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Get.to(Bottom());
+          },
           color: Colors.black,
         ),
         title: Text(
@@ -60,6 +62,7 @@ class _MyPageState extends State<MyPage> {
           children: [
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 0.02.sh),
+
                 child: IconButton(
                   iconSize: 70,
                   icon: _image == null
@@ -158,7 +161,6 @@ class _MyPageState extends State<MyPage> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

@@ -597,7 +597,6 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
           ),
 
         ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

@@ -234,7 +234,6 @@ class _GroupMainState extends State<GroupMain> {
             )
           ],
         ),
-        bottomNavigationBar: bottomWidget(),
       ),
     );
   }

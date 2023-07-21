@@ -189,7 +189,12 @@ class _GroupMakeState extends State<GroupMake> {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 0.02.sh,vertical: 0.01.sh),
-                  child: ElevatedButton(onPressed: () {}, child: Text('만들기',style: GoogleFonts.notoSans (textStyle: TextStyle(color: Colors.black),)), style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFFCCAA9)),),
+                  child: ElevatedButton(onPressed: () {
+
+                  },
+                    child: Text('만들기',style: GoogleFonts.notoSans
+                      (textStyle: TextStyle(color: Colors.black),)
+                    ), style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFFCCAA9)),),
                 ),
               ],
             )

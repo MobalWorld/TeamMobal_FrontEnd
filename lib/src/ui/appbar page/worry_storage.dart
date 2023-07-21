@@ -87,7 +87,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/deer.jpg'),
+                  backgroundImage: AssetImage('assets/images/deer.jpg'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -138,7 +138,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/fubao.webp'),
+                  backgroundImage: AssetImage('assets/images/fubao.webp'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -189,7 +189,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/water52.jpg'),
+                  backgroundImage: AssetImage('assets/images/water52.jpg'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -241,7 +241,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/deer.jpg'),
+                  backgroundImage: AssetImage('assets/images/deer.jpg'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -292,7 +292,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/fubao.webp'),
+                  backgroundImage: AssetImage('assets/images/fubao.webp'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -343,7 +343,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/water52.jpg'),
+                  backgroundImage: AssetImage('assets/images/water52.jpg'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -394,7 +394,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/deer.jpg'),
+                  backgroundImage: AssetImage('assets/images/deer.jpg'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -445,7 +445,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/fubao.webp'),
+                  backgroundImage: AssetImage('assets/images/fubao.webp'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -496,7 +496,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/water52.jpg'),
+                  backgroundImage: AssetImage('assets/images/water52.jpg'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 

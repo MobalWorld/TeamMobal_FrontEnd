@@ -1,6 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mobalworld/src/ui/Group/group_code_confirm.dart';
+import 'package:mobalworld/src/ui/fin_storage.dart';
 // import문에서 첫번째 .. : ㅣ
 import "../../src/ui/appbar page/alarm.dart";
 import "../../src/ui/appbar page/storage.dart";
@@ -126,6 +128,18 @@ class MasterKey extends StatelessWidget {
                     'group_make',
                   ),
                 ),
+                DropdownMenuItem(
+                  value: 'fin_storage',
+                  child: Text(
+                    'fin_storage',
+                  ),
+                ),
+                DropdownMenuItem(
+                  value: 'code_confirm',
+                  child: Text(
+                    'code_confirm',
+                  ),
+                ),
               ],
               onChanged: (String? value) {
                 if (value == 'joinmake') {
@@ -174,6 +188,12 @@ class MasterKey extends StatelessWidget {
                 } else if (value == 'group_make') {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => GroupMake()));
+                } else if (value == 'fin_storage') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FinStorage()));
+                } else if (value == 'code_confirm') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => GroupCodeConfirm()));
                 }
               },
             ),

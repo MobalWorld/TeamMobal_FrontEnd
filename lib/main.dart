@@ -2,10 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:mobalworld/src/ui/Color/colors.dart';
+import 'package:mobalworld/src/ui/Group/group_code_confirm.dart';
 import 'package:provider/provider.dart';
 import 'firebase/firebase_options.dart';
-import 'src/ui/Setting/main_loading.dart';
-
+import 'src/ui/Setting/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,15 +25,18 @@ class MyApp extends StatelessWidget {
       builder: (content, child) => ChangeNotifierProvider(
         create: (context) => Email(),
         child: GetMaterialApp(
+          theme: ThemeData(
+            useMaterial3: true,
+            colorScheme: lightColorScheme,
+          ),
           //get방식의 상태 변화를 주고싶을때 사용
           debugShowCheckedModeBanner: false,
           home: OrientationBuilder(
             //회전가능하게 하는 기능
             builder: (context, orientation) {
-              return LoadingPage();
+              return Splash();
             },
           ),
-
         ),
       ),
     );

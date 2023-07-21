@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mobalworld/src/ui/Group/group_manage.dart';
 
 import '../bottom.dart';
 import 'Settings.dart';
@@ -100,7 +101,10 @@ class _MyPageState extends State<MyPage> {
                     ),
                     trailing: Icon(Icons.arrow_forward_ios_rounded),
                     onTap: () {
-                      Get.to(Settings());
+                      Get.to(
+                        // 그룹 관리 페이지 이동으로 바꿔주기
+                          GroupManage()
+                      );
                     },
                   ),
                   // Add more settings options as needed

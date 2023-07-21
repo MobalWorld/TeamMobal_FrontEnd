@@ -2,16 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-<<<<<<< HEAD
-import 'package:mobalworld/src/ui/Group/group_select.dart';
-import 'package:mobalworld/src/ui/Setting/myPage.dart';
-import 'package:mobalworld/src/ui/worry_Writing.dart';
-=======
 import 'package:mobalworld/src/ui/Setting/myPage.dart';
 
 import 'Group/group_select.dart';
 import 'worry_Writing.dart';
->>>>>>> ce03f6ebd63925ba4572ebf2bd631f68087dcf8a
 
 class Bottom extends StatefulWidget {
   const Bottom({super.key});
@@ -27,6 +21,8 @@ class _BottomState extends State<Bottom> {
       bottomNavigationBar: bottomWidget(),
     );
   }
+
+
 }
 
 BottomNavigationBar bottomWidget() {
@@ -36,6 +32,7 @@ BottomNavigationBar bottomWidget() {
         icon: Icon(Icons.home),
         label: '그룹 리스트',
       ),
+
       BottomNavigationBarItem(
         icon: Icon(Icons.edit),
         label: '고민 작성',
@@ -56,14 +53,11 @@ BottomNavigationBar bottomWidget() {
           WorryWriting(),
         );
       } else if (index == 2) {
-<<<<<<< HEAD
-        Get.to(MyPage());
-=======
         Get.to(
           MyPage(),
         );
->>>>>>> ce03f6ebd63925ba4572ebf2bd631f68087dcf8a
       }
     },
+
   );
 }

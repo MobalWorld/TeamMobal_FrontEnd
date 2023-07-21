@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -6,16 +6,6 @@ import 'package:get/get.dart';
 import 'appbar page/storage.dart';
 import 'appbar page/temporary_storage.dart';
 import 'appbar page/worry_storage.dart';
-=======
-import 'dart:js';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobalworld/src/ui/Group/group_select.dart';
-
-import 'appbar page/storage.dart';
->>>>>>> ce03f6ebd63925ba4572ebf2bd631f68087dcf8a
 import 'bottom.dart';
 import 'master_key.dart';
 
@@ -33,70 +23,42 @@ class _StorageboxState extends State<Storagebox> {
   final darkTextColor = Color(0xff1F1A3D);
 
   //보관함에서만 작동하는 보관함 박스 button을 위젯화 - 만듦
-<<<<<<< HEAD
   Widget getButton({required String hint, required Widget nextPage}) {
     return Container(
-      width: double.infinity,
-      // 버튼 높이
-      height: Getheight(0.02.sh),
-      child: ElevatedButton(
-        onPressed: () {
-          Get.to(nextPage);
-        },
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(beige),
-          foregroundColor: MaterialStateProperty.all(Colors.black),
-          padding: //패딩
-              MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
-          textStyle: MaterialStateProperty.all(TextStyle(
-            fontSize: FontSize(15.sp),
-            fontWeight: FontWeight.w700,
-          )),
-          side: MaterialStateProperty.all(BorderSide(
-            width: 1.0, // 테두리의 두께를 조정하세요
-            color: beige, // 테두리의 색상을 원하는 색상으로 변경하세요
-          )),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius:
-                  BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
-=======
-  Widget getButton({
-    required String hint,
-  }) {
-          return Container(
-            width: double.infinity,
-            // 버튼 높이
-            height: Getheight(0.02.sh),
-            child: ElevatedButton(
-              onPressed: () {
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(beige),
-                foregroundColor: MaterialStateProperty.all(Colors.black),
-                padding: //패딩
-                    MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
-                textStyle: MaterialStateProperty.all(TextStyle(
-                  fontSize: FontSize(15.sp),
-                  fontWeight: FontWeight.w700,
-                )),
-                side: MaterialStateProperty.all(BorderSide(
-                  width: 1.0, // 테두리의 두께를 조정하세요
-                  color: beige, // 테두리의 색상을 원하는 색상으로 변경하세요
-                )),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
-                  ),
-                ),
-              ),
-              child: Text(hint),
->>>>>>> ce03f6ebd63925ba4572ebf2bd631f68087dcf8a
-            ),
-          );
-  }
+        width: double.infinity,
+        // 버튼 높이
+        height: Getheight(0.02.sh),
+        child: ElevatedButton(
+          onPressed: () {
+            Get.to(nextPage);
+          },
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(beige),
+            foregroundColor: MaterialStateProperty.all(Colors.black),
+            padding: //패딩
 
+            MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+
+            textStyle: MaterialStateProperty.all(TextStyle(
+              fontSize: FontSize(15.sp),
+              fontWeight: FontWeight.w700,
+            )),
+            side: MaterialStateProperty.all(BorderSide(
+              width: 1.0, // 테두리의 두께를 조정하세요
+              color: beige, // 테두리의 색상을 원하는 색상으로 변경하세요
+            )),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius:
+
+                BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
+
+              ),
+            ),
+          ),
+          child: Text(hint),
+        ));
+  }
 
   //버튼의 임계값
   double Getheight(double size) {
@@ -155,7 +117,6 @@ class _StorageboxState extends State<Storagebox> {
                 // 바다 코끼리와 위로 보관함 사이 여백 박스
                 height: 0.1.sh,
               ),
-<<<<<<< HEAD
               getButton(hint: "위로 보관함", nextPage: StoragePage()),
               SizedBox(
                 height: 0.03.sh,
@@ -165,26 +126,6 @@ class _StorageboxState extends State<Storagebox> {
                 height: 0.03.sh,
               ),
               getButton(hint: "임시 보관함", nextPage: Temporay_StoragePage()),
-=======
-              getButton(hint: "위로 보관함"
-              ),
-
-
-
-              SizedBox(
-                height: 0.03.sh,
-              ),
-
-              getButton(hint: "나의 고민 보관함"),
-              SizedBox(
-                height: 0.03.sh,
-              ),
-
-
-
-
-              getButton(hint: "임시 보관함"),
->>>>>>> ce03f6ebd63925ba4572ebf2bd631f68087dcf8a
               MasterKey(margin: 50)
             ],
           ),

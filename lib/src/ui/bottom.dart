@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/ui/Group/group_select.dart';
+import 'package:mobalworld/src/ui/Setting/myPage.dart';
 import 'package:mobalworld/src/ui/worry_Writing.dart';
 
 class Bottom extends StatefulWidget {
@@ -19,10 +20,7 @@ class _BottomState extends State<Bottom> {
       bottomNavigationBar: bottomWidget(),
     );
   }
-
-
 }
-
 
 BottomNavigationBar bottomWidget() {
   return BottomNavigationBar(
@@ -31,7 +29,6 @@ BottomNavigationBar bottomWidget() {
         icon: Icon(Icons.home),
         label: '그룹 리스트',
       ),
-
       BottomNavigationBarItem(
         icon: Icon(Icons.edit),
         label: '고민 작성',
@@ -52,10 +49,8 @@ BottomNavigationBar bottomWidget() {
           WorryWriting(),
         );
       } else if (index == 2) {
-        Get.to(()
-        );
+        Get.to(MyPage());
       }
     },
-
   );
 }

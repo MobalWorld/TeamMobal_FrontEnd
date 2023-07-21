@@ -1,8 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
+import 'package:get/get.dart';
 
+import 'appbar page/storage.dart';
+import 'appbar page/temporary_storage.dart';
+import 'appbar page/worry_storage.dart';
+import 'bottom.dart';
 import 'master_key.dart';
 
 class Storagebox extends StatefulWidget {
@@ -19,15 +22,15 @@ class _StorageboxState extends State<Storagebox> {
   final darkTextColor = Color(0xff1F1A3D);
 
   //보관함에서만 작동하는 보관함 박스 button을 위젯화 - 만듦
-  Widget getButton({
-    required String hint,
-  }) {
+  Widget getButton({required String hint, required Widget nextPage}) {
     return Container(
       width: double.infinity,
       // 버튼 높이
       height: Getheight(0.02.sh),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.to(nextPage);
+        },
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(beige),
           foregroundColor: MaterialStateProperty.all(Colors.black),
@@ -74,7 +77,8 @@ class _StorageboxState extends State<Storagebox> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_new,
+          icon: Icon(
+            Icons.arrow_back_ios_new,
             size: 30.sp,
           ),
           onPressed: () {
@@ -109,15 +113,15 @@ class _StorageboxState extends State<Storagebox> {
                 // 바다 코끼리와 위로 보관함 사이 여백 박스
                 height: 0.1.sh,
               ),
-              getButton(hint: "위로 보관함"),
+              getButton(hint: "위로 보관함", nextPage: StoragePage()),
               SizedBox(
                 height: 0.03.sh,
               ),
-              getButton(hint: "나의 고민 보관함"),
+              getButton(hint: "나의 고민 보관함", nextPage: Worry_StoragePage()),
               SizedBox(
                 height: 0.03.sh,
               ),
-              getButton(hint: "임시 보관함"),
+              getButton(hint: "임시 보관함", nextPage: Temporay_StoragePage()),
               MasterKey(margin: 50)
             ],
           ),

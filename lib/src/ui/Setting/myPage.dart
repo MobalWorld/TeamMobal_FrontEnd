@@ -1,10 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../bottom.dart';
 import 'Settings.dart';
-import 'selectImage.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -14,6 +16,23 @@ class MyPage extends StatefulWidget {
 }
 
 class _MyPageState extends State<MyPage> {
+  File? _image;
+  var _nickName;
+
+  Future<void> _pickImageFromGallery() async {
+    final pickedImage = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+    );
+
+    setState(() {
+      if (pickedImage != null) {
+        _image = File(pickedImage.path);
+      } else {
+        print('No image selected.');
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,16 +59,51 @@ class _MyPageState extends State<MyPage> {
           children: [
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 0.02.sh),
-                child: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  backgroundImage: AssetImage(
-                    'assets/walrus.png',
-                  ),
-                  radius: 40,
+                child: IconButton(
+                  iconSize: 70,
+                  icon: _image == null
+                      ? CircleAvatar(
+                          backgroundColor: Colors.white,
+                          backgroundImage: AssetImage(
+                            'assets/walrus.png',
+                          ),
+                          radius: 70,
+                        )
+                      : CircleAvatar(
+                          backgroundImage: FileImage(
+                            _image!,
+                          ),
+                          radius: 70,
+                        ), // Display the selected image
+                  onPressed: () {
+                    _pickImageFromGallery();
+                  },
                 )),
-            Text(
-              "바다 코끼리",
-              style: TextStyle(fontSize: 17, color: Colors.black),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 50,
+                  ),
+                  Expanded(
+                    child: Text(
+                      "바다 코끼리",
+                      style: TextStyle(fontSize: 17, color: Colors.black),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 50,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Icon(Icons.edit),
+                      style: ButtonStyle(),
+                    ),
+                  )
+                ],
+              ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
@@ -81,16 +135,6 @@ class _MyPageState extends State<MyPage> {
                     trailing: Icon(Icons.arrow_forward_ios_rounded),
                     onTap: () {
                       Get.to(Settings());
-                    },
-                  ),
-                  ListTile(
-                    title: Text(
-                      "프로필 사진 변경",
-                      style: TextStyle(fontSize: 17, color: Colors.black),
-                    ),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    onTap: () {
-                      Get.to(SelectImage());
                     },
                   ),
                   ListTile(

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/ui/Group/group_select.dart';
 
 import '../bottom.dart';
 
@@ -17,7 +18,7 @@ class GroupCodeConfirm extends StatelessWidget {
           children: [
             ElevatedButton(onPressed: () {
               Get.to(
-                Bottom(),
+                GroupSelect(),
               );
             } , child: Text('확인'),)
           ],

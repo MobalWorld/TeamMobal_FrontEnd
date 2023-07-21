@@ -98,7 +98,6 @@ class _SettingsState extends State<Settings> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

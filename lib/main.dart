@@ -35,8 +35,7 @@ class MyApp extends StatelessWidget {
           home: OrientationBuilder(
             //회전가능하게 하는 기능
             builder: (context, orientation) {
-              return GroupCodeConfirm();
-                //LoadingPage();
+              return LoadingPage();
             },
           ),
         ),

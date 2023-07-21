@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../bottom.dart';
+import 'changeNickname.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -14,11 +15,11 @@ class MyPage extends StatefulWidget {
   State<MyPage> createState() => _MyPageState();
 }
 
-var _nickName;
+var _nickName = "바다코끼리";
 
 class _MyPageState extends State<MyPage> {
   File? _image;
-
+  
 
   Future<void> _pickImageFromGallery() async {
     final pickedImage = await ImagePicker().pickImage(
@@ -99,9 +100,11 @@ class _MyPageState extends State<MyPage> {
                   ),
                   SizedBox(
                     width: 50,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Icon(Icons.edit),
+                    child: IconButton(
+                      onPressed: () {
+                        Get.to(ChangeNickName());
+                      },
+                      icon: Icon(Icons.edit),
                       style: ButtonStyle(),
                     ),
                   )
@@ -120,7 +123,6 @@ class _MyPageState extends State<MyPage> {
               child: ListView(
                 physics: AlwaysScrollableScrollPhysics(),
                 children: [
-
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
                   getSetting(hint: "다크모드", nextPage: MyPage()),

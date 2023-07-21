@@ -170,7 +170,6 @@ class _StoragePageState extends State<StoragePage> {
         ),
         ],
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

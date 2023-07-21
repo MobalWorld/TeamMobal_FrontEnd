@@ -123,7 +123,6 @@ class _StorageboxState extends State<Storagebox> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

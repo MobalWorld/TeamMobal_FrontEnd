@@ -530,7 +530,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
         ),
         ],),
-      bottomNavigationBar: bottomWidget(),
 
     );
   }

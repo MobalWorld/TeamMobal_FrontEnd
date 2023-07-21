@@ -26,7 +26,9 @@ class _MyPageState extends State<MyPage> {
             Icons.arrow_back_ios_new,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Get.to(Bottom());
+          },
           color: Colors.black,
         ),
         title: Text(
@@ -44,7 +46,7 @@ class _MyPageState extends State<MyPage> {
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
                   backgroundImage: AssetImage(
-                    'assets/walrus.png',
+                    'assets/images/walrus.png',
                   ),
                   radius: 40,
                 )),
@@ -114,7 +116,6 @@ class _MyPageState extends State<MyPage> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

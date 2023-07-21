@@ -118,7 +118,6 @@ class _MyPageState extends State<MyPage> {
               child: ListView(
                 physics: AlwaysScrollableScrollPhysics(),
                 children: [
-
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
                   getSetting(hint: "다크 모드", nextPage: MyPage()),

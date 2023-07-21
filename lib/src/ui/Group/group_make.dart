@@ -36,7 +36,8 @@ class _GroupMakeState extends State<GroupMake> {
             Navigator.pop(context);
           },
         ),
-        title: Text('편지함 만들기',style: GoogleFonts.notoSans(textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 20)),),
+        title: Text('편지함 만들기',style: GoogleFonts.notoSans(
+            textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 20)),),
         centerTitle: true,
       ),
       body: SingleChildScrollView(

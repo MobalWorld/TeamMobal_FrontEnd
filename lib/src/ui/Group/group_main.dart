@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../bottom.dart';
+import '../storagebox_btn.dart';
 
 class GroupMain extends StatefulWidget {
   const GroupMain({Key? key}) : super(key: key);
@@ -24,9 +27,9 @@ final List<String> content = <String>[
 ];
 final List<String> date = <String>['2023. 07. 18', '날짜 2', '날짜 3'];
 final List<String> image = <String>[
-  'assets/walrus.png',
-  'assets/peng1.jpg',
-  'assets/peng2.jpg'
+  'assets/images/walrus.png',
+  'assets/images/peng1.jpg',
+  'assets/images/peng2.jpg'
 ];
 
 class _GroupMainState extends State<GroupMain> {
@@ -50,10 +53,10 @@ class _GroupMainState extends State<GroupMain> {
             children: [
               CircleAvatar(
                 backgroundColor: Colors.white,
-                backgroundImage: AssetImage('assets/walrus.png'),
-                radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
+                backgroundImage: AssetImage('assets/images/walrus.png'),
+                radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
               ),
-              SizedBox(width: 5),
+              SizedBox(width: 2),
               Text(
                 '23-1 한동 위로팀',
                 style: TextStyle(color: Colors.black),
@@ -61,7 +64,9 @@ class _GroupMainState extends State<GroupMain> {
             ],
           ),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.mail_outline, color: Colors.black)),
+            IconButton(onPressed: () {
+              Get.to(Storagebox());
+            }, icon: Icon(Icons.mail_outline, color: Colors.black)),
             IconButton(onPressed: () {}, icon: Icon(Icons.notifications, color: Colors.black)),
           ],
           centerTitle: true,
@@ -77,7 +82,7 @@ class _GroupMainState extends State<GroupMain> {
               child: Container(
                 height: 0.15.sh,
                 decoration: BoxDecoration(
-                  color: Colors.grey[100],
+                  color: Theme.of(context).colorScheme.secondaryContainer,
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
@@ -118,8 +123,8 @@ class _GroupMainState extends State<GroupMain> {
                         children: [
                           CircleAvatar(
                             backgroundColor: Colors.white,
-                            backgroundImage: AssetImage('assets/walrus.png'),
-                            radius: 20, //프로필 사진 원 사이즈 -> 30으로 고정
+                            backgroundImage: AssetImage('assets/images/walrus.png'),
+                            radius: 16, //프로필 사진 원 사이즈 -> 30으로 고정
                           ),
                           Text(
                             '모발모발 한동 위로팀! 다들 화이팅하자!!!',
@@ -143,7 +148,7 @@ class _GroupMainState extends State<GroupMain> {
                       child: Container(
                         height: 0.20.sh,
                         decoration: BoxDecoration(
-                          color: Colors.grey[300],
+                          color: Theme.of(context).colorScheme.primaryContainer,
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(

@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+
 import '../bottom.dart';
-import 'Settings.dart';
+import '../Setting/settings.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -43,7 +44,9 @@ class _MyPageState extends State<MyPage> {
             Icons.arrow_back_ios_new,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           color: Colors.black,
         ),
         title: Text(
@@ -116,6 +119,7 @@ class _MyPageState extends State<MyPage> {
               child: ListView(
                 physics: AlwaysScrollableScrollPhysics(),
                 children: [
+
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
                   getSetting(hint: "다크모드", nextPage: MyPage()),

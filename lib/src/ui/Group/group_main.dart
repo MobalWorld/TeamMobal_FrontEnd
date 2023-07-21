@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/worry_miri.dart';
 
 import '../bottom.dart';
 import '../storagebox_btn.dart';
@@ -27,7 +28,7 @@ final List<String> content = <String>[
 ];
 final List<String> date = <String>['2023. 07. 18', '날짜 2', '날짜 3'];
 final List<String> image = <String>[
-  'assets/images/walrus.png',
+  'assets/images/water52.jpg',
   'assets/images/peng1.jpg',
   'assets/images/peng2.jpg'
 ];
@@ -119,7 +120,7 @@ class _GroupMainState extends State<GroupMain> {
                       ),
                       SizedBox(height: 11),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CircleAvatar(
                             backgroundColor: Colors.white,
@@ -145,93 +146,128 @@ class _GroupMainState extends State<GroupMain> {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: EdgeInsets.only(bottom: 40),
-                      child: Container(
-                        height: 0.20.sh,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.primaryContainer,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 2,
-                              blurRadius: 2,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Transform.translate(
-                              offset: Offset(5, -20), // 왼쪽 상단으로 이동
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                backgroundImage: AssetImage(image[index]),
-                                radius: 20,
+                        child: Container(
+                          height: 0.20.sh,
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.primaryContainer,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 2,
+                                blurRadius: 2,
+                                offset: Offset(0, 3),
                               ),
+                            ],
+                          ),
+
+                          child: ElevatedButton(
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('알림'),
+                                  content: Text('고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop(); // Close the AlertDialog
+                                      },
+                                      child: Text('취소'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Get.to(GroupMiri()); // Close the AlertDialog
+                                      },
+                                      child: Text('확인'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                              splashFactory: NoSplash.splashFactory, // Disable the splash effect
                             ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  // 이름과 날짜
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        name[index],
-                                        style: TextStyle(fontSize: 14),
+                            child: Column(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Transform.translate(
+                                      offset: Offset(5, -20), // 왼쪽 상단으로 이동
+                                      child: CircleAvatar(
+                                        backgroundColor: Colors.white,
+                                        backgroundImage: AssetImage(image[index]),
+                                        radius: 20,
                                       ),
-                                      // 이름과 날짜 사이 간격
-                                      SizedBox(width: 9),
-                                      Text(
-                                        date[index],
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                    ],
-                                  ),
-                                  // 이름과날짜 <-> 제목 사이 간격
-                                  SizedBox(height: 8),
-                                  // 제목
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Expanded(
-                                        child: Text(
-                                          title[index],
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.symmetric(horizontal: 10),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          // 이름과 날짜
+                                          Row(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                name[index],
+                                                style: TextStyle(fontSize: 14),
+                                              ),
+                                              // 이름과 날짜 사이 간격
+                                              SizedBox(width: 9),
+                                              Text(
+                                                date[index],
+                                                style: TextStyle(fontSize: 14),
+                                              ),
+                                            ],
                                           ),
-                                          overflow: TextOverflow.ellipsis,
-                                          maxLines: 2,
-                                        ),
+                                          // 이름과날짜 <-> 제목 사이 간격
+                                          SizedBox(height: 8),
+                                          // 제목
+                                          Row(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Expanded(
+                                                child: Text(
+                                                  title[index],
+                                                  style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                  overflow: TextOverflow.ellipsis,
+                                                  maxLines: 1,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          // 제목 <-> 내용 간격
+                                          SizedBox(height: 8,),
+                                          // 내용
+                                          Row(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Expanded(
+                                                child: Text(
+                                                  content[index],
+                                                  style: TextStyle(fontSize: 12),
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.ellipsis,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
                                       ),
-                                    ],
-                                  ),
-                                  // 제목 <-> 내용 간격
-                                  SizedBox(height: 8,),
-                                  // 내용
-                                  Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Expanded(
-                                        child: Text(
-                                          content[index],
-                                          style: TextStyle(fontSize: 12),
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
+
                     );
                   },
                 ),

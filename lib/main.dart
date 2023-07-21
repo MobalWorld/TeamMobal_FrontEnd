@@ -6,8 +6,7 @@ import 'package:mobalworld/src/ui/Color/colors.dart';
 import 'package:mobalworld/src/ui/Group/group_code_confirm.dart';
 import 'package:provider/provider.dart';
 import 'firebase/firebase_options.dart';
-import 'src/ui/Setting/main_loading.dart';
-
+import 'src/ui/Setting/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
           home: OrientationBuilder(
             //회전가능하게 하는 기능
             builder: (context, orientation) {
-              return LoadingPage();
+              return Splash();
             },
           ),
         ),

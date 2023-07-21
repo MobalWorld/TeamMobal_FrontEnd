@@ -7,7 +7,12 @@ import 'package:get/get_core/src/get_main.dart';
 import 'Group/group_main.dart';
 import 'Group/group_select.dart';
 import 'bottom.dart';
-// import 'setting.dart';
+
+const List<String> list = <String>[
+  '23-1 한동 위로 팀',
+  '푸바오 사랑해 팀',
+  '사랑아 시선해 팀',
+];
 
 class WorryWriting extends StatefulWidget {
   const WorryWriting({super.key});
@@ -20,6 +25,7 @@ class _WorryWritingState extends State<WorryWriting> {
   String title = '';
   String content = '';
   String group = "23-1 한동위로팀";
+  String dropdownValue = list.first;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +42,7 @@ class _WorryWritingState extends State<WorryWriting> {
               child: TextButton(
                 child: Text(
                   '취소',
-                  style: TextStyle(color: Colors.black, fontSize: 17),
+                  style: TextStyle(color: Colors.black, fontSize: 15),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
@@ -78,7 +84,7 @@ class _WorryWritingState extends State<WorryWriting> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Get.to(GroupMain());
+                                  _showDialog(context);
                                 },
                                 child: Text(
                                   '임시저장',
@@ -116,10 +122,23 @@ class _WorryWritingState extends State<WorryWriting> {
             ),
           ),
           centerTitle: true,
-          title: Text(
-            group,
-            style: TextStyle(color: Colors.black, fontSize: 25),
-            textAlign: TextAlign.center,
+          title: DropdownButton<String>(
+            value: dropdownValue,
+            icon: Icon(Icons.arrow_drop_down),
+            elevation: 16,
+            style: TextStyle(color: Colors.black, fontSize: 17.sp),
+            onChanged: (String? value) {
+              // This is called when the user selects an item.
+              setState(() {
+                dropdownValue = value!;
+              });
+            },
+            items: list.map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
           ),
           actions: [
             TextButton(
@@ -128,7 +147,7 @@ class _WorryWritingState extends State<WorryWriting> {
                 style: TextStyle(color: Colors.red[400], fontSize: 15.sp),
               ),
               onPressed: () {
-                Get.to(GroupSelect());
+                _showDialog2(context);
               },
               //   showModalBottomSheet(
               //     context: context,
@@ -238,4 +257,44 @@ class _WorryWritingState extends State<WorryWriting> {
       bottomNavigationBar: bottomWidget(),
     );
   }
+}
+
+void _showDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text('임시 저장'),
+        content: Text('임시 저장함으로 이동합니다'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Get.to(GroupMain()); // Close the dialog
+            },
+            child: Text('확인'),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+void _showDialog2(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text('고민 작성 완료'),
+        content: Text('고민 작성이 완료되었습니다.'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Get.to(GroupMain()); // Close the dialog
+            },
+            child: Text('확인'),
+          ),
+        ],
+      );
+    },
+  );
 }

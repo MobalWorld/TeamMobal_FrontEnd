@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-
-import '../Group/group_manage.dart';
 import '../bottom.dart';
 import 'Settings.dart';
 
@@ -90,7 +88,7 @@ class _MyPageState extends State<MyPage> {
                   ),
                   Expanded(
                     child: Text(
-                      "바다 코끼리",
+                      _nickName,
                       style: TextStyle(fontSize: 17, color: Colors.black),
                       textAlign: TextAlign.center,
                     ),

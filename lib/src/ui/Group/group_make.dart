@@ -122,7 +122,7 @@ class _GroupMakeState extends State<GroupMake> {
                       FocusManager.instance.primaryFocus?.unfocus(),
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(10),
-                        hintText: "편지함 소개를 적어주세요",
+                        hintText: "편지함 소개를 적어주세요.",
                         filled: true,
                         fillColor: Color(0xFFE6F7FE),
                         enabledBorder: OutlineInputBorder(

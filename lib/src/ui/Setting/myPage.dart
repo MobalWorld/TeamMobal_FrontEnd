@@ -18,6 +18,7 @@ class MyPage extends StatefulWidget {
 
 class _MyPageState extends State<MyPage> {
   File? _image;
+  var _nickName;
 
   Future<void> _pickImageFromGallery() async {
     final pickedImage = await ImagePicker().pickImage(
@@ -45,7 +46,7 @@ class _MyPageState extends State<MyPage> {
             color: Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Get.to(Bottom());
           },
           color: Colors.black,
         ),
@@ -61,6 +62,7 @@ class _MyPageState extends State<MyPage> {
           children: [
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 0.02.sh),
+
                 child: IconButton(
                   iconSize: 70,
                   icon: _image == null
@@ -84,6 +86,7 @@ class _MyPageState extends State<MyPage> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
                     width: 50,
@@ -95,11 +98,14 @@ class _MyPageState extends State<MyPage> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.edit),
-                    color: Theme.of(context).colorScheme.primary,
-                  ),
+                  SizedBox(
+                    width: 50,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Icon(Icons.edit),
+                      style: ButtonStyle(),
+                    ),
+                  )
                 ],
               ),
             ),
@@ -143,8 +149,9 @@ class _MyPageState extends State<MyPage> {
                     trailing: Icon(Icons.arrow_forward_ios_rounded),
                     onTap: () {
                       Get.to(
-                          // 그룹 관리 페이지 이동으로 바꿔주기
-                          GroupManage());
+                        // 그룹 관리 페이지 이동으로 바꿔주기
+                          GroupManage()
+                      );
                     },
                   ),
                   // Add more settings options as needed
@@ -154,7 +161,6 @@ class _MyPageState extends State<MyPage> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

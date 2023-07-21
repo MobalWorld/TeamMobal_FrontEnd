@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import 'Group/group_select.dart';
-import 'bottom.dart';
 // import 'setting.dart';
 
 class WorryWriting extends StatefulWidget {
@@ -89,7 +88,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
-                              Navigator.pop(context);
+                              Get.to(WorryWriting());
                             },
                             child: Text(
                               '취소',
@@ -225,7 +224,6 @@ class _WorryWritingState extends State<WorryWriting> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

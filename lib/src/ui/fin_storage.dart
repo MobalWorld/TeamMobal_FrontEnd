@@ -5,8 +5,6 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/ui/storagebox_btn.dart';
 
-import 'bottom.dart';
-
 class FinStorage extends StatefulWidget {
   const FinStorage({Key? key}) : super(key: key);
 
@@ -65,7 +63,6 @@ class _FinStorageState extends State<FinStorage> {
           )
         ],
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

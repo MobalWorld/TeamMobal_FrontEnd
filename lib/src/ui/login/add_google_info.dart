@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 
 import '../../../home/home.dart';
 import '../../../main.dart';
+import '../Group/group_select.dart';
 import '../bottom.dart';
 
 class GoogleAdditionalPage extends StatefulWidget {
@@ -571,7 +572,9 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            HomePage(),
+                                           // HomePage(),
+                                        // 회원 가입 절차 완료 후, 회원가입 누르면 살짝 메인 페이지인 group_select 페이지로 이동
+                                        GroupSelect(),
                                     ),
                                   );
                                 }

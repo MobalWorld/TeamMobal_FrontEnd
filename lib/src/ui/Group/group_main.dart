@@ -24,7 +24,7 @@ final List<String> content = <String>[
 ];
 final List<String> date = <String>['2023. 07. 18', '날짜 2', '날짜 3'];
 final List<String> image = <String>[
-  'assets/walrus.png',
+  'assets/images/walrus.png',
   'assets/peng1.jpg',
   'assets/peng2.jpg'
 ];
@@ -50,7 +50,7 @@ class _GroupMainState extends State<GroupMain> {
             children: [
               CircleAvatar(
                 backgroundColor: Colors.white,
-                backgroundImage: AssetImage('assets/walrus.png'),
+                backgroundImage: AssetImage('assets/images/walrus.png'),
                 radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
               ),
               SizedBox(width: 5),
@@ -118,7 +118,7 @@ class _GroupMainState extends State<GroupMain> {
                         children: [
                           CircleAvatar(
                             backgroundColor: Colors.white,
-                            backgroundImage: AssetImage('assets/walrus.png'),
+                            backgroundImage: AssetImage('assets/images/walrus.png'),
                             radius: 20, //프로필 사진 원 사이즈 -> 30으로 고정
                           ),
                           Text(
@@ -234,7 +234,6 @@ class _GroupMainState extends State<GroupMain> {
             )
           ],
         ),
-        bottomNavigationBar: bottomWidget(),
       ),
     );
   }

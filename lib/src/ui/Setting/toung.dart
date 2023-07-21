@@ -1,7 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
 
 import '../master_key.dart';
 
@@ -35,7 +34,6 @@ class _ToungPageState extends State<ToungPage> {
           MasterKey(margin: 0),
         ],
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

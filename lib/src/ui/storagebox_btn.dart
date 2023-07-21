@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'appbar page/storage.dart';
 import 'appbar page/temporary_storage.dart';
 import 'appbar page/worry_storage.dart';
-import 'bottom.dart';
+
 import 'master_key.dart';
 
 class Storagebox extends StatefulWidget {
@@ -36,7 +36,7 @@ class _StorageboxState extends State<Storagebox> {
             backgroundColor: MaterialStateProperty.all(beige),
             foregroundColor: MaterialStateProperty.all(Colors.black),
             padding: //패딩
-                MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+            MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
             textStyle: MaterialStateProperty.all(TextStyle(
               fontSize: FontSize(15.sp),
               fontWeight: FontWeight.w700,
@@ -127,7 +127,6 @@ class _StorageboxState extends State<Storagebox> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

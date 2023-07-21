@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import '../bottom.dart';
-import 'Settings.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -43,7 +42,9 @@ class _MyPageState extends State<MyPage> {
             Icons.arrow_back_ios_new,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Get.to(Bottom());
+          },
           color: Colors.black,
         ),
         title: Text(
@@ -58,6 +59,7 @@ class _MyPageState extends State<MyPage> {
           children: [
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 0.02.sh),
+
                 child: IconButton(
                   iconSize: 70,
                   icon: _image == null
@@ -128,20 +130,6 @@ class _MyPageState extends State<MyPage> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
-    );
-  }
-
-  ListTile SettingTitle() {
-    return ListTile(
-      title: Text(
-        "설정",
-        style: TextStyle(fontSize: 17, color: Colors.black),
-      ),
-      trailing: Icon(Icons.arrow_forward_ios_rounded),
-      onTap: () {
-        Get.to(Settings());
-      },
     );
   }
 }

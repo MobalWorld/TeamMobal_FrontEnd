@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../bottom.dart';
+import 'group_main.dart';
 
 enum Item { delete }
 
@@ -71,9 +72,13 @@ class _GroupSelectState extends State<GroupSelect> {
         children: <Widget>[ SingleChildScrollView( // 스크롤 가능하게
           child:Column(
             children: [
-
               // 23-1 한동 위로 팀
               ListTile(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GroupMain()),);
+                },
                 dense: false,
                 title: Text("23-1 한동 위로 팀",
                   style: TextStyle(
@@ -235,7 +240,7 @@ class _GroupSelectState extends State<GroupSelect> {
 
         ),
         ],),
-      bottomNavigationBar: bottomWidget(),
+      //bottomNavigationBar: bottomWidget(),
 
     );
   }

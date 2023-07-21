@@ -178,7 +178,6 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
 
         ),
         ],),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

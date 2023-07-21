@@ -14,7 +14,7 @@ class MyPage extends StatefulWidget {
   State<MyPage> createState() => _MyPageState();
 }
 
-var _nickName;
+var _nickName = '바다 코끼리';
 
 class _MyPageState extends State<MyPage> {
   File? _image;

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/ui/Setting/myPage.dart';
 
 import 'Group/group_select.dart';
 import 'worry_Writing.dart';
@@ -53,7 +54,8 @@ BottomNavigationBar bottomWidget() {
           WorryWriting(),
         );
       } else if (index == 2) {
-        Get.to(()
+        Get.to(
+          MyPage(),
         );
       }
     },

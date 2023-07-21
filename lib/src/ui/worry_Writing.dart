@@ -71,7 +71,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
-                              // Get.to(Setting());
+                              
                             },
                             child: Text(
                               '임시저장',

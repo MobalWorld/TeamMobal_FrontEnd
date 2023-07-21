@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../Group/group_manage.dart';
 import '../bottom.dart';
 import '../Setting/settings.dart';
 
@@ -16,9 +15,11 @@ class MyPage extends StatefulWidget {
   State<MyPage> createState() => _MyPageState();
 }
 
+var _nickName;
+
 class _MyPageState extends State<MyPage> {
   File? _image;
-  var _nickName;
+  
 
   Future<void> _pickImageFromGallery() async {
     final pickedImage = await ImagePicker().pickImage(
@@ -28,8 +29,6 @@ class _MyPageState extends State<MyPage> {
     setState(() {
       if (pickedImage != null) {
         _image = File(pickedImage.path);
-      } else {
-        print('No image selected.');
       }
     });
   }
@@ -92,7 +91,7 @@ class _MyPageState extends State<MyPage> {
                   ),
                   Expanded(
                     child: Text(
-                      "바다 코끼리",
+                      _nickName,
                       style: TextStyle(fontSize: 17, color: Colors.black),
                       textAlign: TextAlign.center,
                     ),
@@ -120,38 +119,12 @@ class _MyPageState extends State<MyPage> {
               child: ListView(
                 physics: AlwaysScrollableScrollPhysics(),
                 children: [
-                  ListTile(
-                    title: Text(
-                      "설정",
-                      style: TextStyle(fontSize: 17, color: Colors.black),
-                    ),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    onTap: () {
-                      Get.to(Settings());
-                    },
-                  ),
-                  ListTile(
-                    title: Text(
-                      "닉네임 변경",
-                      style: TextStyle(fontSize: 17, color: Colors.black),
-                    ),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    onTap: () {
-                      Get.to(Settings());
-                    },
-                  ),
-                  ListTile(
-                    title: Text(
-                      "그룹 관리",
-                      style: TextStyle(fontSize: 17, color: Colors.black),
-                    ),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded),
-                    onTap: () {
-                      Get.to(
-                          // 그룹 관리 페이지 이동으로 바꿔주기
-                          GroupManage());
-                    },
-                  ),
+
+                  getSetting(hint: "계정 정보", nextPage: MyPage()),
+                  getSetting(hint: "그룹 관리", nextPage: MyPage()),
+                  getSetting(hint: "다크모드", nextPage: MyPage()),
+                  getSetting(hint: "버전", nextPage: MyPage()),
+                  getSetting(hint: "문의하기", nextPage: MyPage()),
                   // Add more settings options as needed
                 ],
               ),
@@ -162,19 +135,30 @@ class _MyPageState extends State<MyPage> {
       bottomNavigationBar: bottomWidget(),
     );
   }
+
+  ListTile SettingTitle() {
+    return ListTile(
+      title: Text(
+        "설정",
+        style: TextStyle(fontSize: 17, color: Colors.black),
+      ),
+      trailing: Icon(Icons.arrow_forward_ios_rounded),
+      onTap: () {
+        Get.to(Settings());
+      },
+    );
+  }
 }
 
-ListTile getSetting({
-  required String hint,
-}) {
+ListTile getSetting({required String hint, required Widget nextPage}) {
   return ListTile(
     title: Text(
       hint,
-      style: TextStyle(fontSize: 15, color: Colors.black),
+      style: TextStyle(fontSize: 17, color: Colors.black),
     ),
     trailing: Icon(Icons.arrow_forward_ios_rounded),
     onTap: () {
-      Get.toNamed('next');
+      Get.to(nextPage);
     },
   );
 }

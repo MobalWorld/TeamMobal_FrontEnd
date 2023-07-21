@@ -49,7 +49,7 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
@@ -67,11 +67,11 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
-                              // Get.to(Setting());
+                              
                             },
                             child: Text(
                               '임시저장',
@@ -85,7 +85,7 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {

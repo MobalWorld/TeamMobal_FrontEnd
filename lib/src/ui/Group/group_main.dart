@@ -65,21 +65,26 @@ class _GroupMainState extends State<GroupMain> {
             ],
           ),
           actions: [
-            IconButton(onPressed: () {
-              Get.to(Storagebox());
-            }, icon: Icon(Icons.mail_outline, color: Colors.black)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.notifications, color: Colors.black)),
+            IconButton(
+                onPressed: () {
+                  Get.to(Storagebox());
+                },
+                icon: Icon(Icons.mail_outline, color: Colors.black)),
+            IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.notifications, color: Colors.black)),
           ],
           centerTitle: true,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 0.01.sh,
-                  vertical: 0.01.sh),
+              padding:
+                  EdgeInsets.symmetric(horizontal: 0.01.sh, vertical: 0.01.sh),
               child: Container(
                 height: 0.15.sh,
                 decoration: BoxDecoration(
@@ -107,29 +112,37 @@ class _GroupMainState extends State<GroupMain> {
                                   fontWeight: FontWeight.w600,
                                   color: Colors.black),
                               children: [
-                                TextSpan(
-                                  text: '바다 표범',
-                                  style: TextStyle(fontSize: 15, color: Color(0xFFF69B94), fontWeight: FontWeight.w600),
-                                ),
-                                TextSpan(
-                                  text: '님의 한마디!',
-                                  style: TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.w800),
-                                ),
-                              ]
-                          )
-                      ),
+                            TextSpan(
+                              text: '바다 표범',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  color: Color(0xFFF69B94),
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            TextSpan(
+                              text: '님의 한마디!',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w800),
+                            ),
+                          ])),
                       SizedBox(height: 11),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CircleAvatar(
                             backgroundColor: Colors.white,
-                            backgroundImage: AssetImage('assets/images/walrus.png'),
+                            backgroundImage:
+                                AssetImage('assets/images/walrus.png'),
                             radius: 16, //프로필 사진 원 사이즈 -> 30으로 고정
                           ),
                           Text(
                             '모발모발 한동 위로팀! 다들 화이팅하자!!!',
-                            style: TextStyle(fontWeight: FontWeight.w800, fontSize: 17.5, color: Colors.indigoAccent),
+                            style: TextStyle(
+                                fontWeight: FontWeight.w800,
+                                fontSize: 17.5,
+                                color: Colors.indigoAccent),
                           ),
                         ],
                       ),
@@ -141,7 +154,8 @@ class _GroupMainState extends State<GroupMain> {
             Expanded(
               child: Container(
                 child: ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 0.01.sh, vertical: 40),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 0.01.sh, vertical: 40),
                   itemCount: name.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
@@ -266,6 +280,7 @@ class _GroupMainState extends State<GroupMain> {
                               ],
                             ),
                           ),
+
                         ),
 
                     );

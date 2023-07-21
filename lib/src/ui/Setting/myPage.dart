@@ -3,14 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-<<<<<<< HEAD
 import 'package:image_picker/image_picker.dart';
-=======
-import 'package:mobalworld/src/ui/Group/group_manage.dart';
->>>>>>> ce03f6ebd63925ba4572ebf2bd631f68087dcf8a
 
+import '../Group/group_manage.dart';
 import '../bottom.dart';
-import 'Settings.dart';
+import '../Setting/settings.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -69,7 +66,7 @@ class _MyPageState extends State<MyPage> {
                       ? CircleAvatar(
                           backgroundColor: Colors.white,
                           backgroundImage: AssetImage(
-                            'assets/walrus.png',
+                            'assets/images/walrus.png',
                           ),
                           radius: 70,
                         )

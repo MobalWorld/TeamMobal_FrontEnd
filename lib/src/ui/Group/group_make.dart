@@ -2,7 +2,10 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobalworld/src/ui/Setting/toung.dart';
 
 class GroupMake extends StatefulWidget {
   const GroupMake({Key? key}) : super(key: key);
@@ -33,7 +36,8 @@ class _GroupMakeState extends State<GroupMake> {
             Navigator.pop(context);
           },
         ),
-        title: Text('편지함 만들기',style: GoogleFonts.notoSans(textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 20)),),
+        title: Text('편지함 만들기',style: GoogleFonts.notoSans(
+            textStyle: TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 20)),),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -190,7 +194,7 @@ class _GroupMakeState extends State<GroupMake> {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 0.02.sh,vertical: 0.01.sh),
                   child: ElevatedButton(onPressed: () {
-
+                    Get.to(ToungPage());
                   },
                     child: Text('만들기',style: GoogleFonts.notoSans
                       (textStyle: TextStyle(color: Colors.black),)

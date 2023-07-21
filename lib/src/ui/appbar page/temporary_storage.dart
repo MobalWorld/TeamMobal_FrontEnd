@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../bottom.dart';
+import '../temporary_write.dart';
 
 class Temporay_StoragePage extends StatefulWidget {
   const Temporay_StoragePage({super.key});
@@ -65,6 +66,11 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
 
               // 임시 작성글 1
               ListTile(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TemporaryWrite()),);
+                },
                 dense: false,
                 // 사용자가 작성한 고민 글 제목 으로 보여주기
                 title: Text("쓰다만 글이지롱",

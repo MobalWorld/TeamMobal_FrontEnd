@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+
+import 'package:mobalworld/src/ui/Group/group_select.dart';
 import 'package:mobalworld/src/ui/Setting/myPage.dart';
 import 'package:mobalworld/src/ui/worry_Writing.dart';
-
-import 'Group/group_select.dart';
 
 
 class Bottom extends StatefulWidget {
@@ -53,3 +56,4 @@ class _BottomState extends State<Bottom> {
     );
   }
 }
+

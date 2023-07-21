@@ -104,7 +104,7 @@ class _AlarmPageState extends State<AlarmPage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지 (고민 글이 작성된 그룹)
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/hgu.png'),
+                  backgroundImage: AssetImage('assets/images/hgu.png'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 
@@ -162,7 +162,7 @@ class _AlarmPageState extends State<AlarmPage> {
                 // 맨 앞에 오는 그룹의 프로필 이미지 (고민 글이 작성된 그룹)
                 leading: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: AssetImage('assets/fubao.webp'),
+                  backgroundImage: AssetImage('assets/images/fubao.webp'),
                   radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
 

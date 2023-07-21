@@ -161,8 +161,6 @@ class _StoragePageState extends State<StoragePage> {
                 height: 4,
               ),
 
-
-
             ],
           ),
 

@@ -2,7 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
+
+import '../bottom.dart';
 
 class StoragePage extends StatefulWidget {
   const StoragePage({super.key});
@@ -159,8 +160,6 @@ class _StoragePageState extends State<StoragePage> {
               SizedBox(
                 height: 4,
               ),
-
-
 
             ],
           ),

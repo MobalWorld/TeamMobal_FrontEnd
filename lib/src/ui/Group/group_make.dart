@@ -2,7 +2,10 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobalworld/src/ui/Setting/toung.dart';
 
 class GroupMake extends StatefulWidget {
   const GroupMake({Key? key}) : super(key: key);
@@ -122,7 +125,7 @@ class _GroupMakeState extends State<GroupMake> {
                       FocusManager.instance.primaryFocus?.unfocus(),
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.all(10),
-                        hintText: "편지함 소개를 적어주세요",
+                        hintText: "편지함 소개를 적어주세요.",
                         filled: true,
                         fillColor: Color(0xFFE6F7FE),
                         enabledBorder: OutlineInputBorder(
@@ -189,7 +192,12 @@ class _GroupMakeState extends State<GroupMake> {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 0.02.sh,vertical: 0.01.sh),
-                  child: ElevatedButton(onPressed: () {}, child: Text('만들기',style: GoogleFonts.notoSans (textStyle: TextStyle(color: Colors.black),)), style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFFCCAA9)),),
+                  child: ElevatedButton(onPressed: () {
+                    Get.to(ToungPage());
+                  },
+                    child: Text('만들기',style: GoogleFonts.notoSans
+                      (textStyle: TextStyle(color: Colors.black),)
+                    ), style: ElevatedButton.styleFrom(backgroundColor: Color(0xFFFCCAA9)),),
                 ),
               ],
             )

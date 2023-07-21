@@ -3,11 +3,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mobalworld/home/home.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
 import 'package:provider/provider.dart';
 
+import '../../../home/home.dart';
 import '../../../main.dart';
+import '../Group/group_select.dart';
+import '../bottom.dart';
 
 class GoogleAdditionalPage extends StatefulWidget {
   const GoogleAdditionalPage({Key? key}) : super(key: key);
@@ -571,7 +572,9 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            HomePage(),
+                                           // HomePage(),
+                                        // 회원 가입 절차 완료 후, 회원가입 누르면 살짝 메인 페이지인 group_select 페이지로 이동
+                                        GroupSelect(),
                                     ),
                                   );
                                 }

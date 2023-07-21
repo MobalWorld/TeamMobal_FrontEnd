@@ -2,7 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
+
+import '../bottom.dart';
 
 class AlarmPage extends StatefulWidget {
   const AlarmPage({super.key});

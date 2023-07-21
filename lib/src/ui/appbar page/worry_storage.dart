@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
+
+import '../bottom.dart';
 
 class Worry_StoragePage extends StatefulWidget {
   const Worry_StoragePage({super.key});

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/ui/worry_Writing.dart';
 
+import 'Group/group_main.dart';
 import 'Group/group_select.dart';
 import 'bottom.dart';
 
@@ -28,82 +29,92 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
         child: AppBar(
           toolbarHeight: 75,
           backgroundColor: Colors.white,
-          leading: TextButton(
-            child: Text(
-              '취소',
-              style: TextStyle(color: Colors.black, fontSize: 14.sp),
-            ),
-            onPressed: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return Container(
-                    color: Colors.white,
-                    height: 0.3.sh,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: double.infinity,
-                          height: 0.1.sh,
-                          child: ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
-                              elevation: MaterialStateProperty.all<double>(0),
+          // 취소 버튼
+          leading: Align(
+            alignment: Alignment.centerLeft,
+            child: SizedBox(
+              width: 100,
+              child: TextButton(
+                child: Text(
+                  '취소',
+                  style: TextStyle(color: Colors.black, fontSize: 15),
+                ),
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        color: Colors.white,
+                        height: 0.3.sh,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: double.infinity,
+                              height: 0.1.sh,
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                  MaterialStateProperty.all(Colors.white),
+                                  elevation:
+                                  MaterialStateProperty.all<double>(0),
+                                ),
+                                onPressed: () {
+                                  Get.to(GroupSelect());
+                                },
+                                child: Text(
+                                  '작성취소',
+                                  style: TextStyle(color: Colors.red),
+                                ),
+                              ),
                             ),
-                            onPressed: () {
-                              Get.to(GroupSelect());
-                            },
-                            child: Text(
-                              '작성취소',
-                              style: TextStyle(color: Colors.red),
+                            SizedBox(
+                              height: 0.1.sh,
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                  MaterialStateProperty.all(Colors.white),
+                                  elevation:
+                                  MaterialStateProperty.all<double>(0),
+                                ),
+                                onPressed: () {
+                                  _showDialog(context);
+                                },
+                                child: Text(
+                                  '임시저장',
+                                  style: TextStyle(color: Colors.blue[300]),
+                                ),
+                              ),
                             ),
-                          ),
+                            SizedBox(
+                              height: 0.1.sh,
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                  MaterialStateProperty.all(Colors.white),
+                                  elevation:
+                                  MaterialStateProperty.all<double>(0),
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text(
+                                  '취소',
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 14.sp),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 0.1.sh,
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
-                              elevation: MaterialStateProperty.all<double>(0),
-                            ),
-                            onPressed: () {
-                              // Get.to(Setting());
-                            },
-                            child: Text(
-                              '임시저장',
-                              style: TextStyle(color: Colors.blue[300]),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 0.1.sh,
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            style: ButtonStyle(
-                              backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
-                              elevation: MaterialStateProperty.all<double>(0),
-                            ),
-                            onPressed: () {
-                              Get.to(WorryWriting());
-                            },
-                            child: Text(
-                              '취소',
-                              style: TextStyle(
-                                  color: Colors.black, fontSize: 14.sp),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      );
+                    },
                   );
                 },
-              );
-            },
+              ),
+            ),
           ),
           centerTitle: true,
 
@@ -160,4 +171,24 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
       bottomNavigationBar: bottomWidget(),
     );
   }
+}
+
+void _showDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text('임시 저장'),
+        content: Text('임시 저장함으로 이동합니다'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Get.to(GroupMain()); // Close the dialog
+            },
+            child: Text('확인'),
+          ),
+        ],
+      );
+    },
+  );
 }

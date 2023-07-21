@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../bottom.dart';
-import '../Setting/settings.dart';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -133,19 +132,6 @@ class _MyPageState extends State<MyPage> {
         ),
       ),
       bottomNavigationBar: bottomWidget(),
-    );
-  }
-
-  ListTile SettingTitle() {
-    return ListTile(
-      title: Text(
-        "설정",
-        style: TextStyle(fontSize: 17, color: Colors.black),
-      ),
-      trailing: Icon(Icons.arrow_forward_ios_rounded),
-      onTap: () {
-        Get.to(Settings());
-      },
     );
   }
 }

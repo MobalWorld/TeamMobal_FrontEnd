@@ -25,7 +25,6 @@ class _BottomState extends State<Bottom> {
 
 }
 
-
 BottomNavigationBar bottomWidget() {
   return BottomNavigationBar(
     items: <BottomNavigationBarItem>[

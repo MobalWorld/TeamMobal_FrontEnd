@@ -18,7 +18,7 @@ var _nickName;
 
 class _MyPageState extends State<MyPage> {
   File? _image;
-  
+
 
   Future<void> _pickImageFromGallery() async {
     final pickedImage = await ImagePicker().pickImage(
@@ -64,18 +64,20 @@ class _MyPageState extends State<MyPage> {
                   iconSize: 70,
                   icon: _image == null
                       ? CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage(
-                            'assets/images/walrus.png',
-                          ),
-                          radius: 70,
-                        )
+
+                    backgroundColor: Colors.white,
+                    backgroundImage: AssetImage(
+                      'assets/images/walrus.png',
+                    ),
+                    radius: 70,
+                  )
+
                       : CircleAvatar(
-                          backgroundImage: FileImage(
-                            _image!,
-                          ),
-                          radius: 70,
-                        ), // Display the selected image
+                    backgroundImage: FileImage(
+                      _image!,
+                    ),
+                    radius: 70,
+                  ), // Display the selected image
                   onPressed: () {
                     _pickImageFromGallery();
                   },

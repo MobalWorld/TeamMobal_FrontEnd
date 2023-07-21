@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../bottom.dart';
 
+enum Item { delete }
+
 class GroupSelect extends StatefulWidget {
   const GroupSelect({super.key});
 
@@ -12,7 +14,7 @@ class GroupSelect extends StatefulWidget {
 }
 
 class _GroupSelectState extends State<GroupSelect> {
-
+  Item? selectedMenu;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +101,23 @@ class _GroupSelectState extends State<GroupSelect> {
                   radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
                 //맨 우측에 오는 ... 버튼
-                trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {},),
+                trailing: PopupMenuButton<Item>(
+                  icon: Icon(Icons.more_horiz),
+                  initialValue: selectedMenu,
+                  // Callback that sets the selected popup menu item.
+                  onSelected: (Item item) {
+                    setState(() {
+                      selectedMenu = item;
+                    });
+                  },
+                  itemBuilder: (BuildContext context) => <PopupMenuEntry<Item>>[
+                    PopupMenuItem<Item>(
+                      value: Item.delete,
+                      child: Text('삭제'),
+
+                    ),
+                  ],
+                ),
               ),
               // 각 팀 타일 사이에 구분선 추가
               Divider(
@@ -134,7 +152,23 @@ class _GroupSelectState extends State<GroupSelect> {
                   radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
                 //맨 우측에 오는 ... 버튼
-                trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {},),
+                trailing: PopupMenuButton<Item>(
+                  icon: Icon(Icons.more_horiz),
+                  initialValue: selectedMenu,
+                  // Callback that sets the selected popup menu item.
+                  onSelected: (Item item) {
+                    setState(() {
+                      selectedMenu = item;
+                    });
+                  },
+                  itemBuilder: (BuildContext context) => <PopupMenuEntry<Item>>[
+                    PopupMenuItem<Item>(
+                      value: Item.delete,
+                      child: Text('삭제'),
+
+                    ),
+                  ],
+                ),
               ),
 
               // 각 팀 타일 사이에 구분선 추가
@@ -171,7 +205,23 @@ class _GroupSelectState extends State<GroupSelect> {
                   radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                 ),
                 //맨 우측에 오는 ... 버튼
-                trailing: IconButton(icon: Icon(Icons.more_horiz), onPressed: () {},),
+                trailing: PopupMenuButton<Item>(
+                  icon: Icon(Icons.more_horiz),
+                  initialValue: selectedMenu,
+                  // Callback that sets the selected popup menu item.
+                  onSelected: (Item item) {
+                    setState(() {
+                      selectedMenu = item;
+                    });
+                  },
+                  itemBuilder: (BuildContext context) => <PopupMenuEntry<Item>>[
+                    PopupMenuItem<Item>(
+                      value: Item.delete,
+                      child: Text('삭제'),
+
+                    ),
+                  ],
+                ),
               ),
               // 각 팀 타일 사이에 구분선 추가
               Divider(

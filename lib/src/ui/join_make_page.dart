@@ -154,6 +154,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
+                                      //!!!이 아래 LoginPage()가 아니라 그룹 코드 작성하는 페이지로 이동해야함!!!
                                         builder: (context) => LoginPage()));
                               },
                               child: Text(

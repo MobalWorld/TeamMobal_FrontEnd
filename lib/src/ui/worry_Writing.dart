@@ -6,7 +6,6 @@ import 'package:get/get_core/src/get_main.dart';
 
 import 'Group/group_select.dart';
 import 'bottom.dart';
-import 'Group/group_select.dart';
 // import 'setting.dart';
 
 class WorryWriting extends StatefulWidget {
@@ -50,7 +49,7 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
@@ -68,7 +67,7 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
@@ -86,7 +85,7 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {

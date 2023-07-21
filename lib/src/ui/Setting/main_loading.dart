@@ -2,9 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../Group/group_select.dart';
 import '../login/login.dart';
-
 
 class LoadingPage extends StatefulWidget {
   const LoadingPage({Key? key}) : super(key: key);
@@ -19,7 +17,7 @@ class _LoadingPageState extends State<LoadingPage> {
     super.initState();
     Timer(
       Duration(seconds: 1),
-          () => Navigator.push(
+      () => Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => LoginPage()),
       ),
@@ -36,10 +34,10 @@ class _LoadingPageState extends State<LoadingPage> {
           children: [
             Container(
                 child: Icon(
-                  Icons.water_drop_outlined,
-                  size: 160,
-                  color: Color(0xFFFCCAA9),
-                )),
+              Icons.water_drop_outlined,
+              size: 160,
+              color: Color(0xFFFCCAA9),
+            )),
             Container(
               alignment: Alignment.bottomCenter,
               child: const Text(

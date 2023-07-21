@@ -53,6 +53,7 @@ class _StorageboxState extends State<Storagebox> {
 
                 BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
 
+
               ),
             ),
           ),

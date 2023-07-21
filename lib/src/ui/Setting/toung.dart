@@ -1,8 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mobalworld/src/ui/bottom.dart';
 
+import '../bottom.dart';
 import '../master_key.dart';
 
 class ToungPage extends StatefulWidget {

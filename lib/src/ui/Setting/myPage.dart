@@ -64,12 +64,14 @@ class _MyPageState extends State<MyPage> {
                   iconSize: 70,
                   icon: _image == null
                       ? CircleAvatar(
+
                     backgroundColor: Colors.white,
                     backgroundImage: AssetImage(
                       'assets/images/walrus.png',
                     ),
                     radius: 70,
                   )
+
                       : CircleAvatar(
                     backgroundImage: FileImage(
                       _image!,

@@ -6,7 +6,6 @@ import 'package:get/get_core/src/get_main.dart';
 
 import 'Group/group_select.dart';
 import 'bottom.dart';
-import 'Group/group_select.dart';
 // import 'setting.dart';
 
 class WorryWriting extends StatefulWidget {
@@ -50,7 +49,7 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
@@ -68,11 +67,11 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
-                              // Get.to(Setting());
+                              
                             },
                             child: Text(
                               '임시저장',
@@ -86,11 +85,11 @@ class _WorryWritingState extends State<WorryWriting> {
                           child: ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                              MaterialStateProperty.all(Colors.white),
+                                  MaterialStateProperty.all(Colors.white),
                               elevation: MaterialStateProperty.all<double>(0),
                             ),
                             onPressed: () {
-                              Get.to(WorryWriting());
+                              Navigator.pop(context);
                             },
                             child: Text(
                               '취소',
@@ -119,7 +118,7 @@ class _WorryWritingState extends State<WorryWriting> {
                 style: TextStyle(color: Colors.red[400], fontSize: 15.sp),
               ),
               onPressed: () {
-                Navigator.pop(context);
+                Get.to(GroupSelect());
               },
               //   showModalBottomSheet(
               //     context: context,

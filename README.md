@@ -12,6 +12,8 @@ Mobal Mobal 의 마음의 편지 위로 서비스 !
 >> 07/18 프론트 다시 시작  
 >> 07/19 금요일까지 모든 프론트 완성하기  
 >> gitignore에 flutter-plugins, flutter-plugins-dependency 추가함  
+>> 07/22 토 새벽 4시 2분 우리는 아직도 오석 학카에서 하고 있다. 드디어 기능 구현을 다 했다.  
+> 지금까지 스터디 끝나고도 작업하던게 며칠인지... 호호 그래도 플러터 재밌어서 계속 하게 된다.  
 ## Getting Started
 
 This project is a starting point for a Flutter application.

@@ -37,7 +37,7 @@ class _StorageboxState extends State<Storagebox> {
             foregroundColor: MaterialStateProperty.all(Colors.black),
             padding: //패딩
 
-                MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+            MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
 
             textStyle: MaterialStateProperty.all(TextStyle(
               fontSize: FontSize(15.sp),
@@ -51,7 +51,8 @@ class _StorageboxState extends State<Storagebox> {
               RoundedRectangleBorder(
                 borderRadius:
 
-                    BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
+                BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
+
 
               ),
             ),

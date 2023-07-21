@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+
 import '../bottom.dart';
 
 class MyPage extends StatefulWidget {
@@ -43,7 +44,7 @@ class _MyPageState extends State<MyPage> {
             color: Colors.black,
           ),
           onPressed: () {
-            Get.to(Bottom());
+            Navigator.pop(context);
           },
           color: Colors.black,
         ),
@@ -59,7 +60,6 @@ class _MyPageState extends State<MyPage> {
           children: [
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 0.02.sh),
-
                 child: IconButton(
                   iconSize: 70,
                   icon: _image == null
@@ -118,6 +118,7 @@ class _MyPageState extends State<MyPage> {
               child: ListView(
                 physics: AlwaysScrollableScrollPhysics(),
                 children: [
+
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
                   getSetting(hint: "다크모드", nextPage: MyPage()),
@@ -130,6 +131,7 @@ class _MyPageState extends State<MyPage> {
           ],
         ),
       ),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

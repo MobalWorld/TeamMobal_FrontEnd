@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../bottom.dart';
 import '../master_key.dart';
 
 class ToungPage extends StatefulWidget {
@@ -34,6 +35,7 @@ class _ToungPageState extends State<ToungPage> {
           MasterKey(margin: 0),
         ],
       ),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

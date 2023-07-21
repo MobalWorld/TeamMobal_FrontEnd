@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/ui/Group/group_select.dart';
 
-import '../bottom.dart';
+
 
 class GroupCodeConfirm extends StatelessWidget {
   const GroupCodeConfirm({Key? key}) : super(key: key);

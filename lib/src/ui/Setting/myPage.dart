@@ -121,7 +121,7 @@ class _MyPageState extends State<MyPage> {
 
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
-                  getSetting(hint: "다크모드", nextPage: MyPage()),
+                  getSetting(hint: "다크 모드", nextPage: MyPage()),
                   getSetting(hint: "버전", nextPage: MyPage()),
                   getSetting(hint: "문의하기", nextPage: MyPage()),
                   // Add more settings options as needed

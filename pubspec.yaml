@@ -46,6 +46,8 @@ dependencies:
   google_fonts: ^5.1.0
   image_picker: ^1.0.1
   dotted_border: ^2.0.0+3
+  rive: ^0.11.5
+  animated_text_kit: ^4.2.2
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +80,7 @@ flutter:
     - assets/images/fubao.webp
     - assets/images/water52.jpg
     - assets/images/deer.jpg
+    - assets/rive/splash.riv
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

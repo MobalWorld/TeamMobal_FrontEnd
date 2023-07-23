@@ -42,29 +42,27 @@ class _GroupMainState extends State<GroupMain> {
           backgroundColor: Colors.white,
           toolbarHeight: 80,
           leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: Colors.black,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          title: Row(
-            children: [
-              CircleAvatar(
-                backgroundColor: Colors.white,
-                backgroundImage: AssetImage('assets/images/walrus.png'),
-                radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
+              icon: Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.black,
               ),
-              SizedBox(width: 2),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+          ),
+
+          title:
+            // mainAxisAlignment: MainAxisAlignment.center,
               Text(
-                '23-1 한동 위로팀',
-                style: TextStyle(color: Colors.black),
-              ),
-            ],
+                '23-1 한동 위로 팀',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
           ),
-          actions: [
+          actions:  [
             IconButton(
                 onPressed: () {
                   Get.to(Storagebox());
@@ -73,9 +71,10 @@ class _GroupMainState extends State<GroupMain> {
             IconButton(
                 onPressed: () {},
                 icon: Icon(Icons.notifications, color: Colors.black)),
-          ],
-          centerTitle: true,
-        ),
+            ],
+              centerTitle: true,
+          ),
+
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -84,7 +83,7 @@ class _GroupMainState extends State<GroupMain> {
             ),
             Padding(
               padding:
-                  EdgeInsets.symmetric(horizontal: 0.01.sh, vertical: 0.01.sh),
+                  EdgeInsets.symmetric(horizontal: 0.02.sh, vertical: 0.02.sh),
               child: Container(
                 height: 0.15.sh,
                 decoration: BoxDecoration(
@@ -135,7 +134,10 @@ class _GroupMainState extends State<GroupMain> {
                             backgroundColor: Colors.white,
                             backgroundImage:
                                 AssetImage('assets/images/walrus.png'),
-                            radius: 16, //프로필 사진 원 사이즈 -> 30으로 고정
+                            radius: 13, //프로필 사진 원 사이즈
+                          ),
+                          SizedBox(
+                            width: 5,
                           ),
                           Text(
                             '모발모발 한동 위로팀! 다들 화이팅하자!!!',

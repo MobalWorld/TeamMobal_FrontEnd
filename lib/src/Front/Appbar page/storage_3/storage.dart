@@ -73,6 +73,7 @@ class _StoragePageState extends State<StoragePage> {
                   onTap: () {
                     Navigator.push(
                       context,
+                      //finstorage가 아니라 새로 생긴 페이지로 가야함
                       MaterialPageRoute(builder: (context) => FinStorage()),
                     );
                   },

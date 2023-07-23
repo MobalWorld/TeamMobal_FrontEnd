@@ -5,9 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../Group/group_main.dart';
-import '../Group/group_select.dart';
 import '../Setting/bottom.dart';
-
 
 class WiroWriting extends StatefulWidget {
   const WiroWriting({super.key});
@@ -54,13 +52,11 @@ class _WiroWritingState extends State<WiroWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                  MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(Colors.white),
                                   elevation:
-                                  MaterialStateProperty.all<double>(0),
+                                      MaterialStateProperty.all<double>(0),
                                 ),
-                                onPressed: () {
-                                  Get.to(GroupSelect());
-                                },
+                                onPressed: () {},
                                 child: Text(
                                   '작성취소',
                                   style: TextStyle(color: Colors.red),
@@ -73,9 +69,9 @@ class _WiroWritingState extends State<WiroWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                  MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(Colors.white),
                                   elevation:
-                                  MaterialStateProperty.all<double>(0),
+                                      MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
                                   _showDialog(context);
@@ -92,9 +88,9 @@ class _WiroWritingState extends State<WiroWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                  MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(Colors.white),
                                   elevation:
-                                  MaterialStateProperty.all<double>(0),
+                                      MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
                                   Navigator.pop(context);
@@ -126,76 +122,6 @@ class _WiroWritingState extends State<WiroWriting> {
               onPressed: () {
                 _showDialog2(context);
               },
-              //   showModalBottomSheet(
-              //     context: context,
-              //     builder: (BuildContext context) {
-              //       return Container(
-              //         color: Colors.white,
-              //         height: 0.3.sh,
-              //         child: Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           children: [
-              //             SizedBox(
-              //               width: double.infinity,
-              //               height: 0.1.sh,
-              //               child: ElevatedButton(
-              //                 style: ButtonStyle(
-              //                   backgroundColor:
-              //                       MaterialStateProperty.all(Colors.white),
-              //                   elevation: MaterialStateProperty.all<double>(0),
-              //                 ),
-              //                 onPressed: () {
-              //                   Get.to(GroupSelect());
-              //                 },
-              //                 child: Text(
-              //                   '작성취소',
-              //                   style: TextStyle(color: Colors.red),
-              //                 ),
-              //               ),
-              //             ),
-              //             SizedBox(
-              //               height: 0.1.sh,
-              //               width: double.infinity,
-              //               child: ElevatedButton(
-              //                 style: ButtonStyle(
-              //                   backgroundColor:
-              //                       MaterialStateProperty.all(Colors.white),
-              //                   elevation: MaterialStateProperty.all<double>(0),
-              //                 ),
-              //                 onPressed: () {
-              //                   // Get.to(Setting());
-              //                 },
-              //                 child: Text(
-              //                   '임시저장',
-              //                   style: TextStyle(color: Colors.blue[300]),
-              //                 ),
-              //               ),
-              //             ),
-              //             SizedBox(
-              //               height: 0.1.sh,
-              //               width: double.infinity,
-              //               child: ElevatedButton(
-              //                 style: ButtonStyle(
-              //                   backgroundColor:
-              //                       MaterialStateProperty.all(Colors.white),
-              //                   elevation: MaterialStateProperty.all<double>(0),
-              //                 ),
-              //                 onPressed: () {
-              //                   Get.to(WiroWriting());
-              //                 },
-              //                 child: Text(
-              //                   '취소',
-              //                   style: TextStyle(
-              //                       color: Colors.black, fontSize: 14.sp),
-              //                 ),
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       );
-              //     },
-              //   );
-              // },
             ),
           ],
         ),

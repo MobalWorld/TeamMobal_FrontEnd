@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../Color_UI/padding.dart';
 import '../bottom.dart';
 import 'changeNickname.dart';
 
@@ -83,7 +83,7 @@ class _MyPageState extends State<MyPage> {
                   },
                 )),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
+              padding: GetPadding(),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -111,7 +111,7 @@ class _MyPageState extends State<MyPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
+              padding: GetPadding(),
               child: Divider(
                 height: 10,
                 color: Colors.black,
@@ -121,6 +121,7 @@ class _MyPageState extends State<MyPage> {
             Expanded(
               child: ListView(
                 physics: AlwaysScrollableScrollPhysics(),
+                
                 children: [
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
@@ -137,8 +138,6 @@ class _MyPageState extends State<MyPage> {
       bottomNavigationBar: bottomWidget(),
     );
   }
-
-  EdgeInsets GetPadding() => EdgeInsets.symmetric(vertical: 0.02.sh);
 }
 
 ListTile getSetting({required String hint, required Widget nextPage}) {
@@ -153,4 +152,3 @@ ListTile getSetting({required String hint, required Widget nextPage}) {
     },
   );
 }
-

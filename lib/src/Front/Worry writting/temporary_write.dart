@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
+import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 
 import '../Group/group_main.dart';
 import '../Group/group_select.dart';
@@ -55,9 +55,9 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                  MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(Colors.white),
                                   elevation:
-                                  MaterialStateProperty.all<double>(0),
+                                      MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
                                   Get.to(GroupSelect());
@@ -74,9 +74,9 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                  MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(Colors.white),
                                   elevation:
-                                  MaterialStateProperty.all<double>(0),
+                                      MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
                                   _showDialog(context);
@@ -93,9 +93,9 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                  MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(Colors.white),
                                   elevation:
-                                  MaterialStateProperty.all<double>(0),
+                                      MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
                                   Navigator.pop(context);
@@ -132,14 +132,13 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
               onPressed: () {
                 Navigator.pop(context);
               },
-
             ),
           ],
         ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 0.03.sh, vertical: 0.02.sh),
+          padding: GetPadding(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

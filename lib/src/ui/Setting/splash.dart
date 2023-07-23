@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rive/rive.dart';
 
 import '../login/login.dart';
 
@@ -19,7 +20,7 @@ class _SplashState extends State<Splash> {
   }
 
   Future<void> _navigateToMainScreen() async {
-    await Future.delayed(Duration(seconds: 2)); // Adjust the duration as needed
+    await Future.delayed(Duration(seconds: 3)); // Adjust the duration as needed
     Get.to(LoginPage()); // Replace with the route for your main screen
   }
 
@@ -29,10 +30,10 @@ class _SplashState extends State<Splash> {
       body: Container(
         color: Colors.white, // Set the background color of your splash screen
         child: Center(
-          child: Icon(
-            Icons.water_drop_outlined,
-            size: 100,
-          ), // Replace 'splash.png' with the actual image file name
+          child: RiveAnimation.asset(
+            'assets/rive/splash.riv', // Use the RiveAnimation.asset widget
+            fit: BoxFit.contain, // Adjust the fit as needed
+          ),
         ),
       ),
     );

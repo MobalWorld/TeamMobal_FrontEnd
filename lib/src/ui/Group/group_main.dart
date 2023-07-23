@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../worry_miri.dart';
+import '../appbar page/alarm.dart';
 import '../bottom.dart';
 import '../storagebox_btn.dart';
 
@@ -69,7 +70,9 @@ class _GroupMainState extends State<GroupMain> {
                 },
                 icon: Icon(Icons.mail_outline, color: Colors.black)),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(AlarmPage());
+                },
                 icon: Icon(Icons.notifications, color: Colors.black)),
             ],
               centerTitle: true,

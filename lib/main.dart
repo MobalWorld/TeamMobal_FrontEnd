@@ -1,9 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:mobalworld/src/ui/Color/colors.dart';
-import 'package:mobalworld/src/ui/Group/group_code_confirm.dart';
 import 'package:provider/provider.dart';
 import 'firebase/firebase_options.dart';
 import 'src/ui/Setting/splash.dart';
@@ -14,6 +14,10 @@ void main() async {
     // 옵션 설정도 중요
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Fix the screen orientation to portraitUp
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(MyApp());
 }
 

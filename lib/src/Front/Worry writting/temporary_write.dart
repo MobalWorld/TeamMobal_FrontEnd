@@ -145,7 +145,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
             children: [
               TextField(
                 decoration: InputDecoration(
-                  labelText: '제목',
+                  labelText: '제목 : 쓰다만 글이지롱 ',
                 ),
                 onChanged: (value) {
                   setState(() {

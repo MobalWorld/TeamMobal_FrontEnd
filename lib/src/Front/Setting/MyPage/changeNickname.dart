@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:mobalworld/src/Front/Setting/MyPage/myPage.dart';
 
 class ChangeNickName extends StatefulWidget {
@@ -27,7 +28,7 @@ class _ChangeNickNameState extends State<ChangeNickName> {
           )),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 0.03.sh, vertical: 0.02.sh),
+          padding: GetPadding(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

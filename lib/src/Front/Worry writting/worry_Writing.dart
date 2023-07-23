@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../Appbar page/storage_3/temporary_storage.dart';
+import '../Color_UI/padding.dart';
 import '../Group/group_main.dart';
 import '../Group/group_select.dart';
 import '../Setting/bottom.dart';
@@ -65,7 +67,7 @@ class _WorryWritingState extends State<WorryWriting> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Get.to(GroupSelect());
+                                  Get.to(GroupMain());
                                 },
                                 child: Text(
                                   '작성취소',
@@ -149,83 +151,13 @@ class _WorryWritingState extends State<WorryWriting> {
               onPressed: () {
                 _showDialog2(context);
               },
-              //   showModalBottomSheet(
-              //     context: context,
-              //     builder: (BuildContext context) {
-              //       return Container(
-              //         color: Colors.white,
-              //         height: 0.3.sh,
-              //         child: Column(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           children: [
-              //             SizedBox(
-              //               width: double.infinity,
-              //               height: 0.1.sh,
-              //               child: ElevatedButton(
-              //                 style: ButtonStyle(
-              //                   backgroundColor:
-              //                       MaterialStateProperty.all(Colors.white),
-              //                   elevation: MaterialStateProperty.all<double>(0),
-              //                 ),
-              //                 onPressed: () {
-              //                   Get.to(GroupSelect());
-              //                 },
-              //                 child: Text(
-              //                   '작성취소',
-              //                   style: TextStyle(color: Colors.red),
-              //                 ),
-              //               ),
-              //             ),
-              //             SizedBox(
-              //               height: 0.1.sh,
-              //               width: double.infinity,
-              //               child: ElevatedButton(
-              //                 style: ButtonStyle(
-              //                   backgroundColor:
-              //                       MaterialStateProperty.all(Colors.white),
-              //                   elevation: MaterialStateProperty.all<double>(0),
-              //                 ),
-              //                 onPressed: () {
-              //                   // Get.to(Setting());
-              //                 },
-              //                 child: Text(
-              //                   '임시저장',
-              //                   style: TextStyle(color: Colors.blue[300]),
-              //                 ),
-              //               ),
-              //             ),
-              //             SizedBox(
-              //               height: 0.1.sh,
-              //               width: double.infinity,
-              //               child: ElevatedButton(
-              //                 style: ButtonStyle(
-              //                   backgroundColor:
-              //                       MaterialStateProperty.all(Colors.white),
-              //                   elevation: MaterialStateProperty.all<double>(0),
-              //                 ),
-              //                 onPressed: () {
-              //                   Get.to(WorryWriting());
-              //                 },
-              //                 child: Text(
-              //                   '취소',
-              //                   style: TextStyle(
-              //                       color: Colors.black, fontSize: 14.sp),
-              //                 ),
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       );
-              //     },
-              //   );
-              // },
             ),
           ],
         ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 0.03.sh, vertical: 0.02.sh),
+          padding: GetPadding(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -269,7 +201,7 @@ void _showDialog(BuildContext context) {
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(GroupMain()); // Close the dialog
+              Get.to(Temporay_StoragePage()); // Close the dialog
             },
             child: Text('확인'),
           ),

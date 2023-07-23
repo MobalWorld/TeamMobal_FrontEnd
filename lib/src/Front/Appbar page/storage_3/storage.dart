@@ -2,10 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
+import 'package:mobalworld/src/Front/Group/worry_and_wiiroo.dart';
 import 'package:mobalworld/src/Front/Wiro_Writing/wiro_writing.dart';
 
 import '../../Setting/bottom.dart';
-import '../../Group/worry_and_wiiroo.dart';
 
 class StoragePage extends StatefulWidget {
   const StoragePage({super.key});
@@ -74,7 +75,7 @@ class _StoragePageState extends State<StoragePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => WiroWriting()),
+                      MaterialPageRoute(builder: (context) => WiroStorage()),
                     );
                   },
                   dense: false,

@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+<<<<<<< HEAD:lib/src/worry_miri.dart
+import 'package:mobalworld/src/ui/bottom.dart';
+import 'package:mobalworld/src/ui/padding.dart';
+import 'package:mobalworld/src/ui/storagebox_btn.dart';
+=======
 import 'package:mobalworld/src/Front/Setting/bottom.dart';
 import 'package:mobalworld/src/Front/appbar%20page/storage_3/storagebox_btn.dart';
+>>>>>>> 93c7792caa1d46aa4d3313eeba328222b498aef7:lib/src/Front/Group/worry_miri.dart
 
 class GroupMiri extends StatefulWidget {
   const GroupMiri({Key? key}) : super(key: key);
@@ -42,20 +48,14 @@ class _GroupMiriState extends State<GroupMiri> {
               Navigator.pop(context);
             },
           ),
-          title: Row(
-            children: [
-              CircleAvatar(
-                backgroundColor: Colors.white,
-                backgroundImage: AssetImage('assets/images/walrus.png'),
-                radius: 25, //프로필 사진 원 사이즈 -> 30으로 고정
-              ),
-              SizedBox(width: 2),
+          title:
               Text(
                 '23-1 한동 위로팀',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.black,fontWeight: FontWeight.w600, fontSize: 20),
+                textAlign: TextAlign.center,
               ),
-            ],
-          ),
+
+
           actions: [
             IconButton(
                 onPressed: () {
@@ -78,13 +78,11 @@ class _GroupMiriState extends State<GroupMiri> {
               child: Container(
                 child: ListView.builder(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 0.01.sh, vertical: 40),
+                      GetPadding(),
                   itemCount: name.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Padding(
-                      padding: EdgeInsets.only(bottom: 40),
-                      child: Container(
-                        height: 0.50.sh,
+                    return Container(
+                        height: 0.40.sh,
                         decoration: BoxDecoration(
                           color: Theme.of(context).colorScheme.primaryContainer,
                           borderRadius: BorderRadius.circular(20),
@@ -109,7 +107,7 @@ class _GroupMiriState extends State<GroupMiri> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              padding: GetPadding(),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -174,34 +172,33 @@ class _GroupMiriState extends State<GroupMiri> {
                             ),
                           ],
                         ),
-                      ),
-                    );
+                      );
+
                   },
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.01.sh),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            Theme.of(context).colorScheme.secondaryContainer,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      ),
-                      onPressed: () {
-                      },
-                      child: Text('위로 작성하기',style: TextStyle(color: Colors.black),),
-                    ),
-                  ),
-                ],
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: GetPadding(),
+                  child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  Theme.of(context).colorScheme.secondaryContainer,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            ),
+                            onPressed: () {
+                            },
+                            child: Text('위로 작성하기',style: TextStyle(color: Colors.black),),
+                          ),
+                ),
+              ],
             ),
+
             SizedBox(
-              height: 0.01.sh,
+              height: 0.26.sh,
             ),
           ],
         ),

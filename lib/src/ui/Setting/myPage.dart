@@ -61,7 +61,7 @@ class _MyPageState extends State<MyPage> {
         child: Column(
           children: [
             Padding(
-                padding: EdgeInsets.symmetric(vertical: 0.02.sh),
+                padding: GetPadding(),
                 child: IconButton(
                   iconSize: 70,
                   icon: _image == null
@@ -137,6 +137,8 @@ class _MyPageState extends State<MyPage> {
       bottomNavigationBar: bottomWidget(),
     );
   }
+
+  EdgeInsets GetPadding() => EdgeInsets.symmetric(vertical: 0.02.sh);
 }
 
 ListTile getSetting({required String hint, required Widget nextPage}) {

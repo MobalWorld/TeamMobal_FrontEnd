@@ -1,10 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:mobalworld/src/Front/Group/group_select.dart';
 
-import '../../Color_UI/padding.dart';
 import '../bottom.dart';
 import 'changeNickname.dart';
 
@@ -15,9 +16,7 @@ class MyPage extends StatefulWidget {
   State<MyPage> createState() => _MyPageState();
 }
 
-
 var _nickName = '남극 펭귄';
-
 
 class _MyPageState extends State<MyPage> {
   File? _image;
@@ -46,7 +45,7 @@ class _MyPageState extends State<MyPage> {
             color: Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Get.to(GroupSelect());
           },
           color: Colors.black,
         ),
@@ -66,24 +65,24 @@ class _MyPageState extends State<MyPage> {
                   iconSize: 70,
                   icon: _image == null
                       ? CircleAvatar(
-                    backgroundColor: Colors.white,
-                    backgroundImage: AssetImage(
-                      'assets/images/peng1.jpg',
-                    ),
-                    radius: 70,
-                  )
+                          backgroundColor: Colors.white,
+                          backgroundImage: AssetImage(
+                            'assets/images/peng1.jpg',
+                          ),
+                          radius: 70,
+                        )
                       : CircleAvatar(
-                    backgroundImage: FileImage(
-                      _image!,
-                    ),
-                    radius: 70,
-                  ), // Display the selected image
+                          backgroundImage: FileImage(
+                            _image!,
+                          ),
+                          radius: 70,
+                        ), // Display the selected image
                   onPressed: () {
                     _pickImageFromGallery();
                   },
                 )),
             Padding(
-              padding: GetPadding(),
+              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -111,7 +110,7 @@ class _MyPageState extends State<MyPage> {
               ),
             ),
             Padding(
-              padding: GetPadding(),
+              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
               child: Divider(
                 height: 10,
                 color: Colors.black,
@@ -121,13 +120,12 @@ class _MyPageState extends State<MyPage> {
             Expanded(
               child: ListView(
                 physics: AlwaysScrollableScrollPhysics(),
-                
                 children: [
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
-                  getSetting(hint: "다크 모드", nextPage: MyPage()),
                   getSetting(hint: "버전", nextPage: MyPage()),
                   getSetting(hint: "문의하기", nextPage: MyPage()),
+                  getDark(hint: "다크 모드", nextPage: MyPage()),
                   // Add more settings options as needed
                 ],
               ),
@@ -136,6 +134,22 @@ class _MyPageState extends State<MyPage> {
         ),
       ),
       bottomNavigationBar: bottomWidget(),
+    );
+  }
+
+  EdgeInsets GetPadding() => EdgeInsets.symmetric(vertical: 0.02.sh);
+
+  bool _lights = false; // 다크 모드 꺼져있음
+  //getDark 다크모드 토글 적용
+  Widget getDark({required String hint, required Widget nextPage}) {
+    return SwitchListTile(
+      title: const Text('다크 모드'),
+      value: _lights,
+      onChanged: (bool value) {
+        setState(() {
+          _lights = value;
+        });
+      },
     );
   }
 }

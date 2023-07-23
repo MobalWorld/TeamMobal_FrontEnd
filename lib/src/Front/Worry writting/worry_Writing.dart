@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../Color_UI/padding.dart';
 import '../Group/group_main.dart';
 import '../Group/group_select.dart';
 import '../Setting/bottom.dart';
@@ -225,7 +226,7 @@ class _WorryWritingState extends State<WorryWriting> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 0.03.sh, vertical: 0.02.sh),
+          padding: GetPadding(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

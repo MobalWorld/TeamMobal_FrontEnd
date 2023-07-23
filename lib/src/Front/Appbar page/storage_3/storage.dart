@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 
 import '../../Setting/bottom.dart';
 import '../../Group/worry_and_wiiroo.dart';
@@ -60,9 +61,7 @@ class _StoragePageState extends State<StoragePage> {
       /////body - 리스트 시작
       body: ListView(
         padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
-            EdgeInsets.symmetric(
-                horizontal: 0.005.sh, //일단 내가 임의로 바꿈
-                vertical: 0.04.sh),
+            GetPadding(),
         children: <Widget>[
           SingleChildScrollView(
             // 스크롤 가능하게

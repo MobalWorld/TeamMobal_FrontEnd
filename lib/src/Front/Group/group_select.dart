@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:mobalworld/src/Front/appbar%20page/alarm.dart';
 
 import '../Setting/bottom.dart';
@@ -74,15 +75,12 @@ class _GroupSelectState extends State<GroupSelect> {
       ),
 
       /////body - 리스트 시작
-      body: ListView(
-        padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
-            EdgeInsets.symmetric(
-                horizontal: 0.005.sh, //일단 내가 임의로 바꿈
-                vertical: 0.04.sh),
-        children: <Widget>[
-          SingleChildScrollView(
-            // 스크롤 가능하게
-            child: Column(
+      body: SafeArea(
+        child: ListView(
+          padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
+              GetPadding(),
+          children: <Widget>[
+            Column(
               children: [
                 // 23-1 한동 위로 팀
                 ListTile(
@@ -259,10 +257,8 @@ class _GroupSelectState extends State<GroupSelect> {
                 ),
               ],
             ),
-
-            // 새로운 리스트 항목 넣기
-          ),
-        ],
+          ],
+        ),
       ),
       bottomNavigationBar: bottomWidget(),
     );

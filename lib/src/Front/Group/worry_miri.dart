@@ -30,41 +30,39 @@ final List<String> image = <String>[
 class _GroupMiriState extends State<GroupMiri> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          toolbarHeight: 80,
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios_new,
-              color: Colors.black,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        toolbarHeight: 80,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
           ),
-          title:
-              Text(
-                '23-1 한동 위로팀',
-                style: TextStyle(color: Colors.black,fontWeight: FontWeight.w600, fontSize: 20),
-                textAlign: TextAlign.center,
-              ),
-
-
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Get.to(Storagebox());
-                },
-                icon: Icon(Icons.mail_outline, color: Colors.black)),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.notifications, color: Colors.black)),
-          ],
-          centerTitle: true,
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: Column(
+        title: Text(
+          '23-1 한동 위로팀',
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.w600, fontSize: 20),
+          textAlign: TextAlign.center,
+        ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Get.to(Storagebox());
+              },
+              icon: Icon(Icons.mail_outline, color: Colors.black)),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.notifications, color: Colors.black)),
+        ],
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
@@ -73,103 +71,98 @@ class _GroupMiriState extends State<GroupMiri> {
             Expanded(
               child: Container(
                 child: ListView.builder(
-                  padding:
-                      GetPadding(),
+                  padding: GetPadding(),
                   itemCount: name.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
-                        height: 0.40.sh,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.primaryContainer,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 2,
-                              blurRadius: 2,
-                              offset: Offset(0, 3),
+                      height: 0.40.sh,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.primaryContainer,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Transform.translate(
+                            offset: Offset(5, -20), // 왼쪽 상단으로 이동
+                            child: CircleAvatar(
+                              backgroundColor: Colors.white,
+                              backgroundImage: AssetImage(image[index]),
+                              radius: 20,
                             ),
-                          ],
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Transform.translate(
-                              offset: Offset(5, -20), // 왼쪽 상단으로 이동
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                backgroundImage: AssetImage(image[index]),
-                                radius: 20,
-                              ),
-                            ),
-                            Padding(
-                              padding: GetPadding(),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  // 이름과 날짜
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        name[index],
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                      // 이름과 날짜 사이 간격
-                                      SizedBox(width: 9),
-                                      Text(
-                                        date[index],
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                    ],
-                                  ),
-                                  // 이름과날짜 <-> 제목 사이 간격
-                                  SizedBox(height: 8),
-                                  // 제목
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Expanded(
-                                        child: Text(
-                                          title[index],
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          overflow: TextOverflow.ellipsis,
-                                          maxLines: 2,
+                          ),
+                          Padding(
+                            padding: GetPadding(),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                // 이름과 날짜
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      name[index],
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                    // 이름과 날짜 사이 간격
+                                    SizedBox(width: 9),
+                                    Text(
+                                      date[index],
+                                      style: TextStyle(fontSize: 14),
+                                    ),
+                                  ],
+                                ),
+                                // 이름과날짜 <-> 제목 사이 간격
+                                SizedBox(height: 8),
+                                // 제목
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        title[index],
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
                                         ),
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 2,
                                       ),
-                                    ],
-                                  ),
-                                  // 제목 <-> 내용 간격
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  // 내용
-                                  Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Expanded(
-                                        child: Text(
-                                          content[index],
-                                          style: TextStyle(fontSize: 12),
-                                          maxLines: 8,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
+                                    ),
+                                  ],
+                                ),
+                                // 제목 <-> 내용 간격
+                                SizedBox(
+                                  height: 8,
+                                ),
+                                // 내용
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        content[index],
+                                        style: TextStyle(fontSize: 12),
+                                        maxLines: 8,
+                                        overflow: TextOverflow.ellipsis,
                                       ),
-                                    ],
-                                  ),
-                                ],
-                              ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                      );
-
+                          ),
+                        ],
+                      ),
+                    );
                   },
                 ),
               ),
@@ -180,26 +173,28 @@ class _GroupMiriState extends State<GroupMiri> {
                 Padding(
                   padding: GetPadding(),
                   child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  Theme.of(context).colorScheme.secondaryContainer,
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                            ),
-                            onPressed: () {
-                            },
-                            child: Text('위로 작성하기',style: TextStyle(color: Colors.black),),
-                          ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          Theme.of(context).colorScheme.secondaryContainer,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      '위로 작성하기',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
                 ),
               ],
             ),
-
             SizedBox(
               height: 0.26.sh,
             ),
           ],
         ),
-        bottomNavigationBar: bottomWidget(),
       ),
+      bottomNavigationBar: bottomWidget(),
     );
   }
 }

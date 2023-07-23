@@ -21,7 +21,7 @@ class _WiroWritingState extends State<WiroWriting> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        leading: IconButton(
+        leading:구 IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
             color: Colors.black,

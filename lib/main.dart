@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:mobalworld/src/ui/Color/colors.dart';
+import 'package:mobalworld/src/Front/Color_UI/colors.dart';
 import 'package:provider/provider.dart';
 import 'firebase/firebase_options.dart';
-import 'src/ui/Setting/splash.dart';
+import 'src/Front/Setting/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

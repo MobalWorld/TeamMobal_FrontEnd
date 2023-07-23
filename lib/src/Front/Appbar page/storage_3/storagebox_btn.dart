@@ -34,19 +34,22 @@ class _StorageboxState extends State<Storagebox> {
             Get.to(nextPage);
           },
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(beige),
+            // backgroundColor: MaterialStateProperty.all(beige),
+            // 색 변경 - 분홍색으로
+            backgroundColor: MaterialStateProperty.all(Theme.of(context).colorScheme.primaryContainer,),
             foregroundColor: MaterialStateProperty.all(Colors.black),
             padding: //패딩
 
             MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
 
             textStyle: MaterialStateProperty.all(TextStyle(
-              fontSize: FontSize(15.sp),
+              fontSize: FontSize(20.sp),
               fontWeight: FontWeight.w700,
             )),
             side: MaterialStateProperty.all(BorderSide(
               width: 1.0, // 테두리의 두께를 조정하세요
-              color: beige, // 테두리의 색상을 원하는 색상으로 변경하세요
+              // 테두리 색상 분홍색으로 변경
+              color: Theme.of(context).colorScheme.primaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
             )),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
@@ -102,15 +105,18 @@ class _StorageboxState extends State<Storagebox> {
             children: [
               CircleAvatar(
                 backgroundColor: Colors.white,
-                backgroundImage: AssetImage('assets/images/walrus.png'),
-                radius: 40,
+                backgroundImage: AssetImage('assets/images/peng1.jpg'),
+                radius: 50,
               ),
               SizedBox(
                 height: 0.015.sh,
               ),
               Text(
-                '바다 코끼리',
-                style: TextStyle(color: Colors.black, fontSize: 20),
+                '남극 펭귄',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight:FontWeight.w600),
               ),
               SizedBox(
                 height: 0.03.sh,
@@ -119,7 +125,7 @@ class _StorageboxState extends State<Storagebox> {
                 // 바다 코끼리와 위로 보관함 사이 여백 박스
                 height: 0.1.sh,
               ),
-              getButton(hint: "위로 보관함", nextPage: StoragePage()),
+              getButton(hint: "위로 보관함", nextPage: StoragePage(),),
               SizedBox(
                 height: 0.03.sh,
               ),

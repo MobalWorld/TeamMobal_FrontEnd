@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../Color_UI/padding.dart';
+import '../../Group/worry_and_wiiroo.dart';
 import '../../Setting/bottom.dart';
 
 class Worry_StoragePage extends StatefulWidget {
@@ -64,6 +65,12 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
               children: [
                 // 고민 1
                 ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => FinStorage()),
+                    );
+                  },
                   dense: false,
                   title: Text(
                     "매일 매일 목말라",

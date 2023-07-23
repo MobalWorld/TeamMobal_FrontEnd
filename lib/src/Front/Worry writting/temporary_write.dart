@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 
+import '../Appbar page/storage_3/temporary_storage.dart';
 import '../Group/group_main.dart';
 import '../Group/group_select.dart';
 import '../Setting/bottom.dart';
@@ -182,7 +183,7 @@ void _showDialog(BuildContext context) {
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(GroupMain()); // Close the dialog
+              Get.to(Temporay_StoragePage()); // Close the dialog
             },
             child: Text('확인'),
           ),

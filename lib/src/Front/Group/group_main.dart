@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
-import '../Appbar page/alarm.dart';
+import 'package:mobalworld/src/Front/Group/worry_miri.dart';
 import '../Appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
-import 'worry_miri.dart';
+import '../appbar page/alarm.dart';
+
 
 class GroupMain extends StatefulWidget {
   const GroupMain({Key? key}) : super(key: key);
@@ -37,46 +37,48 @@ final List<String> image = <String>[
 class _GroupMainState extends State<GroupMain> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        toolbarHeight: 80,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.black,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          toolbarHeight: 80,
+          leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios_new,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
           ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title:
+
+          title:
             // mainAxisAlignment: MainAxisAlignment.center,
-            Text(
-          '23-1 한동 위로 팀',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
+              Text(
+                '23-1 한동 위로 팀',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
           ),
-          textAlign: TextAlign.center,
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Get.to(Storagebox());
-              },
-              icon: Icon(Icons.mail_outline, color: Colors.black)),
-          IconButton(
-              onPressed: () {
-                Get.to(AlarmPage());
-              },
-              icon: Icon(Icons.notifications, color: Colors.black)),
-        ],
-        centerTitle: true,
-      ),
-      body: SafeArea(
-        child: Column(
+          actions:  [
+            IconButton(
+                onPressed: () {
+                  Get.to(Storagebox());
+                },
+                icon: Icon(Icons.mail_outline, color: Colors.black)),
+            IconButton(
+                onPressed: () {
+                  Get.to(AlarmPage());
+                },
+                icon: Icon(Icons.notifications, color: Colors.black)),
+            ],
+              centerTitle: true,
+          ),
+
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
@@ -163,8 +165,7 @@ class _GroupMainState extends State<GroupMain> {
                       child: Container(
                         height: 140,
                         decoration: BoxDecoration(
-                          color:
-                              Theme.of(context).colorScheme.primaryContainer,
+                          color: Theme.of(context).colorScheme.primaryContainer,
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(
@@ -221,8 +222,7 @@ class _GroupMainState extends State<GroupMain> {
 
                                 // 이름과 날짜
                                 Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       name[index],
@@ -240,8 +240,7 @@ class _GroupMainState extends State<GroupMain> {
                                 SizedBox(height: 8),
                                 // 제목
                                 Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Expanded(
                                       child: Text(
@@ -262,8 +261,7 @@ class _GroupMainState extends State<GroupMain> {
                                 ),
                                 // 내용
                                 Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Expanded(
                                       child: Text(
@@ -287,8 +285,8 @@ class _GroupMainState extends State<GroupMain> {
             )
           ],
         ),
+        bottomNavigationBar: bottomWidget(),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

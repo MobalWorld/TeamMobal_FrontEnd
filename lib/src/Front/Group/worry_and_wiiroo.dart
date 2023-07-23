@@ -49,7 +49,7 @@ class _FinStorageState extends State<FinStorage> {
           child: Column(
             children: [
               SizedBox(
-                height: 0.08.sh,
+                height: 0.05.sh,
               ),
               Center(
                 child: Column(

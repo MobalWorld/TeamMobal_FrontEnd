@@ -16,7 +16,7 @@ class MyPage extends StatefulWidget {
 }
 
 
-var _nickName = '바다 코끼리';
+var _nickName = '남극 펭귄';
 
 
 class _MyPageState extends State<MyPage> {
@@ -66,18 +66,18 @@ class _MyPageState extends State<MyPage> {
                   iconSize: 70,
                   icon: _image == null
                       ? CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage(
-                            'assets/images/walrus.png',
-                          ),
-                          radius: 70,
-                        )
+                    backgroundColor: Colors.white,
+                    backgroundImage: AssetImage(
+                      'assets/images/peng1.jpg',
+                    ),
+                    radius: 70,
+                  )
                       : CircleAvatar(
-                          backgroundImage: FileImage(
-                            _image!,
-                          ),
-                          radius: 70,
-                        ), // Display the selected image
+                    backgroundImage: FileImage(
+                      _image!,
+                    ),
+                    radius: 70,
+                  ), // Display the selected image
                   onPressed: () {
                     _pickImageFromGallery();
                   },

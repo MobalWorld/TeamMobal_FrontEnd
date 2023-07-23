@@ -3,11 +3,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Group/group_main.dart';
 import '../../Color_UI/padding.dart';
 import '../../Setting/bottom.dart';
 import '../../Worry writting/temporary_write.dart';
-
-
 
 class Temporay_StoragePage extends StatefulWidget {
   const Temporay_StoragePage({super.key});
@@ -37,10 +37,9 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
               IconButton(
                 color: Colors.black,
                 icon: Icon(Icons.arrow_back_ios_new),
-
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.to(GroupMain());
                 },
               ),
             ],

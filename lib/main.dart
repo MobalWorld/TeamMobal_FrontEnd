@@ -1,12 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:mobalworld/src/ui/Color/colors.dart';
-import 'package:mobalworld/src/ui/Group/group_code_confirm.dart';
+import 'package:mobalworld/src/Front/Color_UI/colors.dart';
 import 'package:provider/provider.dart';
 import 'firebase/firebase_options.dart';
-import 'src/ui/Setting/splash.dart';
+import 'src/Front/Setting/splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +14,10 @@ void main() async {
     // 옵션 설정도 중요
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Fix the screen orientation to portraitUp
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(MyApp());
 }
 
@@ -28,6 +32,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
             colorScheme: lightColorScheme,
+            fontFamily: 'Yeongdeok Blueroad',
           ),
           //get방식의 상태 변화를 주고싶을때 사용
           debugShowCheckedModeBanner: false,

@@ -46,6 +46,9 @@ dependencies:
   google_fonts: ^5.1.0
   image_picker: ^1.0.1
   dotted_border: ^2.0.0+3
+  rive: ^0.11.5
+  animated_text_kit: ^4.2.2
+  font_awesome_flutter: ^10.5.0
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +81,7 @@ flutter:
     - assets/images/fubao.webp
     - assets/images/water52.jpg
     - assets/images/deer.jpg
+    - assets/rive/splash.riv
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -95,9 +99,13 @@ flutter:
        fonts:
          - asset: assets/fonts/Jalnan.ttf
            weight: 200
-     - family: KOTRA HOPE
+#     - family: KOTRA HOPE
+#       fonts:
+#         - asset: assets/fonts/KOTRA HOPE.ttf
+     - family: Yeongdeok Blueroad
        fonts:
-         - asset: assets/fonts/KOTRA HOPE.ttf
+         - asset: assets/fonts/Yeongdeok Blueroad.ttf
+
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/ui/Setting/myPage.dart';
@@ -29,16 +30,16 @@ BottomNavigationBar bottomWidget() {
   return BottomNavigationBar(
     items: <BottomNavigationBarItem>[
       BottomNavigationBarItem(
-        icon: Icon(Icons.home),
+        icon: FaIcon(FontAwesomeIcons.list),
         label: '그룹 리스트',
       ),
 
       BottomNavigationBarItem(
-        icon: Icon(Icons.edit),
+        icon: FaIcon(FontAwesomeIcons.pen),
         label: '고민 작성',
       ),
       BottomNavigationBarItem(
-        icon: Icon(Icons.person),
+        icon: FaIcon(FontAwesomeIcons.solidUser),
         label: '프로필',
       ),
     ],

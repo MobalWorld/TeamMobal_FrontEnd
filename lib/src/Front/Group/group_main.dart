@@ -37,8 +37,7 @@ final List<String> image = <String>[
 class _GroupMainState extends State<GroupMain> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
           toolbarHeight: 80,
@@ -286,7 +285,6 @@ class _GroupMainState extends State<GroupMain> {
           ],
         ),
         bottomNavigationBar: bottomWidget(),
-      ),
-    );
+      );
   }
 }

@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             useMaterial3: true,
             colorScheme: lightColorScheme,
+            fontFamily: 'Yeongdeok Blueroad',
           ),
           //get방식의 상태 변화를 주고싶을때 사용
           debugShowCheckedModeBanner: false,

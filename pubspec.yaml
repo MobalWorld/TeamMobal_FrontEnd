@@ -99,9 +99,13 @@ flutter:
        fonts:
          - asset: assets/fonts/Jalnan.ttf
            weight: 200
-     - family: KOTRA HOPE
+#     - family: KOTRA HOPE
+#       fonts:
+#         - asset: assets/fonts/KOTRA HOPE.ttf
+     - family: Yeongdeok Blueroad
        fonts:
-         - asset: assets/fonts/KOTRA HOPE.ttf
+         - asset: assets/fonts/Yeongdeok Blueroad.ttf
+
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

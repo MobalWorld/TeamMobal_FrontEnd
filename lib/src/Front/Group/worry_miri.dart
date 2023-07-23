@@ -3,14 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-<<<<<<< HEAD:lib/src/worry_miri.dart
-import 'package:mobalworld/src/ui/bottom.dart';
-import 'package:mobalworld/src/ui/padding.dart';
-import 'package:mobalworld/src/ui/storagebox_btn.dart';
-=======
 import 'package:mobalworld/src/Front/Setting/bottom.dart';
 import 'package:mobalworld/src/Front/appbar%20page/storage_3/storagebox_btn.dart';
->>>>>>> 93c7792caa1d46aa4d3313eeba328222b498aef7:lib/src/Front/Group/worry_miri.dart
+
+import '../Color_UI/padding.dart';
 
 class GroupMiri extends StatefulWidget {
   const GroupMiri({Key? key}) : super(key: key);

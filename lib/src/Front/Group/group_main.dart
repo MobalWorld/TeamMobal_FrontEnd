@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Group/worry_miri.dart';
 import '../Appbar page/storage_3/storagebox_btn.dart';
+import '../Color_UI/padding.dart';
 import '../Setting/bottom.dart';
 import '../appbar page/alarm.dart';
 
@@ -84,9 +85,7 @@ class _GroupMainState extends State<GroupMain> {
             height: 10,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 0.025.sw,
-            ),
+            padding: GetPadding(),
             child: Container(
               height: 120,
               width: double.infinity,

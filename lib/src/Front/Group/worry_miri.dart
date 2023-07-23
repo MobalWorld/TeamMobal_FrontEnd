@@ -7,6 +7,7 @@ import 'package:mobalworld/src/Front/Setting/bottom.dart';
 import 'package:mobalworld/src/Front/appbar%20page/storage_3/storagebox_btn.dart';
 
 import '../Color_UI/padding.dart';
+import '../Wiro_Writing/wiro_writing.dart';
 
 class GroupMiri extends StatefulWidget {
   const GroupMiri({Key? key}) : super(key: key);
@@ -167,25 +168,23 @@ class _GroupMiriState extends State<GroupMiri> {
                 ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: GetPadding(),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          Theme.of(context).colorScheme.secondaryContainer,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    onPressed: () {},
-                    child: Text(
-                      '위로 작성하기',
-                      style: TextStyle(color: Colors.black),
-                    ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: GetPadding(),
+                    child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor:
+                                    Theme.of(context).colorScheme.secondaryContainer,
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                              ),
+                              onPressed: () {
+                                Get.to(WiroWriting());
+                              },
+                              child: Text('위로 작성하기',style: TextStyle(color: Colors.black),),
+                            ),
                   ),
-                ),
               ],
             ),
             SizedBox(

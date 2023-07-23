@@ -58,33 +58,31 @@ class _MyPageState extends State<MyPage> {
         elevation: 1,
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-                padding: GetPadding(),
-                child: IconButton(
-                  iconSize: 70,
-                  icon: _image == null
-                      ? CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage(
-                            'assets/images/walrus.png',
-                          ),
-                          radius: 70,
-                        )
-                      : CircleAvatar(
-                          backgroundImage: FileImage(
-                            _image!,
-                          ),
-                          radius: 70,
-                        ), // Display the selected image
-                  onPressed: () {
-                    _pickImageFromGallery();
-                  },
-                )),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
-              child: Row(
+        child: SingleChildScrollView(
+          padding: GetPadding(),
+          child: Column(
+            children: [
+              IconButton(
+                iconSize: 70,
+                icon: _image == null
+                    ? CircleAvatar(
+                        backgroundColor: Colors.white,
+                        backgroundImage: AssetImage(
+                          'assets/images/walrus.png',
+                        ),
+                        radius: 70,
+                      )
+                    : CircleAvatar(
+                        backgroundImage: FileImage(
+                          _image!,
+                        ),
+                        radius: 70,
+                      ), // Display the selected image
+                onPressed: () {
+                  _pickImageFromGallery();
+                },
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
@@ -109,29 +107,26 @@ class _MyPageState extends State<MyPage> {
                   )
                 ],
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
-              child: Divider(
+              Divider(
                 height: 10,
                 color: Colors.black,
                 thickness: 1,
               ),
-            ),
-            Expanded(
-              child: ListView(
-                physics: AlwaysScrollableScrollPhysics(),
-                children: [
-                  getSetting(hint: "계정 정보", nextPage: MyPage()),
-                  getSetting(hint: "그룹 관리", nextPage: MyPage()),
-                  getSetting(hint: "다크 모드", nextPage: MyPage()),
-                  getSetting(hint: "버전", nextPage: MyPage()),
-                  getSetting(hint: "문의하기", nextPage: MyPage()),
-                  // Add more settings options as needed
-                ],
+              Expanded(
+                child: ListView(
+                  physics: AlwaysScrollableScrollPhysics(),
+                  children: [
+                    getSetting(hint: "계정 정보", nextPage: MyPage()),
+                    getSetting(hint: "그룹 관리", nextPage: MyPage()),
+                    getSetting(hint: "다크 모드", nextPage: MyPage()),
+                    getSetting(hint: "버전", nextPage: MyPage()),
+                    getSetting(hint: "문의하기", nextPage: MyPage()),
+                    // Add more settings options as needed
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: bottomWidget(),

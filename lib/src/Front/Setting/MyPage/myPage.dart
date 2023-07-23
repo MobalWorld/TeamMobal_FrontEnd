@@ -82,7 +82,7 @@ class _MyPageState extends State<MyPage> {
                   },
                 )),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
+              padding: GetPadding(),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -109,10 +109,13 @@ class _MyPageState extends State<MyPage> {
                 ],
               ),
             ),
-            Divider(
-              height: 10,
-              color: Colors.black,
-              thickness: 1,
+            Padding(
+              padding: GetPadding(),
+              child: Divider(
+                height: 10,
+                color: Colors.black,
+                thickness: 1,
+              ),
             ),
             Expanded(
               child: ListView(

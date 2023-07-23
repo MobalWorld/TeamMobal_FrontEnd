@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/temporary_storage.dart';
+import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 
 import '../Group/group_main.dart';
 import '../Setting/bottom.dart';
@@ -56,7 +58,9 @@ class _WiroWritingState extends State<WiroWriting> {
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Get.to(GroupMain());
+                                },
                                 child: Text(
                                   '작성취소',
                                   style: TextStyle(color: Colors.red),
@@ -128,7 +132,7 @@ class _WiroWritingState extends State<WiroWriting> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 0.03.sh, vertical: 0.02.sh),
+          padding: GetPadding(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -172,7 +176,7 @@ void _showDialog(BuildContext context) {
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(GroupMain()); // Close the dialog
+              Get.to(Temporay_StoragePage()); // Close the dialog
             },
             child: Text('확인'),
           ),

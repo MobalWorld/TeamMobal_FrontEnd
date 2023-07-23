@@ -69,10 +69,13 @@ class _JoinMakePageState extends State<JoinMakePage> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            '편지함을 만들고 싶나요?',
-                            style: TextStyle(
-                                fontSize: 20,),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              '편지함을 만들고 싶나요?',
+                              style: TextStyle(
+                                  fontSize: 20,),
+                            ),
                           ),
                           SizedBox(
                             height: 90,
@@ -82,23 +85,26 @@ class _JoinMakePageState extends State<JoinMakePage> {
                       Container(
                         child: Transform.translate(
                           offset: Offset(0, 40),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          GoogleAdditionalPage()));
-                            },
-                            child: Text(
-                              '만들기',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w400,
-                                 ),
-                            ),
-                            style: TextButton.styleFrom(
-                              backgroundColor: Color(0xFFFCCAA9),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            GoogleAdditionalPage()));
+                              },
+                              child: Text(
+                                '만들기',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
+                                   ),
+                              ),
+                              style: TextButton.styleFrom(
+                                backgroundColor: Color(0xFFFCCAA9),
+                              ),
                             ),
                           ),
                         ),
@@ -129,10 +135,16 @@ class _JoinMakePageState extends State<JoinMakePage> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              '편지함을 주소를 알고 있나요?',
-                              style: TextStyle(
-                                  fontSize: 20,),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  '편지함을 만들고 싶나요?',
+                                  style: TextStyle(
+                                    fontSize: 20,),
+                                ),
+                              ),
                             ),
                             SizedBox(
                               height: 90,
@@ -142,23 +154,26 @@ class _JoinMakePageState extends State<JoinMakePage> {
                         Container(
                           child: Transform.translate(
                             offset: Offset(0, 40),
-                            child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        //!!!이 아래 LoginPage()가 아니라 그룹 코드 작성하는 페이지로 이동해야함!!!
-                                        builder: (context) => LoginPage()));
-                              },
-                              child: Text(
-                                '참여하기',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w400,
-                                   ),
-                              ),
-                              style: TextButton.styleFrom(
-                                backgroundColor: Color(0xFFFCCAA9),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          //!!!이 아래 LoginPage()가 아니라 그룹 코드 작성하는 페이지로 이동해야함!!!
+                                          builder: (context) => LoginPage()));
+                                },
+                                child: Text(
+                                  '참여하기',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w400,
+                                     ),
+                                ),
+                                style: TextButton.styleFrom(
+                                  backgroundColor: Color(0xFFFCCAA9),
+                                ),
                               ),
                             ),
                           ),

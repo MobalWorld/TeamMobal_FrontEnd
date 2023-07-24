@@ -137,7 +137,6 @@ class _MyPageState extends State<MyPage> {
     );
   }
 
-
   bool _lights = false; // 다크 모드 꺼져있음
   //getDark 다크모드 토글 적용
   Widget getDark({required String hint, required Widget nextPage}) {

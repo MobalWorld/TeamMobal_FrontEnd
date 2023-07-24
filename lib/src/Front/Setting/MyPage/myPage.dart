@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobalworld/src/Front/Group/group_select.dart';
 
+import '../../Color_UI/padding.dart';
 import '../bottom.dart';
 import 'changeNickname.dart';
 
@@ -137,7 +137,6 @@ class _MyPageState extends State<MyPage> {
     );
   }
 
-  EdgeInsets GetPadding() => EdgeInsets.symmetric(vertical: 0.02.sh);
 
   bool _lights = false; // 다크 모드 꺼져있음
   //getDark 다크모드 토글 적용

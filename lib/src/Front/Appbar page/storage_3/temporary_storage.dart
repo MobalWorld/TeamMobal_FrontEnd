@@ -56,7 +56,6 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
           ),
         ),
       ),
-
       /////body - 리스트 시작
       body: ListView(
         padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기

@@ -136,10 +136,13 @@ class _JoinMakePageState extends State<JoinMakePage> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                '편지함을 주소를 알고 있나요?',
-                                style: TextStyle(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  '편지함을 만들고 싶나요?',
+                                  style: TextStyle(
                                     fontSize: 20,),
+                                ),
                               ),
                             ),
                             SizedBox(

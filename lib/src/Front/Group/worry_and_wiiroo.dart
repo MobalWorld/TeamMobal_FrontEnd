@@ -71,8 +71,9 @@ class _FinStorageState extends State<FinStorage> {
                               style: TextStyle(fontSize: 20),
                             ),
                             Divider(
-                              color:
-                                  Theme.of(context).colorScheme.tertiaryContainer,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .tertiaryContainer,
                             ),
                             Text(
                               '내용',
@@ -81,6 +82,9 @@ class _FinStorageState extends State<FinStorage> {
                           ],
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: 0.05.sh,
                     ),
                     Container(
                       height: 0.3.sh,

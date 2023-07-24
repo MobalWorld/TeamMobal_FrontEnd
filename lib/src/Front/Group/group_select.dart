@@ -77,6 +77,7 @@ class _GroupSelectState extends State<GroupSelect> {
       /////body - 리스트 시작
       body: SafeArea(
         child: ListView(
+          padding: GetPadding(),
           children: [
             Column(
               children: [

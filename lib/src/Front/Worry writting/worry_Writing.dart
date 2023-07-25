@@ -66,7 +66,7 @@ class _WorryWritingState extends State<WorryWriting> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Get.to(GroupMain());
+                                  Navigator.pop(context);
                                 },
                                 child: Text(
                                   '작성취소',

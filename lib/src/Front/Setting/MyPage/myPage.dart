@@ -39,7 +39,7 @@ class _MyPageState extends State<MyPage> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           '마이페이지',
           style: TextStyle(fontSize: 25, color: Colors.black),
         ),
@@ -54,7 +54,7 @@ class _MyPageState extends State<MyPage> {
                 child: IconButton(
                   iconSize: 70,
                   icon: _image == null
-                      ? CircleAvatar(
+                      ? const CircleAvatar(
                           backgroundColor: Colors.white,
                           backgroundImage: AssetImage(
                             'assets/images/peng1.jpg',
@@ -76,13 +76,13 @@ class _MyPageState extends State<MyPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 50,
                   ),
                   Expanded(
                     child: Text(
                       _nickName,
-                      style: TextStyle(fontSize: 17, color: Colors.black),
+                      style: const TextStyle(fontSize: 17, color: Colors.black),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -90,10 +90,10 @@ class _MyPageState extends State<MyPage> {
                     width: 50,
                     child: IconButton(
                       onPressed: () {
-                        Get.to(ChangeProfil());
+                        Get.to(const ChangeProfil());
                       },
-                      icon: Icon(Icons.edit),
-                      style: ButtonStyle(),
+                      icon: const Icon(Icons.edit),
+                      style: const ButtonStyle(),
                     ),
                   )
                 ],
@@ -101,7 +101,7 @@ class _MyPageState extends State<MyPage> {
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
-              child: Divider(
+              child: const Divider(
                 height: 10,
                 color: Colors.black,
                 thickness: 1,
@@ -109,13 +109,13 @@ class _MyPageState extends State<MyPage> {
             ),
             Expanded(
               child: ListView(
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 children: [
-                  getSetting(hint: "계정 정보", nextPage: MyPage()),
-                  getSetting(hint: "그룹 관리", nextPage: MyPage()),
-                  getSetting(hint: "버전", nextPage: MyPage()),
-                  getSetting(hint: "문의하기", nextPage: MyPage()),
-                  getDark(hint: "다크 모드", nextPage: MyPage()),
+                  getSetting(hint: "계정 정보", nextPage: const MyPage()),
+                  getSetting(hint: "그룹 관리", nextPage: const MyPage()),
+                  getSetting(hint: "버전", nextPage: const MyPage()),
+                  getSetting(hint: "문의하기", nextPage: const MyPage()),
+                  getDark(hint: "다크 모드", nextPage: const MyPage()),
                   // Add more settings options as needed
                 ],
               ),
@@ -148,9 +148,9 @@ ListTile getSetting({required String hint, required Widget nextPage}) {
   return ListTile(
     title: Text(
       hint,
-      style: TextStyle(fontSize: 17, color: Colors.black),
+      style: const TextStyle(fontSize: 17, color: Colors.black),
     ),
-    trailing: Icon(Icons.arrow_forward_ios_rounded),
+    trailing: const Icon(Icons.arrow_forward_ios_rounded),
     onTap: () {
       Get.to(nextPage);
     },

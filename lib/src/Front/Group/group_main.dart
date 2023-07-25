@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/Front/Group/group_select.dart';
 
 import '../Appbar page/alarm.dart';
 import '../Appbar page/storage_3/storagebox_btn.dart';
@@ -47,12 +48,12 @@ class _GroupMainState extends State<GroupMain> {
             color: Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Get.to(GroupSelect());
           },
         ),
         title:
-        // mainAxisAlignment: MainAxisAlignment.center,
-        Text(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            Text(
           '23-1 한동 위로 팀',
           style: TextStyle(
             color: Colors.black,
@@ -113,21 +114,21 @@ class _GroupMainState extends State<GroupMain> {
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black),
                             children: [
-                              TextSpan(
-                                text: '바다 표범',
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Color(0xFFF69B94),
-                                    fontWeight: FontWeight.w600),
-                              ),
-                              TextSpan(
-                                text: '님의 한마디!',
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w800),
-                              ),
-                            ])),
+                          TextSpan(
+                            text: '바다 표범',
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Color(0xFFF69B94),
+                                fontWeight: FontWeight.w600),
+                          ),
+                          TextSpan(
+                            text: '님의 한마디!',
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w800),
+                          ),
+                        ])),
                     SizedBox(height: 11),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -135,7 +136,7 @@ class _GroupMainState extends State<GroupMain> {
                         CircleAvatar(
                           backgroundColor: Colors.white,
                           backgroundImage:
-                          AssetImage('assets/images/walrus.png'),
+                              AssetImage('assets/images/walrus.png'),
                           radius: 16, //프로필 사진 원 사이즈 -> 30으로 고정
                         ),
                         Text(
@@ -153,7 +154,8 @@ class _GroupMainState extends State<GroupMain> {
             ),
             Expanded(
               child: ListView.builder(
-                padding: EdgeInsets.symmetric(horizontal: 0.025.sw, vertical: 0.04.sh),
+                padding: EdgeInsets.symmetric(
+                    horizontal: 0.025.sw, vertical: 0.04.sh),
                 itemCount: name.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
@@ -187,13 +189,15 @@ class _GroupMainState extends State<GroupMain> {
                                   actions: [
                                     TextButton(
                                       onPressed: () {
-                                        Navigator.of(context).pop(); // Close the AlertDialog
+                                        Navigator.of(context)
+                                            .pop(); // Close the AlertDialog
                                       },
                                       child: Text('취소'),
                                     ),
                                     TextButton(
                                       onPressed: () {
-                                        Get.to(GroupMiri()); // Close the AlertDialog
+                                        Get.to(
+                                            GroupMiri()); // Close the AlertDialog
                                       },
                                       child: Text('확인'),
                                     ),
@@ -207,14 +211,18 @@ class _GroupMainState extends State<GroupMain> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: [
                                       CircleAvatar(
                                         backgroundColor: Colors.white,
-                                        backgroundImage: AssetImage(image[index]),
+                                        backgroundImage:
+                                            AssetImage(image[index]),
                                         radius: 20,
                                       ),
-                                      SizedBox(width: 5,),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
                                       Text(
                                         name[index],
                                         style: TextStyle(fontSize: 14),
@@ -231,7 +239,8 @@ class _GroupMainState extends State<GroupMain> {
                                   SizedBox(height: 8),
                                   // 제목
                                   Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Expanded(
                                         child: Text(
@@ -252,7 +261,8 @@ class _GroupMainState extends State<GroupMain> {
                                   ),
                                   // 내용
                                   Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Expanded(
                                         child: Text(
@@ -267,7 +277,6 @@ class _GroupMainState extends State<GroupMain> {
                                 ],
                               ),
                             ),
-
                           ),
                         ),
                       ),

@@ -258,8 +258,6 @@ class _GroupSelectState extends State<GroupSelect> {
           ],
         ),
       ),
-
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

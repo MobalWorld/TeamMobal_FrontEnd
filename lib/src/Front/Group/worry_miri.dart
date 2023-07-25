@@ -6,15 +6,16 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Setting/bottom.dart';
 import 'package:mobalworld/src/Front/appbar%20page/storage_3/storagebox_btn.dart';
 
+import '../Appbar page/alarm.dart';
 import '../Color_UI/padding.dart';
 import '../Wiro_Writing/wiro_writing.dart';
 import 'group_main.dart';
 
-class GroupMiri extends StatefulWidget {
-  const GroupMiri({Key? key}) : super(key: key);
+class WorryMiri extends StatefulWidget {
+  const WorryMiri({Key? key}) : super(key: key);
 
   @override
-  State<GroupMiri> createState() => _GroupMiriState();
+  State<WorryMiri> createState() => _WorryMiriState();
 }
 
 final List<String> name = <String>['오이맛 수박'];
@@ -29,7 +30,7 @@ final List<String> image = <String>[
   'assets/images/water52.jpg',
 ];
 
-class _GroupMiriState extends State<GroupMiri> {
+class _WorryMiriState extends State<WorryMiri> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,11 +55,8 @@ class _GroupMiriState extends State<GroupMiri> {
         actions: [
           IconButton(
               onPressed: () {
-                Get.to(Storagebox());
+                Get.to(AlarmPage());
               },
-              icon: Icon(Icons.mail_outline, color: Colors.black)),
-          IconButton(
-              onPressed: () {},
               icon: Icon(Icons.notifications, color: Colors.black)),
         ],
         centerTitle: true,

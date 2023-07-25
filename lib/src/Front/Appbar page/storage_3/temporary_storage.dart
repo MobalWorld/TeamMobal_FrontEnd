@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/storagebox_btn.dart';
 import 'package:mobalworld/src/Front/Group/group_main.dart';
 import '../../Color_UI/padding.dart';
 import '../../Setting/bottom.dart';
@@ -39,7 +40,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                 icon: Icon(Icons.arrow_back_ios_new),
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
-                  Get.to(GroupMain());
+                  Get.to(Storagebox());
                 },
               ),
             ],
@@ -68,10 +69,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                 // 임시 작성글 1
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => TemporaryWrite()),
-                    );
+                    Get.to(TemporaryWrite());
                   },
                   dense: false,
                   // 사용자가 작성한 고민 글 제목 으로 보여주기

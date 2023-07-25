@@ -2,17 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
-
-
-
 
 import '../../Color_UI/padding.dart';
 import '../../Setting/bottom.dart';
-
-import '../../Group/worry_and_wiiroo.dart';
-import '../../Wiro_Writing/wiro_writing.dart';
-
 
 class StoragePage extends StatefulWidget {
   const StoragePage({super.key});
@@ -37,7 +31,6 @@ class _StoragePageState extends State<StoragePage> {
         child: AppBar(
           toolbarHeight: 75,
           backgroundColor: Colors.white,
-
           //뒤로가기 버튼
           leading: Row(
             children: [
@@ -77,10 +70,7 @@ class _StoragePageState extends State<StoragePage> {
                 // 위로 1st
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WiroStorage()),
-                    );
+                    Get.to(WiroStorage());
                   },
                   dense: false,
                   // 사용자가 작성한 고민 글 제목 으로 보여주기

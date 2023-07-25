@@ -104,7 +104,7 @@ class _WorryWritingState extends State<WorryWriting> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Navigator.pop(context);
+                                  Get.back();
                                 },
                                 child: Text(
                                   '취소',
@@ -196,11 +196,11 @@ void _showDialog(BuildContext context) {
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text('임시 저장'),
-        content: Text('임시 저장함으로 이동합니다'),
+        content: Text('임시 저장함에 보관됩니다.'),
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(Temporay_StoragePage()); // Close the dialog
+              Get.to(GroupMain()); // Close the dialog
             },
             child: Text('확인'),
           ),

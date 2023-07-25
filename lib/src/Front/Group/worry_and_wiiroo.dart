@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/worry_storage.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import '../appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
@@ -27,7 +29,7 @@ class _FinStorageState extends State<FinStorage> {
             color: Colors.black,
           ),
           onPressed: () {
-            Get.to(Storagebox());
+            Get.to(Worry_StoragePage());
           },
           color: Colors.black,
         ),

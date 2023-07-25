@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Group/group_main.dart';
 
 import 'storage.dart';
 import 'temporary_storage.dart';
 import 'worry_storage.dart';
 import '../../Setting/bottom.dart';
 import '../../Setting/master_key.dart';
-
 
 class Storagebox extends StatefulWidget {
   const Storagebox({Key? key}) : super(key: key);
@@ -36,11 +36,13 @@ class _StorageboxState extends State<Storagebox> {
           style: ButtonStyle(
             // backgroundColor: MaterialStateProperty.all(beige),
             // 색 변경 - 분홍색으로
-            backgroundColor: MaterialStateProperty.all(Theme.of(context).colorScheme.primaryContainer,),
+            backgroundColor: MaterialStateProperty.all(
+              Theme.of(context).colorScheme.primaryContainer,
+            ),
             foregroundColor: MaterialStateProperty.all(Colors.black),
             padding: //패딩
 
-            MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+                MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
 
             textStyle: MaterialStateProperty.all(TextStyle(
               fontSize: FontSize(20.sp),
@@ -49,15 +51,14 @@ class _StorageboxState extends State<Storagebox> {
             side: MaterialStateProperty.all(BorderSide(
               width: 1.0, // 테두리의 두께를 조정하세요
               // 테두리 색상 분홍색으로 변경
-              color: Theme.of(context).colorScheme.primaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
+              color: Theme.of(context)
+                  .colorScheme
+                  .primaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
             )),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius:
-
-                BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
-
-
+                    BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
               ),
             ),
           ),
@@ -91,7 +92,7 @@ class _StorageboxState extends State<Storagebox> {
             size: 30.sp,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Get.to(GroupMain());
           },
           color: Colors.black,
         ),
@@ -116,7 +117,7 @@ class _StorageboxState extends State<Storagebox> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
-                    fontWeight:FontWeight.w600),
+                    fontWeight: FontWeight.w600),
               ),
               SizedBox(
                 height: 0.03.sh,
@@ -125,7 +126,10 @@ class _StorageboxState extends State<Storagebox> {
                 // 바다 코끼리와 위로 보관함 사이 여백 박스
                 height: 0.1.sh,
               ),
-              getButton(hint: "위로 보관함", nextPage: StoragePage(),),
+              getButton(
+                hint: "위로 보관함",
+                nextPage: StoragePage(),
+              ),
               SizedBox(
                 height: 0.03.sh,
               ),

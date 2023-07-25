@@ -189,15 +189,15 @@ class _GroupMainState extends State<GroupMain> {
                                   actions: [
                                     TextButton(
                                       onPressed: () {
-                                        Navigator.of(context)
-                                            .pop(); // Close the AlertDialog
+                                        Get.back();
+                                        // Close the AlertDialog
                                       },
                                       child: Text('취소'),
                                     ),
                                     TextButton(
                                       onPressed: () {
                                         Get.to(
-                                            GroupMiri()); // Close the AlertDialog
+                                            WorryMiri()); // Close the AlertDialog
                                       },
                                       child: Text('확인'),
                                     ),

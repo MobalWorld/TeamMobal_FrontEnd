@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
+import 'package:mobalworld/src/Front/Group/group_main.dart';
+import 'package:mobalworld/src/Front/Group/worry_miri.dart';
 import '../appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
 
@@ -39,7 +41,9 @@ class _OverflowTextState extends State<OverflowText> {
       children: [
         Text(
           widget.text,
-          maxLines: _isTextOverflow && !_isMore ? 2 : null, // Adjust the maxLines value as needed
+          maxLines: _isTextOverflow && !_isMore
+              ? 2
+              : null, // Adjust the maxLines value as needed
           overflow: _isTextOverflow && !_isMore
               ? TextOverflow.ellipsis
               : TextOverflow.visible,
@@ -56,7 +60,8 @@ class _OverflowTextState extends State<OverflowText> {
               child: Text(
                 '더보기',
                 style: TextStyle(
-                  color: Colors.black, // Set your desired color for the "더보기" text
+                  color:
+                      Colors.black, // Set your desired color for the "더보기" text
                 ),
               ),
             ),
@@ -73,7 +78,8 @@ class _OverflowTextState extends State<OverflowText> {
               child: Text(
                 '숨기기',
                 style: TextStyle(
-                  color: Colors.black, // Set your desired color for the "숨기기" text
+                  color:
+                      Colors.black, // Set your desired color for the "숨기기" text
                 ),
               ),
             ),
@@ -82,7 +88,6 @@ class _OverflowTextState extends State<OverflowText> {
     );
   }
 }
-
 
 final _formKey = GlobalKey<FormState>();
 
@@ -106,7 +111,7 @@ class _WiroWritingState extends State<WiroWriting> {
             color: Colors.black,
           ),
           onPressed: () {
-            Get.to(Storagebox());
+            Get.to(WorryMiri());
           },
           color: Colors.black,
         ),
@@ -179,7 +184,8 @@ class _WiroWritingState extends State<WiroWriting> {
                         children: [
                           Expanded(
                             child: OverflowText(
-                              text:   '방학을 하고 항상 늦게 일어나고 있다. 빨리 일어나고 싶은데 온몸이 천근만근 너무 무겁다. 두근두근 설레는 마음으로 일어나고 싶어도 너무 잠이 부족하다. 수면부족의 큰 문제는 성격이 예민해진다는 것이고 이는 결국 다른 사람에게 상처를 줄 수 있을 만큼 예민해진다. 나는 언제쯤 잠을 많이 자게 될까? 그런데 주변을 보면 다들 늦게 자는 것 같다. 다크서클이 너무 심해서 동아리 이름을 다크라고 지어 다크서클이 되어도 좋을 것 같다. ',
+                              text:
+                                  '방학을 하고 항상 늦게 일어나고 있다. 빨리 일어나고 싶은데 온몸이 천근만근 너무 무겁다. 두근두근 설레는 마음으로 일어나고 싶어도 너무 잠이 부족하다. 수면부족의 큰 문제는 성격이 예민해진다는 것이고 이는 결국 다른 사람에게 상처를 줄 수 있을 만큼 예민해진다. 나는 언제쯤 잠을 많이 자게 될까? 그런데 주변을 보면 다들 늦게 자는 것 같다. 다크서클이 너무 심해서 동아리 이름을 다크라고 지어 다크서클이 되어도 좋을 것 같다. ',
                               maxLength: 1, // Set your desired max length here
                             ),
                           ),
@@ -187,7 +193,6 @@ class _WiroWritingState extends State<WiroWriting> {
                       ),
                     ],
                   ),
-
 
                   SizedBox(
                     height: 0.05.sh,
@@ -211,16 +216,14 @@ class _WiroWritingState extends State<WiroWriting> {
                                 labelText: '제목',
                               ),
                               onTapOutside: (event) => //다른 화면 누를 때 키보드 down
-                              FocusManager.instance.primaryFocus?.unfocus()
-                          ),
+                                  FocusManager.instance.primaryFocus
+                                      ?.unfocus()),
                           TextField(
                               decoration: InputDecoration(
-                                  labelText: '내용',alignLabelWithHint: true
-                              ),
+                                  labelText: '내용', alignLabelWithHint: true),
                               maxLines: 5,
                               onTapOutside: (event) => //다른 화면 누를 때 키보드 down
-                              FocusManager.instance.primaryFocus?.unfocus()
-                          )
+                                  FocusManager.instance.primaryFocus?.unfocus())
                         ],
                       ),
                     ),
@@ -231,19 +234,22 @@ class _WiroWritingState extends State<WiroWriting> {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
-                          Theme.of(context).colorScheme.tertiaryContainer,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                              Theme.of(context).colorScheme.tertiaryContainer,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
                         ),
                         onPressed: () {
-                          Get.to(WiroWriting());
+                          Get.to(GroupMain());
                         },
-                        child: Text('보내기',style: TextStyle(color: Colors.black),),
+                        child: Text(
+                          '보내기',
+                          style: TextStyle(color: Colors.black),
+                        ),
                       ),
                     ],
                   ),
                 ],
               ),
-
             ],
           ),
         ),

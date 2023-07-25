@@ -196,7 +196,7 @@ void _showDialog(BuildContext context) {
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text('임시 저장'),
-        content: Text('임시 저장함에 보관됩니다.'),
+        content: Text('임시 저장됩니다.'),
         actions: [
           TextButton(
             onPressed: () {

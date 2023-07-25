@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
-import '../Appbar page/alarm.dart';
+import 'package:mobalworld/src/Front/Group/worry_miri.dart';
 import '../Appbar page/storage_3/storagebox_btn.dart';
+import '../Color_UI/padding.dart';
 import '../Setting/bottom.dart';
-import 'worry_miri.dart';
+import '../appbar page/alarm.dart';
+
 
 class GroupMain extends StatefulWidget {
   const GroupMain({Key? key}) : super(key: key);
@@ -42,26 +43,27 @@ class _GroupMainState extends State<GroupMain> {
         backgroundColor: Colors.white,
         toolbarHeight: 80,
         leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.black,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+            icon: Icon(
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
         ),
+
         title:
-            // mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
             Text(
-          '23-1 한동 위로 팀',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-          ),
-          textAlign: TextAlign.center,
+              '23-1 한동 위로 팀',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+                fontSize: 20,
+              ),
+              textAlign: TextAlign.center,
         ),
-        actions: [
+        actions:  [
           IconButton(
               onPressed: () {
                 Get.to(Storagebox());
@@ -72,221 +74,214 @@ class _GroupMainState extends State<GroupMain> {
                 Get.to(AlarmPage());
               },
               icon: Icon(Icons.notifications, color: Colors.black)),
-        ],
-        centerTitle: true,
-      ),
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 0.025.sw,
-              ),
-              child: Container(
-                height: 120,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.secondaryContainer,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    RichText(
-                        text: TextSpan(
-                            text: '우리 팀의 이번주 위로왕 ',
-                            style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.black),
-                            children: [
-                          TextSpan(
-                            text: '바다 표범',
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Color(0xFFF69B94),
-                                fontWeight: FontWeight.w600),
-                          ),
-                          TextSpan(
-                            text: '님의 한마디!',
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w800),
-                          ),
-                        ])),
-                    SizedBox(height: 11),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage:
-                              AssetImage('assets/images/walrus.png'),
-                          radius: 16, //프로필 사진 원 사이즈 -> 30으로 고정
-                        ),
-                        Text(
-                          '모발모발 한동 위로팀! 다들 화이팅하자!!!',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w800,
-                              fontSize: 17.5,
-                              color: Colors.indigoAccent),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                child: ListView.builder(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: 0.025.sw, vertical: 0.04.sh),
-                  itemCount: name.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Padding(
-                      padding: EdgeInsets.only(bottom: 40),
-                      child: Container(
-                        height: 140,
-                        decoration: BoxDecoration(
-                          color:
-                              Theme.of(context).colorScheme.primaryContainer,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 2,
-                              blurRadius: 2,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            showDialog(
-                              context: context,
-                              builder: (context) => AlertDialog(
-                                title: Text('알림'),
-                                content: Text(
-                                    '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.of(context)
-                                          .pop(); // Close the AlertDialog
-                                    },
-                                    child: Text('취소'),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Get.to(
-                                          GroupMiri()); // Close the AlertDialog
-                                    },
-                                    child: Text('확인'),
-                                  ),
-                                ],
-                              ),
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20)),
-                            splashFactory: NoSplash
-                                .splashFactory, // Disable the splash effect
-                          ),
-                          child: Transform.translate(
-                            offset: Offset(5, -15),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                CircleAvatar(
-                                  backgroundColor: Colors.white,
-                                  backgroundImage: AssetImage(image[index]),
-                                  radius: 20,
-                                ),
+          ],
+            centerTitle: true,
+        ),
 
-                                // 이름과 날짜
-                                Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      name[index],
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                    // 이름과 날짜 사이 간격
-                                    SizedBox(width: 9),
-                                    Text(
-                                      date[index],
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                  ],
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: GetPadding(),
+            child: Container(
+              height: 120,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondaryContainer,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 2,
+                    blurRadius: 2,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                      text: TextSpan(
+                          text: '우리 팀의 이번주 위로왕 ',
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black),
+                          children: [
+                        TextSpan(
+                          text: '바다 표범',
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Color(0xFFF69B94),
+                              fontWeight: FontWeight.w600),
+                        ),
+                        TextSpan(
+                          text: '님의 한마디!',
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w800),
+                        ),
+                      ])),
+                  SizedBox(height: 11),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.white,
+                        backgroundImage:
+                            AssetImage('assets/images/walrus.png'),
+                        radius: 16, //프로필 사진 원 사이즈 -> 30으로 고정
+                      ),
+                      Text(
+                        '모발모발 한동 위로팀! 다들 화이팅하자!!!',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 17.5,
+                            color: Colors.indigoAccent),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            child: Container(
+              child: ListView.builder(
+                padding: EdgeInsets.symmetric(
+                    horizontal: 0.025.sw, vertical: 0.04.sh),
+                itemCount: name.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: EdgeInsets.only(bottom: 40),
+                    child: Container(
+                      height: 140,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.primaryContainer,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: Text('알림'),
+                              content: Text(
+                                  '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context)
+                                        .pop(); // Close the AlertDialog
+                                  },
+                                  child: Text('취소'),
                                 ),
-                                // 이름과날짜 <-> 제목 사이 간격
-                                SizedBox(height: 8),
-                                // 제목
-                                Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        title[index],
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                        overflow: TextOverflow.ellipsis,
-                                        maxLines: 1,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                // 제목 <-> 내용 간격
-                                SizedBox(
-                                  height: 8,
-                                ),
-                                // 내용
-                                Row(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        content[index],
-                                        style: TextStyle(fontSize: 12),
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                  ],
+                                TextButton(
+                                  onPressed: () {
+                                    Get.to(
+                                        GroupMiri()); // Close the AlertDialog
+                                  },
+                                  child: Text('확인'),
                                 ),
                               ],
                             ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                          splashFactory: NoSplash
+                              .splashFactory, // Disable the splash effect
+                        ),
+                        child: Transform.translate(
+                          offset: Offset(5, -15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.white,
+                                backgroundImage: AssetImage(image[index]),
+                                radius: 20,
+                              ),
+
+                              // 이름과 날짜
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    name[index],
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                  // 이름과 날짜 사이 간격
+                                  SizedBox(width: 9),
+                                  Text(
+                                    date[index],
+                                    style: TextStyle(fontSize: 14),
+                                  ),
+                                ],
+                              ),
+                              // 이름과날짜 <-> 제목 사이 간격
+                              SizedBox(height: 8),
+                              // 제목
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      title[index],
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                      maxLines: 1,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              // 제목 <-> 내용 간격
+                              SizedBox(
+                                height: 8,
+                              ),
+                              // 내용
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      content[index],
+                                      style: TextStyle(fontSize: 12),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ),
-                    );
-                  },
-                ),
+                    ),
+                  );
+                },
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
       bottomNavigationBar: bottomWidget(),
     );

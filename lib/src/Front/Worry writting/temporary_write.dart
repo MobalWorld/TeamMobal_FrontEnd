@@ -100,7 +100,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Navigator.pop(context);
+                                  Get.back();
                                 },
                                 child: Text(
                                   '취소',

@@ -55,7 +55,7 @@ class _StorageboxState extends State<Storagebox> {
               RoundedRectangleBorder(
                 borderRadius:
 
-                BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
+                BorderRadius.circular(20.0), // 원하는 모서리의 둥근 정도를 조정하세요
 
 
               ),
@@ -117,9 +117,6 @@ class _StorageboxState extends State<Storagebox> {
                     color: Colors.black,
                     fontSize: 20,
                     fontWeight:FontWeight.w600),
-              ),
-              SizedBox(
-                height: 0.03.sh,
               ),
               SizedBox(
                 // 바다 코끼리와 위로 보관함 사이 여백 박스

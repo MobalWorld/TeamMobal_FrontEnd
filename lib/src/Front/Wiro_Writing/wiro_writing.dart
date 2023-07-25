@@ -3,130 +3,122 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:mobalworld/src/Front/Appbar%20page/storage_3/temporary_storage.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
-
-import '../Group/group_main.dart';
+import '../appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
 
+class OverflowText extends StatefulWidget {
+  const OverflowText({
+    Key? key,
+    required this.text,
+    required this.maxLength,
+  }) : super(key: key);
+
+  final String text;
+  final int maxLength;
+
+  @override
+  State<OverflowText> createState() => _OverflowTextState();
+}
+
+class _OverflowTextState extends State<OverflowText> {
+  bool _isTextOverflow = false;
+  bool _isMore = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _isTextOverflow = widget.text.length > widget.maxLength;
+    _isMore = !_isTextOverflow;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          widget.text,
+          maxLines: _isTextOverflow && !_isMore ? 2 : null, // Adjust the maxLines value as needed
+          overflow: _isTextOverflow && !_isMore
+              ? TextOverflow.ellipsis
+              : TextOverflow.visible,
+        ),
+        if (_isTextOverflow && !_isMore)
+          Container(
+            margin: const EdgeInsets.only(top: 4),
+            child: InkWell(
+              onTap: () {
+                setState(() {
+                  _isMore = true;
+                });
+              },
+              child: Text(
+                '더보기',
+                style: TextStyle(
+                  color: Colors.black, // Set your desired color for the "더보기" text
+                ),
+              ),
+            ),
+          )
+        else if (_isMore)
+          Container(
+            margin: const EdgeInsets.only(top: 4),
+            child: InkWell(
+              onTap: () {
+                setState(() {
+                  _isMore = false;
+                });
+              },
+              child: Text(
+                '숨기기',
+                style: TextStyle(
+                  color: Colors.black, // Set your desired color for the "숨기기" text
+                ),
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+
+final _formKey = GlobalKey<FormState>();
+
 class WiroWriting extends StatefulWidget {
-  const WiroWriting({super.key});
+  const WiroWriting({Key? key}) : super(key: key);
 
   @override
   State<WiroWriting> createState() => _WiroWritingState();
 }
 
 class _WiroWritingState extends State<WiroWriting> {
-  String title = '';
-  String content = '';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(75.0),
-        child: AppBar(
-          toolbarHeight: 75,
-          backgroundColor: Colors.white,
-          leading: Align(
-            alignment: Alignment.centerLeft,
-            child: SizedBox(
-              width: 100,
-              child: TextButton(
-                child: Text(
-                  '취소',
-                  style: TextStyle(color: Colors.black, fontSize: 15),
-                ),
-                onPressed: () {
-                  showModalBottomSheet(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return Container(
-                        color: Colors.white,
-                        height: 0.3.sh,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: double.infinity,
-                              height: 0.1.sh,
-                              child: ElevatedButton(
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
-                                  elevation:
-                                      MaterialStateProperty.all<double>(0),
-                                ),
-                                onPressed: () {
-                                  Get.to(GroupMain());
-                                },
-                                child: Text(
-                                  '작성취소',
-                                  style: TextStyle(color: Colors.red),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 0.1.sh,
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
-                                  elevation:
-                                      MaterialStateProperty.all<double>(0),
-                                ),
-                                onPressed: () {
-                                  _showDialog(context);
-                                },
-                                child: Text(
-                                  '임시저장',
-                                  style: TextStyle(color: Colors.blue[300]),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 0.1.sh,
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
-                                  elevation:
-                                      MaterialStateProperty.all<double>(0),
-                                ),
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Text(
-                                  '취소',
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 14.sp),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  );
-                },
-              ),
-            ),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios_new,
+            color: Colors.black,
           ),
-          centerTitle: true,
-          title: Text('위로 작성하기'),
-          actions: [
-            TextButton(
-              child: Text(
-                '등록',
-                style: TextStyle(color: Colors.red[400], fontSize: 15.sp),
-              ),
-              onPressed: () {
-                _showDialog2(context);
-              },
-            ),
+          onPressed: () {
+            Get.to(Storagebox());
+          },
+          color: Colors.black,
+        ),
+        title: Column(
+          children: [
+            Text('2023년 07월 11일'),
+            Text('23-1 한동 위로팀',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.secondary,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                )),
           ],
         ),
       ),
@@ -134,29 +126,124 @@ class _WiroWritingState extends State<WiroWriting> {
         child: SingleChildScrollView(
           padding: GetPadding(),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: '제목',
-                ),
-                onChanged: (value) {
-                  setState(() {
-                    title = value;
-                  });
-                },
+              SizedBox(
+                height: 0.05.sh,
               ),
-              SizedBox(height: 16.0),
-              TextField(
-                decoration: InputDecoration(
-                    labelText: '고민 내용', alignLabelWithHint: true),
-                onChanged: (value) {
-                  setState(() {
-                    content = value;
-                  });
-                },
-                maxLines: 10,
+              Column(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            '이름',
+                            style: TextStyle(fontSize: 14),
+                          ),
+                          // 이름과 날짜 사이 간격
+                          SizedBox(width: 9),
+                          Text(
+                            '날짜',
+                            style: TextStyle(fontSize: 14),
+                          ),
+                        ],
+                      ),
+                      // 이름과날짜 <-> 제목 사이 간격
+                      SizedBox(height: 8),
+                      // 제목
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '제목',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
+                            ),
+                          ),
+                        ],
+                      ),
+                      // 제목 <-> 내용 간격
+                      SizedBox(
+                        height: 8,
+                      ),
+                      // 내용
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: OverflowText(
+                              text:   '방학을 하고 항상 늦게 일어나고 있다. 빨리 일어나고 싶은데 온몸이 천근만근 너무 무겁다. 두근두근 설레는 마음으로 일어나고 싶어도 너무 잠이 부족하다. 수면부족의 큰 문제는 성격이 예민해진다는 것이고 이는 결국 다른 사람에게 상처를 줄 수 있을 만큼 예민해진다. 나는 언제쯤 잠을 많이 자게 될까? 그런데 주변을 보면 다들 늦게 자는 것 같다. 다크서클이 너무 심해서 동아리 이름을 다크라고 지어 다크서클이 되어도 좋을 것 같다. ',
+                              maxLength: 1, // Set your desired max length here
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+
+                  SizedBox(
+                    height: 0.05.sh,
+                  ),
+
+                  //여기에 붙여넣기 - 나의 고민
+                  Container(
+                    height: 0.35.sh,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.secondaryContainer,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 0.02.sh, vertical: 0.01.sh),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TextField(
+                              decoration: InputDecoration(
+                                labelText: '제목',
+                              ),
+                              onTapOutside: (event) => //다른 화면 누를 때 키보드 down
+                              FocusManager.instance.primaryFocus?.unfocus()
+                          ),
+                          TextField(
+                              decoration: InputDecoration(
+                                  labelText: '내용',alignLabelWithHint: true
+                              ),
+                              maxLines: 5,
+                              onTapOutside: (event) => //다른 화면 누를 때 키보드 down
+                              FocusManager.instance.primaryFocus?.unfocus()
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                          Theme.of(context).colorScheme.tertiaryContainer,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                        ),
+                        onPressed: () {
+                          Get.to(WiroWriting());
+                        },
+                        child: Text('보내기',style: TextStyle(color: Colors.black),),
+                      ),
+                    ],
+                  ),
+                ],
               ),
+
             ],
           ),
         ),
@@ -164,44 +251,4 @@ class _WiroWritingState extends State<WiroWriting> {
       bottomNavigationBar: bottomWidget(),
     );
   }
-}
-
-void _showDialog(BuildContext context) {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        title: Text('임시 저장'),
-        content: Text('임시 저장함으로 이동합니다'),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Get.to(Temporay_StoragePage()); // Close the dialog
-            },
-            child: Text('확인'),
-          ),
-        ],
-      );
-    },
-  );
-}
-
-void _showDialog2(BuildContext context) {
-  showDialog(
-    context: context,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        title: Text('고민 작성 완료'),
-        content: Text('고민 작성이 완료되었습니다.'),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Get.to(GroupMain()); // Close the dialog
-            },
-            child: Text('확인'),
-          ),
-        ],
-      );
-    },
-  );
 }

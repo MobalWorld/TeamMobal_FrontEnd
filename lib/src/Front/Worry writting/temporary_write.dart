@@ -61,7 +61,8 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Get.to(GroupSelect());
+                                  Get.back();
+                                  Get.back();
                                 },
                                 child: Text(
                                   '작성취소',
@@ -131,7 +132,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                 style: TextStyle(color: Colors.red[400], fontSize: 15.sp),
               ),
               onPressed: () {
-                Navigator.pop(context);
+                Get.to(GroupMain());
               },
             ),
           ],

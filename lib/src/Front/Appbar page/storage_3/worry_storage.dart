@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/storagebox_btn.dart';
 
 import '../../Color_UI/padding.dart';
 import '../../Group/worry_and_wiiroo.dart';
@@ -36,7 +38,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.to(Storagebox());
                 },
               ),
             ],
@@ -66,10 +68,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 고민 1
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => FinStorage()),
-                    );
+                    Get.to(FinStorage());
                   },
                   dense: false,
                   title: Text(

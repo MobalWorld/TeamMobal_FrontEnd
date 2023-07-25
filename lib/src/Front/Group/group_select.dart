@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
+import 'package:mobalworld/src/Front/Group/group_make.dart';
 import 'package:mobalworld/src/Front/appbar%20page/alarm.dart';
 
 import '../Setting/bottom.dart';
@@ -256,6 +257,19 @@ class _GroupSelectState extends State<GroupSelect> {
               ],
             ),
           ],
+        ),
+      ),
+      floatingActionButton: ClipOval(
+        child: FloatingActionButton(
+          onPressed: () {
+            // Navigate to a new screen using Get
+            Get.to(GroupMake());
+          },
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+          backgroundColor: Colors.black,
         ),
       ),
     );

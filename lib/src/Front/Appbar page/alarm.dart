@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../Setting/bottom.dart';
 
@@ -35,7 +36,7 @@ class _AlarmPageState extends State<AlarmPage> {
 
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.back();
                 },
               ),
             ],

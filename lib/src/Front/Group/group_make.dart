@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 
 import '../Setting/toung.dart';
+import 'group_code_confirm.dart';
 
 class GroupMake extends StatefulWidget {
   const GroupMake({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class _GroupMakeState extends State<GroupMake> {
             color: Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Get.back();
           },
         ),
         title: Text(
@@ -248,7 +249,7 @@ class _GroupMakeState extends State<GroupMake> {
                         horizontal: 0.02.sh, vertical: 0.01.sh),
                     child: ElevatedButton(
                       onPressed: () {
-                        Get.to(ToungPage());
+                        Get.to(GroupCodeConfirm());
                       },
                       child: Text('만들기',
                           style: GoogleFonts.notoSans(

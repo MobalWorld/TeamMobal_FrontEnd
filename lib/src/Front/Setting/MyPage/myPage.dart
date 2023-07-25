@@ -1,11 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:mobalworld/src/Front/Group/group_select.dart';
 
-import '../../Color_UI/padding.dart';
 import '../bottom.dart';
 import 'changeNickname.dart';
 
@@ -38,19 +37,10 @@ class _MyPageState extends State<MyPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.black,
-          ),
-          onPressed: () {
-            Get.to(GroupSelect());
-          },
-          color: Colors.black,
-        ),
         title: Text(
-          '프로필',
+          '마이페이지',
           style: TextStyle(fontSize: 25, color: Colors.black),
         ),
         centerTitle: true,
@@ -82,7 +72,7 @@ class _MyPageState extends State<MyPage> {
                   },
                 )),
             Padding(
-              padding: GetPadding(),
+              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -100,7 +90,7 @@ class _MyPageState extends State<MyPage> {
                     width: 50,
                     child: IconButton(
                       onPressed: () {
-                        Get.to(ChangeNickName());
+                        Get.to(ChangeProfil());
                       },
                       icon: Icon(Icons.edit),
                       style: ButtonStyle(),
@@ -110,7 +100,7 @@ class _MyPageState extends State<MyPage> {
               ),
             ),
             Padding(
-              padding: GetPadding(),
+              padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
               child: Divider(
                 height: 10,
                 color: Colors.black,
@@ -123,9 +113,9 @@ class _MyPageState extends State<MyPage> {
                 children: [
                   getSetting(hint: "계정 정보", nextPage: MyPage()),
                   getSetting(hint: "그룹 관리", nextPage: MyPage()),
-                  getSetting(hint: "다크 모드", nextPage: MyPage()),
                   getSetting(hint: "버전", nextPage: MyPage()),
                   getSetting(hint: "문의하기", nextPage: MyPage()),
+                  getDark(hint: "다크 모드", nextPage: MyPage()),
                   // Add more settings options as needed
                 ],
               ),
@@ -136,6 +126,8 @@ class _MyPageState extends State<MyPage> {
       bottomNavigationBar: bottomWidget(),
     );
   }
+
+  EdgeInsets GetPadding() => EdgeInsets.symmetric(vertical: 0.02.sh);
 
   bool _lights = false; // 다크 모드 꺼져있음
   //getDark 다크모드 토글 적용

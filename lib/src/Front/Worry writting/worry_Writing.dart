@@ -7,7 +7,6 @@ import 'package:get/get_core/src/get_main.dart';
 import '../Appbar page/storage_3/temporary_storage.dart';
 import '../Color_UI/padding.dart';
 import '../Group/group_main.dart';
-import '../Group/group_select.dart';
 import '../Setting/bottom.dart';
 
 const List<String> list = <String>[

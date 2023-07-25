@@ -19,8 +19,7 @@ class JoinMakePage extends StatefulWidget {
 class _JoinMakePageState extends State<JoinMakePage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         body: Center(
           child: Padding(
             // 전체 패딩 값 - 함수로 불러와서 쓰기
@@ -187,7 +186,6 @@ class _JoinMakePageState extends State<JoinMakePage> {
             ),
           ),
         ),
-      ),
     );
   }
 }

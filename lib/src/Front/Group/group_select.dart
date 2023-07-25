@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
@@ -77,9 +76,8 @@ class _GroupSelectState extends State<GroupSelect> {
       /////body - 리스트 시작
       body: SafeArea(
         child: ListView(
-          padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
-              GetPadding(),
-          children: <Widget>[
+          padding: GetPadding(),
+          children: [
             Column(
               children: [
                 // 23-1 한동 위로 팀
@@ -260,6 +258,7 @@ class _GroupSelectState extends State<GroupSelect> {
           ],
         ),
       ),
+
       bottomNavigationBar: bottomWidget(),
     );
   }

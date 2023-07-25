@@ -51,8 +51,8 @@ class _GroupMainState extends State<GroupMain> {
           },
         ),
         title:
-            // mainAxisAlignment: MainAxisAlignment.center,
-            Text(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        Text(
           '23-1 한동 위로 팀',
           style: TextStyle(
             color: Colors.black,
@@ -113,21 +113,21 @@ class _GroupMainState extends State<GroupMain> {
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black),
                             children: [
-                          TextSpan(
-                            text: '바다 표범',
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Color(0xFFF69B94),
-                                fontWeight: FontWeight.w600),
-                          ),
-                          TextSpan(
-                            text: '님의 한마디!',
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w800),
-                          ),
-                        ])),
+                              TextSpan(
+                                text: '바다 표범',
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    color: Color(0xFFF69B94),
+                                    fontWeight: FontWeight.w600),
+                              ),
+                              TextSpan(
+                                text: '님의 한마디!',
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w800),
+                              ),
+                            ])),
                     SizedBox(height: 11),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -135,7 +135,7 @@ class _GroupMainState extends State<GroupMain> {
                         CircleAvatar(
                           backgroundColor: Colors.white,
                           backgroundImage:
-                              AssetImage('assets/images/walrus.png'),
+                          AssetImage('assets/images/walrus.png'),
                           radius: 16, //프로필 사진 원 사이즈 -> 30으로 고정
                         ),
                         Text(
@@ -152,132 +152,129 @@ class _GroupMainState extends State<GroupMain> {
               ),
             ),
             Expanded(
-                child: ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 0.025.sw, vertical: 0.04.sh),
-                  itemCount: name.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Padding(
-                      padding: EdgeInsets.only(bottom: 40),
-                      child: Container(
-                        height: 140,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.tertiaryContainer,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 2,
-                              blurRadius: 2,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Material(
-                            color: Colors.transparent,
-                            child: InkWell(
-                              onTap: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (context) => AlertDialog(
-                                    title: Text('알림'),
-                                    content: Text(
-                                        '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡'),
-                                    actions: [
-                                      TextButton(
-                                        onPressed: () {
-                                          Navigator.of(context).pop(); // Close the AlertDialog
-                                        },
-                                        child: Text('취소'),
-                                      ),
-                                      TextButton(
-                                        onPressed: () {
-                                          Get.to(GroupMiri()); // Close the AlertDialog
-                                        },
-                                        child: Text('확인'),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
+              child: ListView.builder(
+                padding: EdgeInsets.symmetric(horizontal: 0.025.sw, vertical: 0.04.sh),
+                itemCount: name.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: EdgeInsets.only(bottom: 40),
+                    child: Container(
+                      height: 140,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).colorScheme.tertiaryContainer,
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('알림'),
+                                  content: Text(
+                                      '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop(); // Close the AlertDialog
+                                      },
+                                      child: Text('취소'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Get.to(GroupMiri()); // Close the AlertDialog
+                                      },
+                                      child: Text('확인'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.center,
-                                        children: [
-                                          CircleAvatar(
-                                            backgroundColor: Colors.white,
-                                            backgroundImage: AssetImage(image[index]),
-                                            radius: 20,
-                                          ),
-                                          SizedBox(width: 5,),
-                                          Text(
-                                            name[index],
-                                            style: TextStyle(fontSize: 14),
-                                          ),
-                                          // 이름과 날짜 사이 간격
-                                          SizedBox(width: 9),
-                                          Text(
-                                            date[index],
-                                            style: TextStyle(fontSize: 14),
-                                          ),
-                                        ],
+                                      CircleAvatar(
+                                        backgroundColor: Colors.white,
+                                        backgroundImage: AssetImage(image[index]),
+                                        radius: 20,
                                       ),
-                                      // 이름과날짜 <-> 제목 사이 간격
-                                      SizedBox(height: 8),
-                                      // 제목
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Expanded(
-                                            child: Text(
-                                              title[index],
-                                              style: TextStyle(
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                              overflow: TextOverflow.ellipsis,
-                                              maxLines: 1,
-                                            ),
-                                          ),
-                                        ],
+                                      SizedBox(width: 5,),
+                                      Text(
+                                        name[index],
+                                        style: TextStyle(fontSize: 14),
                                       ),
-                                      // 제목 <-> 내용 간격
-                                      SizedBox(
-                                        height: 8,
-                                      ),
-                                      // 내용
-                                      Row(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Expanded(
-                                            child: Text(
-                                              content[index],
-                                              style: TextStyle(fontSize: 12),
-                                              maxLines: 1,
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-                                        ],
+                                      // 이름과 날짜 사이 간격
+                                      SizedBox(width: 9),
+                                      Text(
+                                        date[index],
+                                        style: TextStyle(fontSize: 14),
                                       ),
                                     ],
                                   ),
+                                  // 이름과날짜 <-> 제목 사이 간격
+                                  SizedBox(height: 8),
+                                  // 제목
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          title[index],
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 1,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  // 제목 <-> 내용 간격
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  // 내용
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Expanded(
+                                        child: Text(
+                                          content[index],
+                                          style: TextStyle(fontSize: 12),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
-
                             ),
+
                           ),
                         ),
                       ),
-                    );
-                  },
-                ),
-
-
-
+                    ),
+                  );
+                },
+              ),
             )
           ],
         ),

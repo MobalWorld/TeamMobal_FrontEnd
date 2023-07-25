@@ -180,11 +180,11 @@ void _showDialog(BuildContext context) {
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text('임시 저장'),
-        content: Text('임시 저장함으로 이동합니다'),
+        content: Text('임시 저장되었습니다.'),
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(Temporay_StoragePage()); // Close the dialog
+              Get.to(GroupMain()); // Close the dialog
             },
             child: Text('확인'),
           ),

@@ -5,9 +5,11 @@ import 'package:get/get.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:mobalworld/src/Front/Group/group_code_confirm.dart';
 import 'package:mobalworld/src/Front/Group/group_make.dart';
+import 'package:provider/provider.dart';
 
 //import 'package:mobalworld/src/ui/Setting/main_loading.dart';
 
+import '../Setting/theme_provider.dart';
 import '../login/add_google_info.dart';
 import '../login/login.dart';
 import '../Setting/master_key.dart';
@@ -22,6 +24,7 @@ class JoinMakePage extends StatefulWidget {
 class _JoinMakePageState extends State<JoinMakePage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
       body: Center(
         child: Padding(
@@ -43,27 +46,18 @@ class _JoinMakePageState extends State<JoinMakePage> {
                 child: const Text(
                   '편지의 마음',
                   style: TextStyle(
-                    color: Colors.black87,
                     fontSize: 30,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
               SizedBox(
-                height: 0.1.sh,
+                height: 0.07.sh,
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Color(0xFFFFF8E8),
+                  color: Theme.of(context).colorScheme.tertiaryContainer,
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,7 +66,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(12.0),
                           child: Text(
                             '편지함을 만들고 싶나요?',
                             style: TextStyle(
@@ -97,12 +91,15 @@ class _JoinMakePageState extends State<JoinMakePage> {
                             child: Text(
                               '만들기',
                               style: TextStyle(
-                                color: Colors.black,
                                 fontWeight: FontWeight.w400,
+                                color: isDarkMode? Colors.white : Colors.black,
                               ),
                             ),
-                            style: TextButton.styleFrom(
-                              backgroundColor: Color(0xFFFCCAA9),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: isDarkMode? Color(0xFF17171C) : Color(0xFFFCCAA9),
+                                shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              )
                             ),
                           ),
                         ),
@@ -112,20 +109,13 @@ class _JoinMakePageState extends State<JoinMakePage> {
                 ),
               ),
               SizedBox(
-                height: 0.01.sh,
+                height: 0.03.sh,
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Color(0xFFFFF8E8),
+                  color: Theme.of(context).colorScheme.tertiaryContainer,
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
-                      spreadRadius: 5,
-                      blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
+
                 ),
                 // 컨테이너의 차일드
                 child: Row(
@@ -135,17 +125,15 @@ class _JoinMakePageState extends State<JoinMakePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(12.0),
                             child: Text(
-                              '편지함을 만들고 싶나요?',
+                              '편지함 주소를 알고 있나요?',
                               style: TextStyle(
                                 fontSize: 20,
                               ),
                             ),
                           ),
-                        ),
+
                         SizedBox(
                           height: 90,
                         )
@@ -163,12 +151,15 @@ class _JoinMakePageState extends State<JoinMakePage> {
                             child: Text(
                               '참여하기',
                               style: TextStyle(
-                                color: Colors.black,
+                                color: isDarkMode? Colors.white : Colors.black,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
-                            style: TextButton.styleFrom(
-                              backgroundColor: Color(0xFFFCCAA9),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: isDarkMode? Color(0xFF17171C) : Color(0xFFFCCAA9) ,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15),
+                              )
                             ),
                           ),
                         ),
@@ -177,7 +168,6 @@ class _JoinMakePageState extends State<JoinMakePage> {
                   ],
                 ),
               ),
-              MasterKey(margin: 5),
             ],
           ),
         ),

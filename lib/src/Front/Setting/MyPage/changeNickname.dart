@@ -47,25 +47,46 @@ class _ChangeProfilState extends State<ChangeProfil> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconButton(
-                iconSize: 70,
-                icon: _image == null
-                    ? CircleAvatar(
-                        backgroundColor: Colors.white,
-                        backgroundImage: AssetImage(
-                          'assets/images/peng1.jpg',
-                        ),
-                        radius: 70,
-                      )
-                    : CircleAvatar(
-                        backgroundImage: FileImage(
-                          _image!,
-                        ),
-                        radius: 70,
-                      ), // Display the selected image
-                onPressed: () {
-                  _pickImageFromGallery();
-                },
+              Stack(
+                children: [
+                  IconButton(
+                    iconSize: 70,
+                    icon: _image == null
+                        ? CircleAvatar(
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage(
+                              'assets/images/peng1.jpg',
+                            ),
+                            radius: 70,
+                          )
+                        : CircleAvatar(
+                            backgroundImage: FileImage(
+                              _image!,
+                            ),
+                            radius: 70,
+                          ), // Display the selected image
+                    onPressed: () {
+                      _pickImageFromGallery();
+                    },
+                  ),
+                  Positioned(
+                    bottom: 10,
+                    right: 10,
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey,
+                      ),
+                      child: Icon(
+                        Icons.add_a_photo,
+                        size: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               TextField(
                 decoration: InputDecoration(

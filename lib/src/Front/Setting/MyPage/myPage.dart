@@ -4,9 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-
+import 'package:provider/provider.dart';
+import '../../Appbar page/alarm.dart';
+import '../../Appbar page/storage_3/storagebox_btn.dart';
+import '../../Group/group_select.dart';
 import '../bottom.dart';
+import '../bottomNav.dart';
+import '../theme_provider.dart';
 import 'changeNickname.dart';
+
+
+var _nickName = '남극 펭귄';
 
 class MyPage extends StatefulWidget {
   const MyPage({super.key});
@@ -14,8 +22,6 @@ class MyPage extends StatefulWidget {
   @override
   State<MyPage> createState() => _MyPageState();
 }
-
-var _nickName = '남극 펭귄';
 
 class _MyPageState extends State<MyPage> {
   File? _image;
@@ -34,43 +40,47 @@ class _MyPageState extends State<MyPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        title: const Text(
+        title: Text(
           '마이페이지',
-          style: TextStyle(fontSize: 25, color: Colors.black),
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 20,
+            color: isDarkMode ? Colors.white : Colors.black,
+          ),
+          textAlign: TextAlign.center,
         ),
         centerTitle: true,
-        elevation: 1,
       ),
       body: SafeArea(
         child: Column(
           children: [
             Padding(
-                padding: GetPadding(),
-                child: IconButton(
-                  iconSize: 70,
-                  icon: _image == null
-                      ? const CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage(
-                            'assets/images/peng1.jpg',
-                          ),
-                          radius: 70,
-                        )
-                      : CircleAvatar(
-                          backgroundImage: FileImage(
-                            _image!,
-                          ),
-                          radius: 70,
-                        ), // Display the selected image
-                  onPressed: () {
-                    _pickImageFromGallery();
-                  },
-                )),
+              padding: GetPadding(),
+              child: IconButton(
+                iconSize: 70,
+                icon: _image == null
+                    ? const CircleAvatar(
+                  backgroundColor: Colors.white,
+                  backgroundImage: AssetImage(
+                    'assets/images/peng1.jpg',
+                  ),
+                  radius: 70,
+                )
+                    : CircleAvatar(
+                  backgroundImage: FileImage(
+                    _image!,
+                  ),
+                  radius: 70,
+                ), // Display the selected image
+                onPressed: () {
+                  _pickImageFromGallery();
+                },
+              ),
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
               child: Row(
@@ -82,7 +92,7 @@ class _MyPageState extends State<MyPage> {
                   Expanded(
                     child: Text(
                       _nickName,
-                      style: const TextStyle(fontSize: 17, color: Colors.black),
+                      style: const TextStyle(fontSize: 17),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -95,15 +105,15 @@ class _MyPageState extends State<MyPage> {
                       icon: const Icon(Icons.edit),
                       style: const ButtonStyle(),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
-              child: const Divider(
+              child: Divider(
                 height: 10,
-                color: Colors.black,
+                color: isDarkMode? Colors.white : Colors.black,
                 thickness: 1,
               ),
             ),
@@ -111,11 +121,12 @@ class _MyPageState extends State<MyPage> {
               child: ListView(
                 physics: const AlwaysScrollableScrollPhysics(),
                 children: [
-                  getSetting(hint: "계정 정보", nextPage: const MyPage()),
-                  getSetting(hint: "그룹 관리", nextPage: const MyPage()),
-                  getSetting(hint: "버전", nextPage: const MyPage()),
-                  getSetting(hint: "문의하기", nextPage: const MyPage()),
-                  getDark(hint: "다크 모드", nextPage: const MyPage()),
+                  // !!!!!!! nextPage 나중에 만들면 바꾸기 !!!!!!!
+                  getSetting(hint: "계정 정보", nextPage: BottomNavi()),
+                  getSetting(hint: "그룹 관리", nextPage: BottomNavi()),
+                  getSetting(hint: "버전", nextPage: BottomNavi()),
+                  getSetting(hint: "문의하기", nextPage: BottomNavi()),
+                  getDark(), // 다크모드 토글을 위해 nextPage를 전달하지 않습니다.
                   // Add more settings options as needed
                 ],
               ),
@@ -123,32 +134,35 @@ class _MyPageState extends State<MyPage> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 
   EdgeInsets GetPadding() => EdgeInsets.symmetric(vertical: 0.02.sh);
+}
 
-  bool _lights = false; // 다크 모드 꺼져있음
-  //getDark 다크모드 토글 적용
-  Widget getDark({required String hint, required Widget nextPage}) {
-    return SwitchListTile(
-      title: const Text('다크 모드'),
-      value: _lights,
-      onChanged: (bool value) {
-        setState(() {
-          _lights = value;
-        });
-      },
-    );
-  }
+Widget getDark() {
+  return Consumer<ThemeProvider>(
+    builder: (context, themeProvider, _) {
+      return SwitchListTile(
+        title: const Text('다크 모드'),
+        value: themeProvider.isDarkMode,
+        inactiveThumbColor: Colors.white,
+        inactiveTrackColor: Colors.grey,
+        activeColor: Colors.black,
+        activeTrackColor: Colors.white,
+        onChanged: (bool value) {
+          themeProvider.toggleTheme();
+        },
+      );
+    },
+  );
 }
 
 ListTile getSetting({required String hint, required Widget nextPage}) {
   return ListTile(
     title: Text(
       hint,
-      style: const TextStyle(fontSize: 17, color: Colors.black),
+      style: const TextStyle(fontSize: 17),
     ),
     trailing: const Icon(Icons.arrow_forward_ios_rounded),
     onTap: () {

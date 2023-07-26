@@ -36,39 +36,57 @@ class _ChangeProfilState extends State<ChangeProfil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.white,
-          toolbarHeight: 80,
-          leading: TextButton(
-            child: Text("취소"),
-            onPressed: () {
-              Get.to(MyPage());
-            },
-          )),
+        backgroundColor: Colors.white,
+        toolbarHeight: 80,
+        leading: TextButton(
+          child: Text("취소"),
+          onPressed: () {
+            Get.to(MyPage());
+          },
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: GetPadding(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconButton(
-                iconSize: 70,
-                icon: _image == null
-                    ? CircleAvatar(
-                        backgroundColor: Colors.white,
-                        backgroundImage: AssetImage(
-                          'assets/images/peng1.jpg',
-                        ),
-                        radius: 70,
-                      )
-                    : CircleAvatar(
-                        backgroundImage: FileImage(
-                          _image!,
-                        ),
-                        radius: 70,
-                      ), // Display the selected image
-                onPressed: () {
-                  _pickImageFromGallery();
-                },
+              Stack(
+                children: [
+                  IconButton(
+                    iconSize: 70,
+                    icon: _image == null
+                        ? CircleAvatar(
+                            backgroundColor: Colors.white,
+                            backgroundImage: AssetImage(
+                              'assets/images/peng1.jpg',
+                            ),
+                            radius: 70,
+                          )
+                        : CircleAvatar(
+                            backgroundImage: FileImage(
+                              _image!,
+                            ),
+                            radius: 70,
+                          ), // Display the selected image
+                    onPressed: () {
+                      _pickImageFromGallery();
+                    },
+                  ),
+                  Positioned(
+                    bottom: 10,
+                    right: 20,
+                    child: Transform.scale(
+                      scale: 1.5,
+                      child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                          child: Icon(Icons.add_a_photo)),
+                    ),
+                  ),
+                ],
               ),
               TextField(
                 decoration: InputDecoration(

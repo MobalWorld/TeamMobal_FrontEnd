@@ -6,7 +6,9 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
+import 'package:provider/provider.dart';
 
+import '../Setting/theme_provider.dart';
 import '../Setting/toung.dart';
 import 'group_code_confirm.dart';
 
@@ -22,15 +24,14 @@ class _GroupMakeState extends State<GroupMake> {
   bool IsName = false;
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
-            color: Colors.black,
           ),
           onPressed: () {
             Get.back();
@@ -40,7 +41,6 @@ class _GroupMakeState extends State<GroupMake> {
           '편지함 만들기',
           style: GoogleFonts.notoSans(
               textStyle: TextStyle(
-                  color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 20)),
         ),
@@ -61,11 +61,10 @@ class _GroupMakeState extends State<GroupMake> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
                       child: Text('편지함 이름',
-                          style: GoogleFonts.notoSans(
-                              textStyle: TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
-                          ))),
+                          )),
                     ),
                     SizedBox(
                       height: 5,
@@ -74,9 +73,8 @@ class _GroupMakeState extends State<GroupMake> {
                       padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
                       child: Text(
                         '편지함 이름은 개설 이후에도 변경할 수 있습니다.',
-                        style: GoogleFonts.notoSans(
-                            textStyle: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 15)),
+                        style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 15),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -101,9 +99,9 @@ class _GroupMakeState extends State<GroupMake> {
                           contentPadding: EdgeInsets.all(10),
                           hintText: "제목을 입력해 주세요",
                           filled: true,
-                          fillColor: Color(0xFFE6F7FE),
+                          fillColor: Colors.transparent,
                           enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFFE6F7FE)),
+                            borderSide: BorderSide(color: Colors.grey.withOpacity(0.9)),
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
@@ -122,11 +120,10 @@ class _GroupMakeState extends State<GroupMake> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
                       child: Text('편지함 소개',
-                          style: GoogleFonts.notoSans(
-                              textStyle: TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
-                          ))),
+                          )),
                     ),
                     SizedBox(
                       height: 5,
@@ -135,9 +132,9 @@ class _GroupMakeState extends State<GroupMake> {
                       padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
                       child: Text(
                         '편지함 소개는 개설 이후에도 변경할 수 있습니다.',
-                        style: GoogleFonts.notoSans(
-                            textStyle: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 15)),
+                        style:
+                             TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 15),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -148,7 +145,6 @@ class _GroupMakeState extends State<GroupMake> {
                         maxLines: 1,
                         controller: _name,
                         style: TextStyle(
-                            color: Colors.black,
                             fontSize: 18.0,
                             fontWeight: FontWeight.w600),
                         onChanged: (String text) {
@@ -162,9 +158,9 @@ class _GroupMakeState extends State<GroupMake> {
                           contentPadding: EdgeInsets.all(10),
                           hintText: "편지함 소개를 적어주세요.",
                           filled: true,
-                          fillColor: Color(0xFFE6F7FE),
+                          fillColor: Colors.transparent,
                           enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFFE6F7FE)),
+                            borderSide: BorderSide(color: Colors.grey.withOpacity(0.9)),
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
@@ -183,11 +179,10 @@ class _GroupMakeState extends State<GroupMake> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
                       child: Text('대표 사진',
-                          style: GoogleFonts.notoSans(
-                              textStyle: TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 20,
-                          ))),
+                          )),
                     ),
                     SizedBox(
                       height: 5,
@@ -196,9 +191,8 @@ class _GroupMakeState extends State<GroupMake> {
                       padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
                       child: Text(
                         '대표 사진은 편지함 페이지 커버에 표시 됩니다.',
-                        style: GoogleFonts.notoSans(
-                            textStyle: TextStyle(
-                                fontWeight: FontWeight.w400, fontSize: 15)),
+                        style: TextStyle(
+                                fontWeight: FontWeight.w400, fontSize: 15),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -256,6 +250,9 @@ class _GroupMakeState extends State<GroupMake> {
                             textStyle: TextStyle(color: Colors.black),
                           )),
                       style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                        ),
                           backgroundColor: Color(0xFFFCCAA9)),
                     ),
                   ),

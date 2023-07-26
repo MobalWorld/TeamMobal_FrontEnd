@@ -44,7 +44,7 @@ class _WorryWritingState extends State<WorryWriting> {
               child: TextButton(
                 child: Text(
                   '취소',
-                  style: TextStyle(color: isDarkMode ? Colors.white : Colors.black , fontSize: 15),
+                  style: TextStyle(fontSize: 15),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
@@ -62,7 +62,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(isDarkMode ? Colors.white : Colors.black),
+                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
@@ -81,7 +81,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(isDarkMode ? Colors.white : Colors.black),
+                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
@@ -100,7 +100,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(isDarkMode ? Colors.white : Colors.black),
+                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),

@@ -169,7 +169,6 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

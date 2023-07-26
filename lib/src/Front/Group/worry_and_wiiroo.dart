@@ -6,6 +6,8 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
 import 'package:mobalworld/src/Front/Appbar%20page/storage_3/worry_storage.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
+import 'package:provider/provider.dart';
+import '../Setting/theme_provider.dart';
 import '../appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
 
@@ -19,14 +21,14 @@ class FinStorage extends StatefulWidget {
 class _FinStorageState extends State<FinStorage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
-            color: Colors.black,
+            color: isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             Get.to(Worry_StoragePage());
@@ -135,7 +137,6 @@ class _FinStorageState extends State<FinStorage> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

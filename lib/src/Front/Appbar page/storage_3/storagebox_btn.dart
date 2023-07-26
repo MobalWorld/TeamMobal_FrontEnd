@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mobalworld/src/Front/Group/group_main.dart';
+import 'package:provider/provider.dart';
 
+import '../../Setting/bottomNav.dart';
+import '../../Setting/theme_provider.dart';
 import 'storage.dart';
 import 'temporary_storage.dart';
 import 'worry_storage.dart';
@@ -17,13 +20,11 @@ class Storagebox extends StatefulWidget {
 }
 
 class _StorageboxState extends State<Storagebox> {
-  // final beige = Color(0xffFFF8E8);
-  // FCCAA9
-  final beige = const Color(0xff96B0E5);
-  final darkTextColor = const Color(0xff1F1A3D);
+
 
   //보관함에서만 작동하는 보관함 박스 button을 위젯화 - 만듦
   Widget getButton({required String hint, required Widget nextPage}) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return SizedBox(
         width: double.infinity,
         // 버튼 높이
@@ -33,12 +34,11 @@ class _StorageboxState extends State<Storagebox> {
             Get.to(nextPage);
           },
           style: ButtonStyle(
-            // backgroundColor: MaterialStateProperty.all(beige),
             // 색 변경 - 분홍색으로
             backgroundColor: MaterialStateProperty.all(
               Theme.of(context).colorScheme.primaryContainer,
             ),
-            foregroundColor: MaterialStateProperty.all(Colors.black),
+            foregroundColor: MaterialStateProperty.all(isDarkMode ? Colors.white : Colors.black),
             padding: //패딩
 
                 MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
@@ -52,7 +52,7 @@ class _StorageboxState extends State<Storagebox> {
               // 테두리 색상 분홍색으로 변경
               color: Theme.of(context)
                   .colorScheme
-                  .primaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
+                  .tertiaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
             )),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
@@ -81,19 +81,19 @@ class _StorageboxState extends State<Storagebox> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
             size: 30.sp,
+            color: isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            Get.to(const GroupMain());
+            Get.to(BottomNavi());
           },
-          color: Colors.black,
         ),
         elevation: 0.0,
       ),
@@ -114,7 +114,6 @@ class _StorageboxState extends State<Storagebox> {
               const Text(
                 '남극 펭귄',
                 style: TextStyle(
-                    color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.w600),
               ),
@@ -139,7 +138,6 @@ class _StorageboxState extends State<Storagebox> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

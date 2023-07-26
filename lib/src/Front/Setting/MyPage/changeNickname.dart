@@ -1,12 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../Color_UI/padding.dart';
-import 'myPage.dart';
 
 class ChangeProfil extends StatefulWidget {
   const ChangeProfil({super.key});
@@ -36,12 +34,11 @@ class _ChangeProfilState extends State<ChangeProfil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.white,
           toolbarHeight: 80,
           leading: TextButton(
             child: Text("취소"),
             onPressed: () {
-              Get.to(MyPage());
+              Get.back();
             },
           )),
       body: SafeArea(

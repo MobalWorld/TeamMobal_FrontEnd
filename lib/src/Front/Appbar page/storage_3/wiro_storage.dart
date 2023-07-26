@@ -4,8 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
+import 'package:provider/provider.dart';
 
 import '../../Setting/bottom.dart';
+import '../../Setting/theme_provider.dart';
 import '../../appbar page/storage_3/storagebox_btn.dart';
 
 
@@ -19,19 +21,18 @@ class WiroStorage extends StatefulWidget {
 class _WiroStorageState extends State<WiroStorage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
-            color: Colors.black,
+            color: isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             Navigator.pop(context);
           },
-          color: Colors.black,
         ),
         title: Column(
           children: [
@@ -99,7 +100,6 @@ class _WiroStorageState extends State<WiroStorage> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

@@ -6,6 +6,9 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:mobalworld/src/Front/Group/group_main.dart';
 import 'package:mobalworld/src/Front/Group/worry_miri.dart';
+import 'package:provider/provider.dart';
+import '../Setting/bottomNav.dart';
+import '../Setting/theme_provider.dart';
 import '../appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
 
@@ -36,6 +39,7 @@ class _OverflowTextState extends State<OverflowText> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -61,7 +65,7 @@ class _OverflowTextState extends State<OverflowText> {
                 '더보기',
                 style: TextStyle(
                   color:
-                      Colors.black, // Set your desired color for the "더보기" text
+                  isDarkMode ? Colors.white : Colors.black, // Set your desired color for the "더보기" text
                 ),
               ),
             ),
@@ -79,7 +83,7 @@ class _OverflowTextState extends State<OverflowText> {
                 '숨기기',
                 style: TextStyle(
                   color:
-                      Colors.black, // Set your desired color for the "숨기기" text
+                  isDarkMode ? Colors.white : Colors.black, // Set your desired color for the "숨기기" text
                 ),
               ),
             ),
@@ -101,19 +105,19 @@ class WiroWriting extends StatefulWidget {
 class _WiroWritingState extends State<WiroWriting> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
-            color: Colors.black,
+            color: isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
             Get.to(WorryMiri());
           },
-          color: Colors.black,
+          color: isDarkMode ? Colors.white : Colors.black,
         ),
         title: Column(
           children: [
@@ -214,13 +218,16 @@ class _WiroWritingState extends State<WiroWriting> {
                           TextField(
                               decoration: InputDecoration(
                                 labelText: '제목',
+                                labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black)
                               ),
                               onTapOutside: (event) => //다른 화면 누를 때 키보드 down
                                   FocusManager.instance.primaryFocus
                                       ?.unfocus()),
                           TextField(
                               decoration: InputDecoration(
-                                  labelText: '내용', alignLabelWithHint: true),
+                                  labelText: '내용',
+                                  labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
+                                  alignLabelWithHint: true),
                               maxLines: 5,
                               onTapOutside: (event) => //다른 화면 누를 때 키보드 down
                                   FocusManager.instance.primaryFocus?.unfocus())
@@ -239,11 +246,11 @@ class _WiroWritingState extends State<WiroWriting> {
                               borderRadius: BorderRadius.circular(10)),
                         ),
                         onPressed: () {
-                          Get.to(GroupMain());
+                          Get.to(BottomNavi());
                         },
                         child: Text(
                           '보내기',
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
                         ),
                       ),
                     ],
@@ -254,7 +261,6 @@ class _WiroWritingState extends State<WiroWriting> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

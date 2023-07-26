@@ -1,12 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../Color_UI/padding.dart';
-import 'myPage.dart';
 
 class ChangeProfil extends StatefulWidget {
   const ChangeProfil({super.key});
@@ -36,15 +34,13 @@ class _ChangeProfilState extends State<ChangeProfil> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        toolbarHeight: 80,
-        leading: TextButton(
-          child: Text("취소"),
-          onPressed: () {
-            Get.to(MyPage());
-          },
-        ),
-      ),
+          toolbarHeight: 80,
+          leading: TextButton(
+            child: Text("취소"),
+            onPressed: () {
+              Get.back();
+            },
+          )),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: GetPadding(),
@@ -75,15 +71,19 @@ class _ChangeProfilState extends State<ChangeProfil> {
                   ),
                   Positioned(
                     bottom: 10,
-                    right: 20,
-                    child: Transform.scale(
-                      scale: 1.5,
-                      child: Container(
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white,
-                          ),
-                          child: Icon(Icons.add_a_photo)),
+                    right: 10,
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey,
+                      ),
+                      child: Icon(
+                        Icons.add_a_photo,
+                        size: 20,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ],

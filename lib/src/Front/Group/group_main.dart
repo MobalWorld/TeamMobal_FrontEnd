@@ -1,13 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Group/group_select.dart';
+import 'package:provider/provider.dart';
 
 import '../Appbar page/alarm.dart';
 import '../Appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
+import '../Setting/theme_provider.dart';
 import 'worry_miri.dart';
 
 class GroupMain extends StatefulWidget {
@@ -38,41 +41,42 @@ final List<String> image = <String>[
 class _GroupMainState extends State<GroupMain> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
-            Icons.arrow_back_ios_new,
-            color: Colors.black,
+            Icons.arrow_back_ios_new, color: isDarkMode ? Colors.white : Colors.black
           ),
           onPressed: () {
             Get.to(GroupSelect());
           },
         ),
-        title:
-            // mainAxisAlignment: MainAxisAlignment.center,
-            Text(
+        title: Text(
           '23-1 한동 위로 팀',
           style: TextStyle(
-            color: Colors.black,
             fontWeight: FontWeight.w600,
             fontSize: 20,
+            color: isDarkMode ? Colors.white : Colors.black,
           ),
           textAlign: TextAlign.center,
         ),
         actions: [
           IconButton(
-              onPressed: () {
-                Get.to(Storagebox());
-              },
-              icon: Icon(Icons.mail_outline, color: Colors.black)),
+            onPressed: () {
+              Get.to(Storagebox());
+            },
+            icon: FaIcon(FontAwesomeIcons.envelope, color: isDarkMode ? Colors.white : Colors.black,),
+          ),
           IconButton(
-              onPressed: () {
-                Get.to(AlarmPage());
-              },
-              icon: Icon(Icons.notifications, color: Colors.black)),
+            onPressed: () {
+              Get.to(AlarmPage());
+            },
+            icon:
+              FaIcon(FontAwesomeIcons.solidBell, color: isDarkMode ? Colors.white : Colors.black),
+
+          ),
         ],
         centerTitle: true,
       ),
@@ -93,42 +97,39 @@ class _GroupMainState extends State<GroupMain> {
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.secondaryContainer,
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 2,
-                      blurRadius: 2,
-                      offset: Offset(0, 3), // changes position of shadow
-                    ),
-                  ],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    RichText(
-                        text: TextSpan(
-                            text: '우리 팀의 이번주 위로왕 ',
-                            style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.black),
-                            children: [
-                          TextSpan(
-                            text: '바다 표범',
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Color(0xFFF69B94),
-                                fontWeight: FontWeight.w600),
-                          ),
-                          TextSpan(
-                            text: '님의 한마디!',
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.black,
-                                fontWeight: FontWeight.w800),
-                          ),
-                        ])),
+                RichText(
+                text: TextSpan(
+                text: '우리 팀의 이번주 위로왕 ',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    color: isDarkMode ? Colors.white : Colors.black,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: '바다 표범',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: isDarkMode ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.inversePrimary,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    TextSpan(
+                      text: '님의 한마디!',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: isDarkMode ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
                     SizedBox(height: 11),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -144,7 +145,7 @@ class _GroupMainState extends State<GroupMain> {
                           style: TextStyle(
                               fontWeight: FontWeight.w800,
                               fontSize: 17.5,
-                              color: Colors.indigoAccent),
+                              color: isDarkMode? Color(0xFFCDE5FF) : Colors.indigoAccent),
                         ),
                       ],
                     ),
@@ -165,14 +166,6 @@ class _GroupMainState extends State<GroupMain> {
                       decoration: BoxDecoration(
                         color: Theme.of(context).colorScheme.tertiaryContainer,
                         borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 2,
-                            blurRadius: 2,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
@@ -288,7 +281,6 @@ class _GroupMainState extends State<GroupMain> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

@@ -73,8 +73,8 @@ class _BottomNaviState extends State<BottomNavi> {
           ),
         ],
         currentIndex: _selectedIndex,
-        unselectedItemColor: isDarkMode? Color(0xFF8E9399) : Color(0xFF62626B),
-        selectedItemColor: isDarkMode? Colors.white : Colors.black,
+        unselectedItemColor: isDarkMode? Color(0xFF888C8A) : Color(0xFF888C8A),
+        selectedItemColor: isDarkMode? Color(0xFF7BD88A) : Color(0xFF7BD88A),
         onTap: _onItemTapped,
       ),
     );

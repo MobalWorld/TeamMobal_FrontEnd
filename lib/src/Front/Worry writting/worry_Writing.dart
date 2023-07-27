@@ -3,19 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:provider/provider.dart';
 
 import '../Appbar page/storage_3/temporary_storage.dart';
 import '../Color_UI/padding.dart';
 import '../Group/group_main.dart';
-import '../Group/group_select.dart';
 import '../Setting/bottom.dart';
+import '../Setting/bottomNav.dart';
+import '../Setting/theme_provider.dart';
 
 const List<String> list = <String>[
   '23-1 한동 위로 팀',
   '푸바오 사랑해 팀',
   '사랑아 시선해 팀',
 ];
-
 class WorryWriting extends StatefulWidget {
   const WorryWriting({super.key});
 
@@ -30,13 +31,12 @@ class _WorryWritingState extends State<WorryWriting> {
   String dropdownValue = list.first;
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(75.0),
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: Colors.white,
           leading: Align(
             alignment: Alignment.centerLeft,
             child: SizedBox(
@@ -44,7 +44,7 @@ class _WorryWritingState extends State<WorryWriting> {
               child: TextButton(
                 child: Text(
                   '취소',
-                  style: TextStyle(color: Colors.black, fontSize: 15),
+                  style: TextStyle(fontSize: 15),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
@@ -62,12 +62,12 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Get.to(GroupMain());
+                                  Get.offAll(() => BottomNavi());
                                 },
                                 child: Text(
                                   '작성취소',
@@ -81,7 +81,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
@@ -100,12 +100,12 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(Colors.white),
+                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Navigator.pop(context);
+                                  Get.back();
                                 },
                                 child: Text(
                                   '취소',
@@ -128,7 +128,7 @@ class _WorryWritingState extends State<WorryWriting> {
             value: dropdownValue,
             icon: Icon(Icons.arrow_drop_down),
             elevation: 16,
-            style: TextStyle(color: Colors.black, fontSize: 17.sp),
+            style: TextStyle(color: isDarkMode ? Colors.white : Colors.black, fontSize: 17.sp),
             onChanged: (String? value) {
               // This is called when the user selects an item.
               setState(() {
@@ -151,6 +151,7 @@ class _WorryWritingState extends State<WorryWriting> {
               onPressed: () {
                 _showDialog2(context);
               },
+
             ),
           ],
         ),
@@ -163,30 +164,35 @@ class _WorryWritingState extends State<WorryWriting> {
             children: [
               TextField(
                 decoration: InputDecoration(
-                  labelText: '제목',
+                  labelText: '제목', labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black)
                 ),
                 onChanged: (value) {
                   setState(() {
                     title = value;
                   });
                 },
+                  onTapOutside: (event) => //다른 화면 누를 때 키보드 down
+                  FocusManager.instance.primaryFocus?.unfocus()
+
               ),
               SizedBox(height: 16.0),
               TextField(
                 decoration: InputDecoration(
-                    labelText: '고민 내용', alignLabelWithHint: true),
+                    labelText: '고민 내용', alignLabelWithHint: true, labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
                 onChanged: (value) {
                   setState(() {
                     content = value;
                   });
                 },
                 maxLines: 10,
+                  onTapOutside: (event) => //다른 화면 누를 때 키보드 down
+                  FocusManager.instance.primaryFocus?.unfocus()
+
               ),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }
@@ -197,11 +203,11 @@ void _showDialog(BuildContext context) {
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text('임시 저장'),
-        content: Text('임시 저장함으로 이동합니다'),
+        content: Text('임시 저장됩니다.'),
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(Temporay_StoragePage()); // Close the dialog
+              Get.offAll(() => BottomNavi());
             },
             child: Text('확인'),
           ),
@@ -221,7 +227,7 @@ void _showDialog2(BuildContext context) {
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(GroupMain()); // Close the dialog
+              Get.offAll(() => BottomNavi());
             },
             child: Text('확인'),
           ),

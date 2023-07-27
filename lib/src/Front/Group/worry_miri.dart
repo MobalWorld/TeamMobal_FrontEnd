@@ -1,19 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Setting/bottom.dart';
 import 'package:mobalworld/src/Front/appbar%20page/storage_3/storagebox_btn.dart';
+import 'package:provider/provider.dart';
 
+import '../Appbar page/alarm.dart';
 import '../Color_UI/padding.dart';
+import '../Setting/bottomNav.dart';
+import '../Setting/theme_provider.dart';
 import '../Wiro_Writing/wiro_writing.dart';
+import 'group_main.dart';
 
-class GroupMiri extends StatefulWidget {
-  const GroupMiri({Key? key}) : super(key: key);
+class WorryMiri extends StatefulWidget {
+  const WorryMiri({Key? key}) : super(key: key);
 
   @override
-  State<GroupMiri> createState() => _GroupMiriState();
+  State<WorryMiri> createState() => _WorryMiriState();
 }
 
 final List<String> name = <String>['오이맛 수박'];
@@ -28,37 +34,34 @@ final List<String> image = <String>[
   'assets/images/water52.jpg',
 ];
 
-class _GroupMiriState extends State<GroupMiri> {
+class _WorryMiriState extends State<WorryMiri> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
-            color: Colors.black,
+            color: isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Get.to(BottomNavi());
           },
         ),
         title: Text(
           '23-1 한동 위로팀',
           style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.w600, fontSize: 20),
+              color: isDarkMode ? Colors.white : Colors.black, fontWeight: FontWeight.w600, fontSize: 20),
           textAlign: TextAlign.center,
         ),
         actions: [
           IconButton(
               onPressed: () {
-                Get.to(Storagebox());
+                Get.to(AlarmPage());
               },
-              icon: Icon(Icons.mail_outline, color: Colors.black)),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.notifications, color: Colors.black)),
+              icon: FaIcon(FontAwesomeIcons.solidBell, color: isDarkMode ? Colors.white : Colors.black)),
         ],
         centerTitle: true,
       ),
@@ -80,14 +83,6 @@ class _GroupMiriState extends State<GroupMiri> {
                       decoration: BoxDecoration(
                         color: Theme.of(context).colorScheme.primaryContainer,
                         borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 2,
-                            blurRadius: 2,
-                            offset: Offset(0, 3),
-                          ),
-                        ],
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,23 +163,27 @@ class _GroupMiriState extends State<GroupMiri> {
                 ),
               ),
             ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Padding(
-                    padding: GetPadding(),
-                    child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor:
-                                    Theme.of(context).colorScheme.secondaryContainer,
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                              ),
-                              onPressed: () {
-                                Get.to(WiroWriting());
-                              },
-                              child: Text('위로 작성하기',style: TextStyle(color: Colors.black),),
-                            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: GetPadding(),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:
+                          Theme.of(context).colorScheme.secondaryContainer,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                    onPressed: () {
+                      Get.to(WiroWriting());
+                    },
+                    child: Text(
+                      '위로 작성하기',
+                      style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
+                    ),
                   ),
+                ),
               ],
             ),
             SizedBox(
@@ -193,7 +192,6 @@ class _GroupMiriState extends State<GroupMiri> {
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

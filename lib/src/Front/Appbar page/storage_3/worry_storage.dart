@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/storagebox_btn.dart';
+import 'package:provider/provider.dart';
 
 import '../../Color_UI/padding.dart';
 import '../../Group/worry_and_wiiroo.dart';
 import '../../Setting/bottom.dart';
+import '../../Setting/theme_provider.dart';
 
 class Worry_StoragePage extends StatefulWidget {
   const Worry_StoragePage({super.key});
@@ -15,8 +19,9 @@ class Worry_StoragePage extends StatefulWidget {
 class _Worry_StoragePageState extends State<Worry_StoragePage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
+
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -25,18 +30,16 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: Colors.white,
 
           //뒤로가기 버튼
           leading: Row(
             children: [
               IconButton(
-                color: Colors.black,
                 icon: Icon(Icons.arrow_back_ios_new),
-
+                color: isDarkMode ? Colors.white : Colors.black,
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.to(Storagebox());
                 },
               ),
             ],
@@ -48,7 +51,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
             style: TextStyle(
               fontWeight: FontWeight.w900,
               fontSize: 23,
-              color: Colors.black,
             ),
           ),
         ),
@@ -66,16 +68,12 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                 // 고민 1
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => FinStorage()),
-                    );
+                    Get.to(FinStorage());
                   },
                   dense: false,
                   title: Text(
                     "매일 매일 목말라",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -85,7 +83,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 목 안 마른 사슴",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -130,7 +127,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "판다에게 차인 이후 살고싶지 않아",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -140,7 +136,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 푸바오 팬클럽 회장",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -185,7 +180,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "불쌍한 인간들",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -195,7 +189,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From.오이맛 수박",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -241,7 +234,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "매일 매일 목말라",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -251,7 +243,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 목 안 마른 사슴",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -296,7 +287,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "판다에게 차인 이후 살고싶지 않아",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -306,7 +296,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 푸바오 팬클럽 회장",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -351,7 +340,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "불쌍한 인간들",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -361,7 +349,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From.오이맛 수박",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -406,7 +393,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "매일 매일 목말라",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -416,7 +402,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 목 안 마른 사슴",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -461,7 +446,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "판다에게 차인 이후 살고싶지 않아",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -471,7 +455,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 푸바오 팬클럽 회장",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -516,7 +499,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "불쌍한 인간들",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -526,7 +508,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From.오이맛 수박",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -569,7 +550,6 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

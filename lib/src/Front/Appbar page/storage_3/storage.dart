@@ -2,17 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
-
-
-
+import 'package:provider/provider.dart';
 
 import '../../Color_UI/padding.dart';
 import '../../Setting/bottom.dart';
-
-import '../../Group/worry_and_wiiroo.dart';
-import '../../Wiro_Writing/wiro_writing.dart';
-
+import '../../Setting/theme_provider.dart';
 
 class StoragePage extends StatefulWidget {
   const StoragePage({super.key});
@@ -26,8 +22,8 @@ class StoragePage extends StatefulWidget {
 class _StoragePageState extends State<StoragePage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -36,15 +32,12 @@ class _StoragePageState extends State<StoragePage> {
 
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: Colors.white,
-
           //뒤로가기 버튼
           leading: Row(
             children: [
               IconButton(
-                color: Colors.black,
                 icon: Icon(Icons.arrow_back_ios_new),
-
+                color: isDarkMode ? Colors.white : Colors.black,
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
                   Navigator.pop(context);
@@ -59,7 +52,6 @@ class _StoragePageState extends State<StoragePage> {
             style: TextStyle(
               fontWeight: FontWeight.w900,
               fontSize: 23,
-              color: Colors.black,
             ),
           ),
         ),
@@ -77,17 +69,13 @@ class _StoragePageState extends State<StoragePage> {
                 // 위로 1st
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WiroStorage()),
-                    );
+                    Get.to(WiroStorage());
                   },
                   dense: false,
                   // 사용자가 작성한 고민 글 제목 으로 보여주기
                   title: Text(
                     "행복하고 싶다",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -122,7 +110,6 @@ class _StoragePageState extends State<StoragePage> {
                   title: Text(
                     "살고 싶지 않아",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -157,7 +144,6 @@ class _StoragePageState extends State<StoragePage> {
                   title: Text(
                     "왜 나만 이럴까",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -191,7 +177,6 @@ class _StoragePageState extends State<StoragePage> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

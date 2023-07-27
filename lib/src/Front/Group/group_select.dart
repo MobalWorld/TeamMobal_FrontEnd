@@ -1,12 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
+import 'package:mobalworld/src/Front/Group/group_make.dart';
 import 'package:mobalworld/src/Front/appbar%20page/alarm.dart';
+import 'package:provider/provider.dart';
 
 import '../Setting/bottom.dart';
+import '../Setting/bottomNav.dart';
+import '../Setting/theme_provider.dart';
 import 'group_main.dart';
 
 enum Item { delete }
@@ -23,8 +27,9 @@ class _GroupSelectState extends State<GroupSelect> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: Colors.white,
+
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -33,7 +38,7 @@ class _GroupSelectState extends State<GroupSelect> {
 
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: Colors.white,
+
 
           leading: Align(
             alignment: Alignment.centerLeft,
@@ -53,7 +58,7 @@ class _GroupSelectState extends State<GroupSelect> {
                 style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 21,
-                  color: Colors.black,
+
                 ),
               ),
             ],
@@ -64,11 +69,8 @@ class _GroupSelectState extends State<GroupSelect> {
                 onPressed: () {
                   Get.to(AlarmPage());
                 },
-                icon: Icon(
-                  Icons.notifications,
-                  color: Colors.black,
-                  size: 30,
-                )),
+                icon: FaIcon(FontAwesomeIcons.solidBell, color: isDarkMode ? Colors.white : Colors.black),
+            ),
           ],
           centerTitle: true,
         ),
@@ -77,24 +79,20 @@ class _GroupSelectState extends State<GroupSelect> {
       /////body - 리스트 시작
       body: SafeArea(
         child: ListView(
-          padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
-              GetPadding(),
-          children: <Widget>[
+          padding: GetPadding(),
+          children: [
             Column(
               children: [
                 // 23-1 한동 위로 팀
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => GroupMain()),
-                    );
+                    Get.to(BottomNavi());
                   },
                   dense: false,
                   title: Text(
                     "23-1 한동 위로 팀",
                     style: TextStyle(
-                      color: Colors.black,
+
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),
@@ -102,7 +100,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   subtitle: Text(
                     "참여자 : 5명",
                     style: TextStyle(
-                      color: Colors.black54,
+
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -116,7 +114,6 @@ class _GroupSelectState extends State<GroupSelect> {
 
                   // 맨 앞에 오는 그룹의 프로필 이미지
                   leading: CircleAvatar(
-                    backgroundColor: Colors.white,
                     backgroundImage: AssetImage('assets/images/hgu.png'),
                     radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                   ),
@@ -141,7 +138,7 @@ class _GroupSelectState extends State<GroupSelect> {
                 ),
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 // 푸바오 사랑해 팀
                 ListTile(
@@ -149,7 +146,6 @@ class _GroupSelectState extends State<GroupSelect> {
                   title: Text(
                     "푸바오 사랑해 팀",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),
@@ -157,7 +153,6 @@ class _GroupSelectState extends State<GroupSelect> {
                   subtitle: Text(
                     "참여자 : 125명",
                     style: TextStyle(
-                      color: Colors.black54,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -171,7 +166,7 @@ class _GroupSelectState extends State<GroupSelect> {
 
                   // 맨 앞에 오는 그룹의 프로필 이미지
                   leading: CircleAvatar(
-                    backgroundColor: Colors.white,
+
                     backgroundImage: AssetImage('assets/images/fubao.webp'),
                     radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                   ),
@@ -197,7 +192,7 @@ class _GroupSelectState extends State<GroupSelect> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                  thickness: 1,
                 ),
 
                 // 사랑아 시선해 팀
@@ -206,7 +201,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   title: Text(
                     "사랑아 시선해 팀",
                     style: TextStyle(
-                      color: Colors.black,
+
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),
@@ -214,7 +209,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   subtitle: Text(
                     "참여자 : 15명",
                     style: TextStyle(
-                      color: Colors.black54,
+
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -228,7 +223,7 @@ class _GroupSelectState extends State<GroupSelect> {
 
                   // 맨 앞에 오는 그룹의 프로필 이미지
                   leading: CircleAvatar(
-                    backgroundColor: Colors.white,
+
                     backgroundImage: AssetImage('assets/images/peng2.jpg'),
                     radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
                   ),
@@ -253,14 +248,24 @@ class _GroupSelectState extends State<GroupSelect> {
                 ),
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                  thickness: 1,
                 ),
               ],
             ),
           ],
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
+      floatingActionButton: ClipOval(
+        child: FloatingActionButton(
+          onPressed: () {
+            // Navigate to a new screen using Get
+            Get.to(GroupMake());
+          },
+          child: FaIcon(FontAwesomeIcons.plus,color: isDarkMode? Colors.white : Colors.white,)
+          ,
+          backgroundColor: isDarkMode? Color(0xFF62626B) : Colors.black,
+        ),
+      ),
     );
   }
 }

@@ -3,11 +3,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Appbar%20page/storage_3/storagebox_btn.dart';
+import 'package:mobalworld/src/Front/Group/group_main.dart';
+import 'package:provider/provider.dart';
 import '../../Color_UI/padding.dart';
 import '../../Setting/bottom.dart';
+import '../../Setting/theme_provider.dart';
 import '../../Worry writting/temporary_write.dart';
-
-
 
 class Temporay_StoragePage extends StatefulWidget {
   const Temporay_StoragePage({super.key});
@@ -19,8 +22,9 @@ class Temporay_StoragePage extends StatefulWidget {
 class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
+
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -29,19 +33,17 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
 
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: Colors.white,
 
           //뒤로가기 버튼
           leading: Row(
             children: [
               IconButton(
-                color: Colors.black,
                 icon: Icon(Icons.arrow_back_ios_new),
-
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.to(Storagebox());
                 },
+                color: isDarkMode ? Colors.white : Colors.black
               ),
             ],
           ),
@@ -52,12 +54,10 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
             style: TextStyle(
               fontWeight: FontWeight.w900,
               fontSize: 23,
-              color: Colors.black,
             ),
           ),
         ),
       ),
-
       /////body - 리스트 시작
       body: ListView(
         padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
@@ -70,17 +70,13 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                 // 임시 작성글 1
                 ListTile(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => TemporaryWrite()),
-                    );
+                    Get.to(TemporaryWrite());
                   },
                   dense: false,
                   // 사용자가 작성한 고민 글 제목 으로 보여주기
                   title: Text(
                     "쓰다만 글이지롱",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -115,7 +111,6 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   title: Text(
                     "임시 작성 중인 글입니다",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -150,7 +145,6 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   title: Text(
                     "작성중이었는데 고민해결!",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -184,7 +178,6 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

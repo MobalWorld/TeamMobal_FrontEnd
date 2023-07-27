@@ -1,14 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Group/group_main.dart';
+import 'package:provider/provider.dart';
 
+import '../../Setting/bottomNav.dart';
+import '../../Setting/theme_provider.dart';
 import 'storage.dart';
 import 'temporary_storage.dart';
 import 'worry_storage.dart';
 import '../../Setting/bottom.dart';
 import '../../Setting/master_key.dart';
-
 
 class Storagebox extends StatefulWidget {
   const Storagebox({Key? key}) : super(key: key);
@@ -18,14 +20,12 @@ class Storagebox extends StatefulWidget {
 }
 
 class _StorageboxState extends State<Storagebox> {
-  // final beige = Color(0xffFFF8E8);
-  // FCCAA9
-  final beige = Color(0xff96B0E5);
-  final darkTextColor = Color(0xff1F1A3D);
+
 
   //보관함에서만 작동하는 보관함 박스 button을 위젯화 - 만듦
   Widget getButton({required String hint, required Widget nextPage}) {
-    return Container(
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
+    return SizedBox(
         width: double.infinity,
         // 버튼 높이
         height: Getheight(0.02.sh),
@@ -34,30 +34,31 @@ class _StorageboxState extends State<Storagebox> {
             Get.to(nextPage);
           },
           style: ButtonStyle(
-            // backgroundColor: MaterialStateProperty.all(beige),
             // 색 변경 - 분홍색으로
-            backgroundColor: MaterialStateProperty.all(Theme.of(context).colorScheme.primaryContainer,),
-            foregroundColor: MaterialStateProperty.all(Colors.black),
+            backgroundColor: MaterialStateProperty.all(
+              Theme.of(context).colorScheme.primaryContainer,
+            ),
+            foregroundColor: MaterialStateProperty.all(isDarkMode ? Colors.white : Colors.black),
             padding: //패딩
 
-            MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+                MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
 
             textStyle: MaterialStateProperty.all(TextStyle(
               fontSize: FontSize(20.sp),
               fontWeight: FontWeight.w700,
+              fontFamily: 'Yeongdeok Blueroad'
             )),
             side: MaterialStateProperty.all(BorderSide(
               width: 1.0, // 테두리의 두께를 조정하세요
               // 테두리 색상 분홍색으로 변경
-              color: Theme.of(context).colorScheme.primaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
+              color: Theme.of(context)
+                  .colorScheme
+                  .tertiaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
             )),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius:
-
-                BorderRadius.circular(100.0), // 원하는 모서리의 둥근 정도를 조정하세요
-
-
+                    BorderRadius.circular(20.0), // 원하는 모서리의 둥근 정도를 조정하세요
               ),
             ),
           ),
@@ -81,19 +82,18 @@ class _StorageboxState extends State<Storagebox> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
-            size: 30.sp,
+            color: isDarkMode ? Colors.white : Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Get.to(BottomNavi());
           },
-          color: Colors.black,
         ),
         elevation: 0.0,
       ),
@@ -103,7 +103,7 @@ class _StorageboxState extends State<Storagebox> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 backgroundColor: Colors.white,
                 backgroundImage: AssetImage('assets/images/peng1.jpg'),
                 radius: 50,
@@ -111,35 +111,33 @@ class _StorageboxState extends State<Storagebox> {
               SizedBox(
                 height: 0.015.sh,
               ),
-              Text(
+              const Text(
                 '남극 펭귄',
                 style: TextStyle(
-                    color: Colors.black,
                     fontSize: 20,
-                    fontWeight:FontWeight.w600),
-              ),
-              SizedBox(
-                height: 0.03.sh,
+                    fontWeight: FontWeight.w600),
               ),
               SizedBox(
                 // 바다 코끼리와 위로 보관함 사이 여백 박스
                 height: 0.1.sh,
               ),
-              getButton(hint: "위로 보관함", nextPage: StoragePage(),),
+              getButton(
+                hint: "위로 보관함",
+                nextPage: const StoragePage(),
+              ),
               SizedBox(
                 height: 0.03.sh,
               ),
-              getButton(hint: "나의 고민 보관함", nextPage: Worry_StoragePage()),
+              getButton(hint: "나의 고민 보관함", nextPage: const Worry_StoragePage()),
               SizedBox(
                 height: 0.03.sh,
               ),
-              getButton(hint: "임시 보관함", nextPage: Temporay_StoragePage()),
-              MasterKey(margin: 50)
+              getButton(hint: "임시 보관함", nextPage: const Temporay_StoragePage()),
+              const MasterKey(margin: 50)
             ],
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

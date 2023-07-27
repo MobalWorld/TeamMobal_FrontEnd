@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 
 import '../Setting/bottom.dart';
+import '../Setting/theme_provider.dart';
 
 class AlarmPage extends StatefulWidget {
   const AlarmPage({super.key});
@@ -14,8 +17,8 @@ class AlarmPage extends StatefulWidget {
 class _AlarmPageState extends State<AlarmPage> {
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -24,19 +27,19 @@ class _AlarmPageState extends State<AlarmPage> {
 
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: Colors.white,
+
 
           //뒤로가기 버튼
           leading: Row(
             children: [
               IconButton(
-                color: Colors.black,
                 icon: Icon(Icons.arrow_back_ios_new),
 
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
-                  Navigator.pop(context);
+                  Get.back();
                 },
+                  color: isDarkMode ? Colors.white : Colors.black
               ),
             ],
           ),
@@ -47,7 +50,6 @@ class _AlarmPageState extends State<AlarmPage> {
             style: TextStyle(
               fontWeight: FontWeight.w900,
               fontSize: 25,
-              color: Colors.black,
             ),
           ),
         ),
@@ -71,7 +73,6 @@ class _AlarmPageState extends State<AlarmPage> {
                   title: Text(
                     "행복하고 싶다에 대한 위로가 도착했습니다.",
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -83,7 +84,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "23-1 한동 위로 팀",
                         style: TextStyle(
-                          color: Colors.black,
+
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                         ),
@@ -91,7 +92,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "2023/07/18",
                         style: TextStyle(
-                          color: Colors.black,
+
                           fontSize: 12,
                           fontWeight: FontWeight.w200,
                         ),
@@ -115,7 +116,7 @@ class _AlarmPageState extends State<AlarmPage> {
                 ),
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                  thickness: 1,
                 ),
 
                 //리스트 타일 사이에 여백 한번 만들어봄
@@ -130,7 +131,7 @@ class _AlarmPageState extends State<AlarmPage> {
                   title: Text(
                     "푸바오 없인 못살아에 대한 위로가 도착했습니다.",
                     style: TextStyle(
-                      color: Colors.black,
+
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -142,7 +143,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "푸바오 사랑해 팀",
                         style: TextStyle(
-                          color: Colors.black,
+
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                         ),
@@ -150,7 +151,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "2023/07/15",
                         style: TextStyle(
-                          color: Colors.black,
+
                           fontSize: 12,
                           fontWeight: FontWeight.w200,
                         ),
@@ -175,7 +176,7 @@ class _AlarmPageState extends State<AlarmPage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                  thickness: 1,
                 ),
               ],
             ),
@@ -184,7 +185,6 @@ class _AlarmPageState extends State<AlarmPage> {
           ),
         ],
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

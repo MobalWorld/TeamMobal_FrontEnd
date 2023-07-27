@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
+import 'package:mobalworld/src/Front/Setting/bottomNav.dart';
 
 import '../Appbar page/storage_3/temporary_storage.dart';
 import '../Group/group_main.dart';
@@ -24,12 +25,10 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(75.0),
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: Colors.white,
           // 취소 버튼
           leading: Align(
             alignment: Alignment.centerLeft,
@@ -38,7 +37,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
               child: TextButton(
                 child: Text(
                   '취소',
-                  style: TextStyle(color: Colors.black, fontSize: 15),
+                  style: TextStyle(fontSize: 15),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
@@ -61,7 +60,8 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Get.to(GroupSelect());
+                                  Get.back();
+                                  Get.back();
                                 },
                                 child: Text(
                                   '작성취소',
@@ -99,7 +99,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  Navigator.pop(context);
+                                  Get.back();
                                 },
                                 child: Text(
                                   '취소',
@@ -121,7 +121,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
 
           title: Text(
             group,
-            style: TextStyle(color: Colors.black, fontSize: 25),
+            style: TextStyle(fontSize: 25),
             textAlign: TextAlign.center,
           ),
           actions: [
@@ -131,7 +131,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
                 style: TextStyle(color: Colors.red[400], fontSize: 15.sp),
               ),
               onPressed: () {
-                Navigator.pop(context);
+                Get.to(BottomNavi());
               },
             ),
           ],
@@ -145,7 +145,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
             children: [
               TextField(
                 decoration: InputDecoration(
-                  labelText: '제목 : 쓰다만 글이지롱 ',
+                  hintText: '쓰다만 글이지롱'
                 ),
                 onChanged: (value) {
                   setState(() {
@@ -168,7 +168,6 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }
@@ -179,11 +178,11 @@ void _showDialog(BuildContext context) {
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text('임시 저장'),
-        content: Text('임시 저장함으로 이동합니다'),
+        content: Text('임시 저장되었습니다.'),
         actions: [
           TextButton(
             onPressed: () {
-              Get.to(Temporay_StoragePage()); // Close the dialog
+              Get.to(BottomNavi()); // Close the dialog
             },
             child: Text('확인'),
           ),

@@ -41,7 +41,6 @@ class _ToungPageState extends State<ToungPage> {
           ),
         ),
       ),
-      bottomNavigationBar: bottomWidget(),
     );
   }
 }

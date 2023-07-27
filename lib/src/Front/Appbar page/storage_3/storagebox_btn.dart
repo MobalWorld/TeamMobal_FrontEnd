@@ -46,6 +46,7 @@ class _StorageboxState extends State<Storagebox> {
             textStyle: MaterialStateProperty.all(TextStyle(
               fontSize: FontSize(20.sp),
               fontWeight: FontWeight.w700,
+              fontFamily: 'Yeongdeok Blueroad'
             )),
             side: MaterialStateProperty.all(BorderSide(
               width: 1.0, // 테두리의 두께를 조정하세요

@@ -253,13 +253,16 @@ class _WiroWritingState extends State<WiroWriting> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 0.035.sh,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              isDarkMode ? Color(0xFF242625) : Colors.white,
+                              isDarkMode ? Color(0xFFFF6105) : Colors.white,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
                         ),
@@ -273,6 +276,7 @@ class _WiroWritingState extends State<WiroWriting> {
                       ),
                     ],
                   ),
+
                 ],
               ),
             ],

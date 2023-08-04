@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mobalworld/src/Front/Group/group_code_confirm.dart';
 import 'package:mobalworld/src/Front/Group/worry_and_wiiroo.dart';
+import 'package:mobalworld/src/Front/Setting/MyPage/myPage.dart';
 // import문에서 첫번째 .. : ㅣ
 import '../appbar page/alarm.dart';
 import '../appbar page/storage_3/storage.dart';
@@ -35,6 +36,11 @@ class MasterKey extends StatelessWidget {
             DropdownButton<String>(
               hint: Text('페이지 이동'),
               items: [
+                DropdownMenuItem(
+                  //마이 페이지
+                  value: 'MyPage',
+                  child: Text('My page'),
+                ),
                 DropdownMenuItem(
                   //로그인 페이지
                   value: 'login',
@@ -150,7 +156,11 @@ class MasterKey extends StatelessWidget {
                 } else if (value == 'loading') {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => LoadingPage()));
-                } else if (value == 'info') {
+                } else if (value == 'MyPage') {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyPage()));
+                }
+                else if (value == 'info') {
                   Navigator.push(
                       context,
                       MaterialPageRoute(

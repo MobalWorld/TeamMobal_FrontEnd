@@ -174,7 +174,7 @@ class _WorryMiriState extends State<WorryMiri> {
                   padding: GetPadding(),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      foregroundColor: isDarkMode ? Colors.black : Colors.white, backgroundColor: isDarkMode ? Color(0xFF242625) : Colors.white,
+                      foregroundColor: isDarkMode ? Colors.black : Colors.white, backgroundColor: isDarkMode ? Color(0xFFFF6105) : Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                     ),
@@ -182,7 +182,7 @@ class _WorryMiriState extends State<WorryMiri> {
                       Get.to(WiroWriting());
                     },
                     child: Text(
-                      '위로 작성하기',
+                      '답변하기',
                       style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
                     ),
                   ),

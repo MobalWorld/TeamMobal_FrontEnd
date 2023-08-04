@@ -28,10 +28,12 @@ class _GroupMakeState extends State<GroupMake> {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return SafeArea(
         child: Scaffold(
-      appBar: AppBar(
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
+          appBar: AppBar(
+            backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         toolbarHeight: 80,
-        leading: IconButton(
-          icon: Icon(
+            leading: IconButton(
+              icon: Icon(
             Icons.arrow_back_ios_new,
             color: isDarkMode? Colors.white : Colors.black,
           ),
@@ -247,12 +249,15 @@ class _GroupMakeState extends State<GroupMake> {
                       onPressed: () {
                         Get.to(GroupCodeConfirm());
                       },
-                      child: Text('만들기'),
+                      child: Text('만들기',
+                        style:TextStyle(
+                          color: Colors.white,
+                        ) ,),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)
                         ),
-                          backgroundColor: Color(0xFFFFB487)),
+                          backgroundColor: Color(0xFFFF6105)),
                     ),
                   ),
                 ],

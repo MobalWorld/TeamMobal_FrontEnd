@@ -24,7 +24,7 @@ class _StoragePageState extends State<StoragePage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -32,7 +32,7 @@ class _StoragePageState extends State<StoragePage> {
         ),
 
         child: AppBar(
-          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
           toolbarHeight: 75,
           //뒤로가기 버튼
           leading: Row(

@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mobalworld/src/Front/Setting/theme_provider.dart';
+import 'package:provider/provider.dart';
 import '../login/login.dart';
 
 class LoadingPage extends StatefulWidget {
@@ -27,9 +29,10 @@ class _LoadingPageState extends State<LoadingPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

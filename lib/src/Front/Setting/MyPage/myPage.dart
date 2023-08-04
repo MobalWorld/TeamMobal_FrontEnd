@@ -42,9 +42,9 @@ class _MyPageState extends State<MyPage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
-        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         automaticallyImplyLeading: false,
         title: Text(
           '마이페이지',
@@ -112,7 +112,6 @@ class _MyPageState extends State<MyPage> {
                 children: [
                   // !!!!!!! nextPage 나중에 만들면 바꾸기 !!!!!!!
                   getSetting(hint: "계정 정보", nextPage: BottomNavi(),isDarkMode: isDarkMode),
-                  getSetting(hint: "그룹 관리", nextPage: BottomNavi(),isDarkMode: isDarkMode),
                   getSetting(hint: "버전", nextPage: BottomNavi(),isDarkMode: isDarkMode),
                   getSetting(hint: "문의하기", nextPage: BottomNavi(),isDarkMode: isDarkMode),
                   getDark(), // 다크모드 토글을 위해 nextPage를 전달하지 않습니다.

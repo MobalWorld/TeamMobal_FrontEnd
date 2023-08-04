@@ -39,9 +39,9 @@ class _WorryMiriState extends State<WorryMiri> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
-        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
@@ -174,7 +174,7 @@ class _WorryMiriState extends State<WorryMiri> {
                   padding: GetPadding(),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      foregroundColor: isDarkMode ? Colors.black : Colors.white, backgroundColor: isDarkMode ? Color(0xFF242625) : Colors.white,
+                      foregroundColor: isDarkMode ? Colors.black : Colors.white, backgroundColor: isDarkMode ? Color(0xFFFF6105) : Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                     ),
@@ -182,7 +182,7 @@ class _WorryMiriState extends State<WorryMiri> {
                       Get.to(WiroWriting());
                     },
                     child: Text(
-                      '위로 작성하기',
+                      '답변하기',
                       style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
                     ),
                   ),

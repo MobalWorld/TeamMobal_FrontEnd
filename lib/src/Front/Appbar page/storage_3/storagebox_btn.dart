@@ -42,7 +42,7 @@ class _StorageboxState extends State<Storagebox> {
                 MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
 
             textStyle: MaterialStateProperty.all(TextStyle(
-              fontSize: FontSize(20.sp),
+              fontSize: FontSize(16.sp),
               fontWeight: FontWeight.w700,
               fontFamily: 'Yeongdeok Blueroad'
             )),
@@ -80,9 +80,9 @@ class _StorageboxState extends State<Storagebox> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
-        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,

@@ -125,7 +125,6 @@ class _MyPageState extends State<MyPage> {
                 children: [
                   // !!!!!!! nextPage 나중에 만들면 바꾸기 !!!!!!!
                   getSetting(hint: "계정 정보", nextPage: BottomNavi(),isDarkMode: isDarkMode),
-                  getSetting(hint: "그룹 관리", nextPage: BottomNavi(),isDarkMode: isDarkMode),
                   getSetting(hint: "버전", nextPage: BottomNavi(),isDarkMode: isDarkMode),
                   getSetting(hint: "문의하기", nextPage: BottomNavi(),isDarkMode: isDarkMode),
                   getDark(), // 다크모드 토글을 위해 nextPage를 전달하지 않습니다.

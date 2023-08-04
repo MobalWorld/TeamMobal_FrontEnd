@@ -179,7 +179,7 @@ class _GroupMainState extends State<GroupMain> {
                               showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
-                                  backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+                                  backgroundColor: isDarkMode ? Color(0xFF62626B) : Color(0xFFEFF0F2),
                                   title: Text('알림',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),),
                                   content: Text(
                                       '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),

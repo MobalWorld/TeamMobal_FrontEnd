@@ -42,7 +42,9 @@ class _MyPageState extends State<MyPage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: AppBar(
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
         automaticallyImplyLeading: false,
         title: Text(
           '마이페이지',
@@ -86,13 +88,13 @@ class _MyPageState extends State<MyPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const SizedBox(
+                   SizedBox(
                     width: 50,
                   ),
                   Expanded(
                     child: Text(
                       _nickName,
-                      style: const TextStyle(fontSize: 17),
+                      style: TextStyle(fontSize: 17,color: isDarkMode ? Colors.white : Colors.black,),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -102,7 +104,7 @@ class _MyPageState extends State<MyPage> {
                       onPressed: () {
                         Get.to(const ChangeProfil());
                       },
-                      icon: const Icon(Icons.edit),
+                      icon: Icon(Icons.edit,color: isDarkMode ? Colors.white : Colors.black,),
                       style: const ButtonStyle(),
                     ),
                   ),
@@ -122,10 +124,10 @@ class _MyPageState extends State<MyPage> {
                 physics: const AlwaysScrollableScrollPhysics(),
                 children: [
                   // !!!!!!! nextPage 나중에 만들면 바꾸기 !!!!!!!
-                  getSetting(hint: "계정 정보", nextPage: BottomNavi()),
-                  getSetting(hint: "그룹 관리", nextPage: BottomNavi()),
-                  getSetting(hint: "버전", nextPage: BottomNavi()),
-                  getSetting(hint: "문의하기", nextPage: BottomNavi()),
+                  getSetting(hint: "계정 정보", nextPage: BottomNavi(),isDarkMode: isDarkMode),
+                  getSetting(hint: "그룹 관리", nextPage: BottomNavi(),isDarkMode: isDarkMode),
+                  getSetting(hint: "버전", nextPage: BottomNavi(),isDarkMode: isDarkMode),
+                  getSetting(hint: "문의하기", nextPage: BottomNavi(),isDarkMode: isDarkMode),
                   getDark(), // 다크모드 토글을 위해 nextPage를 전달하지 않습니다.
                   // Add more settings options as needed
                 ],
@@ -158,13 +160,13 @@ Widget getDark() {
   );
 }
 
-ListTile getSetting({required String hint, required Widget nextPage}) {
+ListTile getSetting({required String hint, required Widget nextPage, required bool isDarkMode}) {
   return ListTile(
     title: Text(
       hint,
       style: const TextStyle(fontSize: 17),
     ),
-    trailing: const Icon(Icons.arrow_forward_ios_rounded),
+    trailing: Icon(Icons.arrow_forward_ios_rounded, color: isDarkMode ? Colors.white : Colors.black),
     onTap: () {
       Get.to(nextPage);
     },

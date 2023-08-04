@@ -23,7 +23,9 @@ class _WiroStorageState extends State<WiroStorage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: AppBar(
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
@@ -36,10 +38,13 @@ class _WiroStorageState extends State<WiroStorage> {
         ),
         title: Column(
           children: [
-            Text('2023년 07월 11일'),
+            Text('2023년 07월 11일',
+            style: TextStyle(
+              color: isDarkMode ? Colors.white : Colors.black,
+            ),),
             Text('23-1 한동 위로팀',
                 style: TextStyle(
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: isDarkMode ? Colors.white : Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                 )),
@@ -66,7 +71,7 @@ class _WiroStorageState extends State<WiroStorage> {
                     Container(
                       height: 0.3.sh,
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.secondaryContainer,
+                        color: isDarkMode ? Color(0xFF242625) : Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Padding(
@@ -77,17 +82,18 @@ class _WiroStorageState extends State<WiroStorage> {
                           children: [
                             Text(
                               '(내가 작성했던 고민 제목) \n 매일 매일 목 말라 ',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 20,
+                                color: isDarkMode ? Colors.white : Colors.black,),
                             ),
                             Divider(
-                              color:
-                              Theme.of(context).colorScheme.tertiaryContainer,
+                                thickness: 1,
+                                color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                             ),
                             Text(
                               '(내용) 안녕하세요 저는 매일 매일 목말라서 고민입니다. 왜 저는 항상 목이 마를까요'
                                   '얼마나 물을 더 마셔야 목이 안 마를지... 아니 이제는 물을 마시는게 맞는지도 잘 모르겠어요..'
                                   '어떻게 해야 이 목마름이 사라질까요..''물로만 목마름을 해결할 수 있을까요? ',
-                              style: TextStyle(fontSize: 15),
+                              style: TextStyle(fontSize: 15,color: isDarkMode ? Colors.white : Colors.black,),
                             )
                           ],
                         ),

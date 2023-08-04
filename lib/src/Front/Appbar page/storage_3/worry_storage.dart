@@ -22,6 +22,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
 
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -30,7 +31,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
         child: AppBar(
           toolbarHeight: 75,
-
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
           //뒤로가기 버튼
           leading: Row(
             children: [
@@ -49,6 +50,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
             "나의 고민 보관함",
             textAlign: TextAlign.center,
             style: TextStyle(
+              color: isDarkMode ? Colors.white : Colors.black,
               fontWeight: FontWeight.w900,
               fontSize: 23,
             ),
@@ -74,6 +76,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "매일 매일 목말라",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -83,6 +86,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 목 안 마른 사슴",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -105,6 +109,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/16",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -113,7 +118,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -127,6 +133,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "판다에게 차인 이후 살고싶지 않아",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -136,6 +143,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 푸바오 팬클럽 회장",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -158,6 +166,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/13",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -166,7 +175,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -180,6 +190,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "불쌍한 인간들",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -189,6 +200,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From.오이맛 수박",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -211,6 +223,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/10",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -219,7 +232,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -234,6 +248,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "매일 매일 목말라",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -243,6 +258,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 목 안 마른 사슴",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -265,6 +281,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/16",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -273,7 +290,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -287,6 +305,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "판다에게 차인 이후 살고싶지 않아",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -296,6 +315,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 푸바오 팬클럽 회장",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -318,6 +338,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/13",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -326,7 +347,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -340,6 +362,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "불쌍한 인간들",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -349,6 +372,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From.오이맛 수박",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -371,6 +395,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/10",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -379,7 +404,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -393,6 +419,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "매일 매일 목말라",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -402,6 +429,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 목 안 마른 사슴",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -424,6 +452,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/16",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -432,7 +461,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -446,6 +476,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "판다에게 차인 이후 살고싶지 않아",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -455,6 +486,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From. 푸바오 팬클럽 회장",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -477,6 +509,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/13",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -485,7 +518,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백
@@ -499,6 +533,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   title: Text(
                     "불쌍한 인간들",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                     ),
@@ -508,6 +543,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   subtitle: Text(
                     "From.오이맛 수박",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                     ),
@@ -530,6 +566,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
                   trailing: Text(
                     "2023/07/10",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -538,7 +575,8 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
                 // 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이 여백

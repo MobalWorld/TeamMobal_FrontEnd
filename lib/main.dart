@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
                 useMaterial3: true,
                 colorScheme: themeProvider.isDarkMode ? darkColorScheme : lightColorScheme,
                 fontFamily: 'Yeongdeok Blueroad',
+                primarySwatch: null,
               ),
               darkTheme: ThemeData(
                 useMaterial3: true,

@@ -24,6 +24,7 @@ class _StoragePageState extends State<StoragePage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -31,6 +32,7 @@ class _StoragePageState extends State<StoragePage> {
         ),
 
         child: AppBar(
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
           toolbarHeight: 75,
           //뒤로가기 버튼
           leading: Row(
@@ -50,6 +52,7 @@ class _StoragePageState extends State<StoragePage> {
             "위로 보관함",
             textAlign: TextAlign.center,
             style: TextStyle(
+              color: isDarkMode ? Colors.white : Colors.black,
               fontWeight: FontWeight.w900,
               fontSize: 23,
             ),
@@ -76,6 +79,7 @@ class _StoragePageState extends State<StoragePage> {
                   title: Text(
                     "행복하고 싶다",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -87,6 +91,7 @@ class _StoragePageState extends State<StoragePage> {
                   trailing: Text(
                     "2023/07/16",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -95,7 +100,9 @@ class _StoragePageState extends State<StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
+
                 ),
 
                 //리스트 타일 사이에 여백 한번 만들어봄
@@ -110,6 +117,7 @@ class _StoragePageState extends State<StoragePage> {
                   title: Text(
                     "살고 싶지 않아",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -121,6 +129,7 @@ class _StoragePageState extends State<StoragePage> {
                   trailing: Text(
                     "2023/07/12",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -129,7 +138,8 @@ class _StoragePageState extends State<StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이에 여백
@@ -144,6 +154,7 @@ class _StoragePageState extends State<StoragePage> {
                   title: Text(
                     "왜 나만 이럴까",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -155,6 +166,7 @@ class _StoragePageState extends State<StoragePage> {
                   trailing: Text(
                     "2023/07/10",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -163,7 +175,8 @@ class _StoragePageState extends State<StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이에 여백

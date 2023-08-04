@@ -43,7 +43,9 @@ class _GroupMainState extends State<GroupMain> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: AppBar(
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBFDFC),
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
@@ -95,7 +97,7 @@ class _GroupMainState extends State<GroupMain> {
                 height: 120,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.secondaryContainer,
+                  color: isDarkMode ? Color(0xFF242625) : Colors.white,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -115,7 +117,7 @@ class _GroupMainState extends State<GroupMain> {
                       text: '바다 표범',
                       style: TextStyle(
                         fontSize: 15,
-                        color: isDarkMode ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.inversePrimary,
+                        color: isDarkMode ? Color(0xFFFCCAA9) : Color(0xFFFCCAA9),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -130,7 +132,7 @@ class _GroupMainState extends State<GroupMain> {
                   ],
                 ),
               ),
-                    SizedBox(height: 11),
+                    SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -160,11 +162,12 @@ class _GroupMainState extends State<GroupMain> {
                 itemCount: name.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
-                    padding: EdgeInsets.only(bottom: 40),
+                    // 박스 사이 간격 수정
+                    padding: EdgeInsets.only(bottom: 20),
                     child: Container(
                       height: 140,
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.tertiaryContainer,
+                        color: isDarkMode ? Color(0xFF242625) : Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: ClipRRect(
@@ -176,23 +179,24 @@ class _GroupMainState extends State<GroupMain> {
                               showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
-                                  title: Text('알림'),
+                                  backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+                                  title: Text('알림',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),),
                                   content: Text(
-                                      '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡'),
+                                      '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
                                   actions: [
                                     TextButton(
                                       onPressed: () {
                                         Get.back();
                                         // Close the AlertDialog
                                       },
-                                      child: Text('취소'),
+                                      child: Text('취소',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
                                     ),
                                     TextButton(
                                       onPressed: () {
                                         Get.to(
                                             WorryMiri()); // Close the AlertDialog
                                       },
-                                      child: Text('확인'),
+                                      child: Text('확인',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
                                     ),
                                   ],
                                 ),
@@ -218,13 +222,17 @@ class _GroupMainState extends State<GroupMain> {
                                       ),
                                       Text(
                                         name[index],
-                                        style: TextStyle(fontSize: 14),
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color: isDarkMode ? Colors.white : Colors.black),
                                       ),
                                       // 이름과 날짜 사이 간격
                                       SizedBox(width: 9),
                                       Text(
                                         date[index],
-                                        style: TextStyle(fontSize: 14),
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color: isDarkMode ? Colors.white : Colors.black),
                                       ),
                                     ],
                                   ),
@@ -241,6 +249,7 @@ class _GroupMainState extends State<GroupMain> {
                                           style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold,
+                                            color: isDarkMode ? Colors.white : Colors.black
                                           ),
                                           overflow: TextOverflow.ellipsis,
                                           maxLines: 1,
@@ -260,7 +269,9 @@ class _GroupMainState extends State<GroupMain> {
                                       Expanded(
                                         child: Text(
                                           content[index],
-                                          style: TextStyle(fontSize: 12),
+                                          style: TextStyle(
+                                              fontSize: 12,
+                                              color: isDarkMode ? Colors.white : Colors.black),
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                         ),

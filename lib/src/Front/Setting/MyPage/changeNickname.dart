@@ -3,8 +3,10 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
 import '../../Color_UI/padding.dart';
+import '../theme_provider.dart';
 
 class ChangeProfil extends StatefulWidget {
   const ChangeProfil({super.key});
@@ -32,11 +34,14 @@ class _ChangeProfilState extends State<ChangeProfil> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: AppBar(
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
           toolbarHeight: 80,
           leading: TextButton(
-            child: Text("취소"),
+            child: Text("취소",style: TextStyle(color: isDarkMode ? Colors.white : Colors.black,),),
             onPressed: () {
               Get.back();
             },
@@ -91,6 +96,13 @@ class _ChangeProfilState extends State<ChangeProfil> {
               TextField(
                 decoration: InputDecoration(
                   labelText: '닉네임',
+                  labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black,),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: isDarkMode ? Colors.white : Colors.black), // 포커스될 때 테두리 색상
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: isDarkMode ? Colors.white : Colors.black), // 포커스될 때 테두리 색상
+                  ),
                 ),
                 onChanged: (value) {
                   setState(() {

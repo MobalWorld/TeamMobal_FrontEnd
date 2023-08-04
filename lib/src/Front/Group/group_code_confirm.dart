@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +29,7 @@ class GroupCodeConfirm extends StatelessWidget {
           leading: Row(
             children: [
               IconButton(
-                icon: Icon(Icons.arrow_back_ios_new),
+                icon: Icon(Icons.arrow_back_ios_new,color: isDarkMode? Colors.white : Colors.black,),
 
                 // 추후에 이동 기능 추가하기
                 onPressed: () {
@@ -69,7 +70,7 @@ class GroupCodeConfirm extends StatelessWidget {
 
                   Container(
                     decoration: BoxDecoration(
-                      color: Color(0xFFF5F2FD),
+                      color: isDarkMode? Color(0xFF242625) : Colors.white,
                       borderRadius: BorderRadius.circular(7),
                     ),
                     child: Padding(
@@ -79,7 +80,7 @@ class GroupCodeConfirm extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.w600,
-                          color: Colors.black
+                          color: isDarkMode? Colors.white : Colors.black
 
                         ),
                       ),
@@ -94,26 +95,34 @@ class GroupCodeConfirm extends StatelessWidget {
                   //코드 복사하기 버튼
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      fixedSize: Size(160,40),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
                         backgroundColor:
-                            Theme.of(context).colorScheme.primaryContainer),
+                            isDarkMode? Color(0xFF242625) : Colors.white),
                     onPressed: () {
                       //코드 복사 되었을 경우 하단부에 알림
                       final snackBar = SnackBar(
-                        content: const Text('✅ 그룹 코드가 복사되었습니다!',style: TextStyle(
-                          color: Colors.black
+                        content: Text('✅ 그룹 코드가 복사되었습니다!',style: TextStyle(
+                          color: isDarkMode? Colors.white :Colors.black,
                         ),),
                       );
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     },
-                    child: Text(
-                      '코드 복사하기',
-                      style: TextStyle(
-                        color: isDarkMode? Colors.white : Colors.black,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '코드 복사하기',
+                          style: TextStyle(
+                            color: isDarkMode? Colors.white : Colors.black,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(width: 5,),
+                        FaIcon(FontAwesomeIcons.solidCopy,color: isDarkMode? Colors.white : Colors.black,),
+                      ],
                     ),
                   ),
                   SizedBox(
@@ -123,20 +132,28 @@ class GroupCodeConfirm extends StatelessWidget {
                   //코드 공유하기 버튼
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                        fixedSize: Size(160,40),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
                         backgroundColor:
-                            Theme.of(context).colorScheme.primaryContainer),
+                        isDarkMode? Color(0xFF242625) : Colors.white),
                     onPressed: () {
                       // 코드 공유하는 버튼
                     },
-                    child: Text(
-                      '코드 공유하기',
-                      style: TextStyle(
-                        color: isDarkMode? Colors.white : Colors.black,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '코드 공유하기',
+                          style: TextStyle(
+                            color: isDarkMode? Colors.white : Colors.black,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(width: 5,),
+                        FaIcon(FontAwesomeIcons.solidShareFromSquare,color: isDarkMode? Colors.white : Colors.black),
+                      ],
                     ),
                   ),
 
@@ -147,7 +164,7 @@ class GroupCodeConfirm extends StatelessWidget {
                   //확인 버튼
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+                    backgroundColor: Color(0xFF4880EE),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     )),
@@ -159,7 +176,7 @@ class GroupCodeConfirm extends StatelessWidget {
                     child: Text(
                       '확인',
                       style: TextStyle(
-                        color: isDarkMode? Colors.white : Colors.black,
+                        color: Colors.white,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

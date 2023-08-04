@@ -23,7 +23,9 @@ class _FinStorageState extends State<FinStorage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: AppBar(
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
@@ -37,10 +39,10 @@ class _FinStorageState extends State<FinStorage> {
         ),
         title: Column(
           children: [
-            Text('2023년 07월 11일'),
+            Text('2023년 07월 11일',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black,),),
             Text('23-1 한동 위로팀',
                 style: TextStyle(
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: isDarkMode ? Colors.white : Colors.black,
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                 )),
@@ -61,7 +63,7 @@ class _FinStorageState extends State<FinStorage> {
                     Container(
                       height: 0.3.sh,
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.secondaryContainer,
+                        color: isDarkMode ? Color(0xFF242625) : Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Padding(
@@ -72,16 +74,14 @@ class _FinStorageState extends State<FinStorage> {
                           children: [
                             Text(
                               '고민 제목',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 20,color: isDarkMode ? Colors.white : Colors.black,),
                             ),
                             Divider(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .tertiaryContainer,
+                              color: isDarkMode ? Colors.white : Colors.black,
                             ),
                             Text(
                               '내용',
-                              style: TextStyle(fontSize: 15),
+                              style: TextStyle(fontSize: 15,color: isDarkMode ? Colors.white : Colors.black,),
                             )
                           ],
                         ),
@@ -93,7 +93,7 @@ class _FinStorageState extends State<FinStorage> {
                     Container(
                       height: 0.3.sh,
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primaryContainer,
+                        color: isDarkMode ? Color(0xFF242625) : Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Padding(
@@ -114,17 +114,19 @@ class _FinStorageState extends State<FinStorage> {
                                 ),
                                 Text(
                                   '위로 보낸 사람',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: isDarkMode ? Colors.white : Colors.black,),
                                 ),
                               ],
                             ),
                             Divider(
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .tertiaryContainer),
+                              color: isDarkMode ? Colors.white : Colors.black,),
                             Text(
                               '내용',
-                              style: TextStyle(fontSize: 15),
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  color: isDarkMode ? Colors.white : Colors.black,),
                             )
                           ],
                         ),

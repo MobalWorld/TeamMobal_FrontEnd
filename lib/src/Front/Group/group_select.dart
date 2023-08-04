@@ -155,7 +155,10 @@ class _GroupSelectState extends State<GroupSelect> {
                         <PopupMenuEntry<Item>>[
                       PopupMenuItem<Item>(
                         value: Item.delete,
-                        child: Text('삭제'),
+                        child: Text('삭제', style:
+                          TextStyle(
+                            color: Colors.red,
+                          ),),
                       ),
                     ],
                   ),
@@ -211,7 +214,10 @@ class _GroupSelectState extends State<GroupSelect> {
                         <PopupMenuEntry<Item>>[
                       PopupMenuItem<Item>(
                         value: Item.delete,
-                        child: Text('삭제'),
+                        child: Text('삭제', style:
+                        TextStyle(
+                          color: Colors.red,
+                        ),),
                       ),
                     ],
                   ),
@@ -269,7 +275,10 @@ class _GroupSelectState extends State<GroupSelect> {
                         <PopupMenuEntry<Item>>[
                       PopupMenuItem<Item>(
                         value: Item.delete,
-                        child: Text('삭제'),
+                        child: Text('삭제', style:
+                        TextStyle(
+                          color: Colors.red,
+                        ),),
                       ),
                     ],
                   ),

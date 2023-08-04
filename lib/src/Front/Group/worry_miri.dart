@@ -174,7 +174,7 @@ class _WorryMiriState extends State<WorryMiri> {
                   padding: GetPadding(),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      foregroundColor: isDarkMode ? Colors.black : Colors.white, backgroundColor: isDarkMode ? Color(0xFFFF6105) : Colors.white,
+                      foregroundColor: isDarkMode ? Colors.black : Colors.white, backgroundColor: isDarkMode ? Color(0xFFFF6105) : Color(0xFFFF6105),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                     ),
@@ -183,14 +183,14 @@ class _WorryMiriState extends State<WorryMiri> {
                     },
                     child: Text(
                       '답변하기',
-                      style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
+                      style: TextStyle(color: isDarkMode ? Colors.white : Colors.white),
                     ),
                   ),
                 ),
               ],
             ),
             SizedBox(
-              height: 0.345.sh,
+              height: 0.325.sh,
             ),
           ],
         ),

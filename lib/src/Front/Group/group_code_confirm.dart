@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -93,36 +94,38 @@ class GroupCodeConfirm extends StatelessWidget {
                   ),
 
                   //코드 복사하기 버튼
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: Size(160,40),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        backgroundColor:
-                            isDarkMode? Color(0xFF242625) : Colors.white),
-                    onPressed: () {
-                      //코드 복사 되었을 경우 하단부에 알림
-                      final snackBar = SnackBar(
-                        content: Text('✅ 그룹 코드가 복사되었습니다!',style: TextStyle(
-                          color: isDarkMode? Colors.white :Colors.black,
-                        ),),
-                      );
-                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '코드 복사하기',
-                          style: TextStyle(
-                            color: isDarkMode? Colors.white : Colors.black,
-                            fontWeight: FontWeight.w600,
+                  SizedBox(
+                    width: 0.45.sw,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                        ),
-                        SizedBox(width: 5,),
-                        FaIcon(FontAwesomeIcons.solidCopy,color: isDarkMode? Colors.white : Colors.black,),
-                      ],
+                          backgroundColor:
+                              isDarkMode? Color(0xFF242625) : Colors.white),
+                      onPressed: () {
+                        //코드 복사 되었을 경우 하단부에 알림
+                        final snackBar = SnackBar(
+                          content: Text('✅ 그룹 코드가 복사되었습니다!',style: TextStyle(
+                            color: isDarkMode? Colors.white :Colors.black,
+                          ),),
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '코드 복사하기  ',
+                            style: TextStyle(
+                              color: isDarkMode? Colors.white : Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                            ),
+                          ),
+                          FaIcon(FontAwesomeIcons.solidCopy,color: isDarkMode? Colors.white : Colors.black,),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -130,30 +133,33 @@ class GroupCodeConfirm extends StatelessWidget {
                   ),
 
                   //코드 공유하기 버튼
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        fixedSize: Size(160,40),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        backgroundColor:
-                        isDarkMode? Color(0xFF242625) : Colors.white),
-                    onPressed: () {
-                      // 코드 공유하는 버튼
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '코드 공유하기',
-                          style: TextStyle(
-                            color: isDarkMode? Colors.white : Colors.black,
-                            fontWeight: FontWeight.w600,
+                  SizedBox(
+                    width: 0.45.sw,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                        ),
-                        SizedBox(width: 5,),
-                        FaIcon(FontAwesomeIcons.solidShareFromSquare,color: isDarkMode? Colors.white : Colors.black),
-                      ],
+                          backgroundColor:
+                          isDarkMode? Color(0xFF242625) : Colors.white),
+                      onPressed: () {
+                        // 코드 공유하는 버튼
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '코드 공유하기',
+                            style: TextStyle(
+                              color: isDarkMode? Colors.white : Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 15,
+                            ),
+                          ),
+                          SizedBox(width: 5,),
+                          FaIcon(FontAwesomeIcons.solidShareFromSquare,color: isDarkMode? Colors.white : Colors.black),
+                        ],
+                      ),
                     ),
                   ),
 

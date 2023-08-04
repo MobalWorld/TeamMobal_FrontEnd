@@ -26,6 +26,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       body: Center(
         child: Padding(
           // 전체 패딩 값 - 함수로 불러와서 쓰기
@@ -56,7 +57,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.tertiaryContainer,
+                  color: isDarkMode ? Color(0xFF242625) : Colors.white,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -96,7 +97,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
-                                backgroundColor: isDarkMode? Color(0xFF17171C) : Color(0xFFFCCAA9),
+                                backgroundColor: Color(0xFFFCA778),
                                 shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               )
@@ -113,7 +114,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.tertiaryContainer,
+                  color: isDarkMode ? Color(0xFF242625) : Colors.white,
                   borderRadius: BorderRadius.circular(20),
 
                 ),
@@ -156,7 +157,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: isDarkMode? Color(0xFF17171C) : Color(0xFFFCCAA9) ,
+                              backgroundColor: Color(0xFFFCA778),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               )

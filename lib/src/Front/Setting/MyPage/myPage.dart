@@ -62,27 +62,14 @@ class _MyPageState extends State<MyPage> {
           children: [
             Padding(
               padding: GetPadding(),
-              child: IconButton(
-                iconSize: 70,
-                icon: _image == null
-                    ? const CircleAvatar(
+              child: CircleAvatar(
                   backgroundColor: Colors.white,
                   backgroundImage: AssetImage(
                     'assets/images/peng1.jpg',
                   ),
                   radius: 70,
-                )
-                    : CircleAvatar(
-                  backgroundImage: FileImage(
-                    _image!,
-                  ),
-                  radius: 70,
-                ), // Display the selected image
-                onPressed: () {
-                  _pickImageFromGallery();
-                },
+                ),
               ),
-            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 0.02.sh),
               child: Row(

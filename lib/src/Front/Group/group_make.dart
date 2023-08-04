@@ -252,7 +252,7 @@ class _GroupMakeState extends State<GroupMake> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)
                         ),
-                          backgroundColor: Color(0xFFFCCAA9)),
+                          backgroundColor: Color(0xFFFFB487)),
                     ),
                   ),
                 ],

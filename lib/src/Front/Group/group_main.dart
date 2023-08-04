@@ -43,9 +43,9 @@ class _GroupMainState extends State<GroupMain> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
-        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBFDFC),
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
@@ -117,7 +117,7 @@ class _GroupMainState extends State<GroupMain> {
                       text: '바다 표범',
                       style: TextStyle(
                         fontSize: 15,
-                        color: isDarkMode ? Color(0xFFFCCAA9) : Color(0xFFFCCAA9),
+                        color: isDarkMode ? Color(0xFFFF2205) : Color(0xFFFF2205),
                         fontWeight: FontWeight.w600,
                       ),
                     ),

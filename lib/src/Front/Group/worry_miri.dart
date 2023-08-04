@@ -39,7 +39,9 @@ class _WorryMiriState extends State<WorryMiri> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: AppBar(
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
@@ -81,7 +83,7 @@ class _WorryMiriState extends State<WorryMiri> {
                     return Container(
                       height: 0.40.sh,
                       decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.primaryContainer,
+                        color: isDarkMode ? Color(0xFF242625) : Colors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Column(
@@ -106,13 +108,14 @@ class _WorryMiriState extends State<WorryMiri> {
                                   children: [
                                     Text(
                                       name[index],
-                                      style: TextStyle(fontSize: 14),
+                                      style: TextStyle(fontSize: 14,color: isDarkMode ? Colors.white : Colors.black,
+                                      ),
                                     ),
                                     // 이름과 날짜 사이 간격
                                     SizedBox(width: 9),
                                     Text(
                                       date[index],
-                                      style: TextStyle(fontSize: 14),
+                                      style: TextStyle(fontSize: 14,color: isDarkMode ? Colors.white : Colors.black,),
                                     ),
                                   ],
                                 ),
@@ -128,6 +131,7 @@ class _WorryMiriState extends State<WorryMiri> {
                                         style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold,
+                                          color: isDarkMode ? Colors.white : Colors.black,
                                         ),
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 2,
@@ -146,7 +150,7 @@ class _WorryMiriState extends State<WorryMiri> {
                                     Expanded(
                                       child: Text(
                                         content[index],
-                                        style: TextStyle(fontSize: 12),
+                                        style: TextStyle(fontSize: 12,color: isDarkMode ? Colors.white : Colors.black,),
                                         maxLines: 8,
                                         overflow: TextOverflow.ellipsis,
                                       ),
@@ -170,8 +174,7 @@ class _WorryMiriState extends State<WorryMiri> {
                   padding: GetPadding(),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          Theme.of(context).colorScheme.secondaryContainer,
+                      foregroundColor: isDarkMode ? Colors.black : Colors.white, backgroundColor: isDarkMode ? Color(0xFF242625) : Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
                     ),
@@ -187,7 +190,7 @@ class _WorryMiriState extends State<WorryMiri> {
               ],
             ),
             SizedBox(
-              height: 0.26.sh,
+              height: 0.345.sh,
             ),
           ],
         ),

@@ -20,7 +20,8 @@ class GroupMake extends StatefulWidget {
 }
 
 class _GroupMakeState extends State<GroupMake> {
-  final TextEditingController _name = TextEditingController();
+  final TextEditingController _title = TextEditingController();
+  final TextEditingController _content = TextEditingController();
   bool IsName = false;
   @override
   Widget build(BuildContext context) {
@@ -32,6 +33,7 @@ class _GroupMakeState extends State<GroupMake> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
+            color: isDarkMode? Colors.white : Colors.black,
           ),
           onPressed: () {
             Get.back();
@@ -83,9 +85,9 @@ class _GroupMakeState extends State<GroupMake> {
                       child: TextField(
                         keyboardType: TextInputType.multiline,
                         maxLines: 1,
-                        controller: _name,
+                        controller: _title,
                         style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 18.0,
                             fontWeight: FontWeight.w600),
                         onChanged: (String text) {
@@ -143,7 +145,7 @@ class _GroupMakeState extends State<GroupMake> {
                       child: TextField(
                         keyboardType: TextInputType.multiline,
                         maxLines: 1,
-                        controller: _name,
+                        controller: _content,
                         style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.w600),
@@ -245,10 +247,7 @@ class _GroupMakeState extends State<GroupMake> {
                       onPressed: () {
                         Get.to(GroupCodeConfirm());
                       },
-                      child: Text('만들기',
-                          style: GoogleFonts.notoSans(
-                            textStyle: TextStyle(color: Colors.black),
-                          )),
+                      child: Text('만들기'),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15)

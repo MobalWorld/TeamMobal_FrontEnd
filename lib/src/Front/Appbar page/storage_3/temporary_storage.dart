@@ -25,6 +25,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
 
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -33,7 +34,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
 
         child: AppBar(
           toolbarHeight: 75,
-
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
           //뒤로가기 버튼
           leading: Row(
             children: [
@@ -52,6 +53,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
             "임시 보관함",
             textAlign: TextAlign.center,
             style: TextStyle(
+              color: isDarkMode ? Colors.white : Colors.black,
               fontWeight: FontWeight.w900,
               fontSize: 23,
             ),
@@ -77,6 +79,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   title: Text(
                     "쓰다만 글이지롱",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -88,6 +91,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   trailing: Text(
                     "2023/07/16",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -96,7 +100,8 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                  thickness: 1,
+                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이에 여백 한번 만들어봄
@@ -111,6 +116,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   title: Text(
                     "임시 작성 중인 글입니다",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -122,6 +128,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   trailing: Text(
                     "2023/07/12",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -130,7 +137,8 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이에 여백
@@ -145,6 +153,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   title: Text(
                     "작성중이었는데 고민해결!",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w800,
                     ),
@@ -156,6 +165,7 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
                   trailing: Text(
                     "2023/07/10",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
                     ),
@@ -164,7 +174,8 @@ class _Temporay_StoragePageState extends State<Temporay_StoragePage> {
 
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
-                  thickness: 2,
+                    thickness: 1,
+                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이에 여백

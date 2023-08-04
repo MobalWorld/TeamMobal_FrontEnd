@@ -140,7 +140,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
             TextButton(
               child: Text(
                 '등록',
-                style: TextStyle(color : isDarkMode? Colors.white : Colors.black , fontSize: 15.sp),
+                style: TextStyle(color : isDarkMode? Colors.white : Colors.black , fontSize: 15),
               ),
               onPressed: () {
                 Get.to(BottomNavi());

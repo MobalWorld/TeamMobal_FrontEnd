@@ -20,8 +20,9 @@ class _AlarmPageState extends State<AlarmPage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: PreferredSize(
+
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
           75.0,
@@ -29,7 +30,7 @@ class _AlarmPageState extends State<AlarmPage> {
 
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
 
           //뒤로가기 버튼
           leading: Row(

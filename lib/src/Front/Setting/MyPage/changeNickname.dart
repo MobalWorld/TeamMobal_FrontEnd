@@ -36,9 +36,9 @@ class _ChangeProfilState extends State<ChangeProfil> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
-          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
           toolbarHeight: 80,
           leading: TextButton(
             child: Text("취소",style: TextStyle(color: isDarkMode ? Colors.white : Colors.black,),),

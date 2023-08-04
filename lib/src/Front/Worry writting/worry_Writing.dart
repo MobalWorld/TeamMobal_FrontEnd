@@ -33,11 +33,11 @@ class _WorryWritingState extends State<WorryWriting> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(75.0),
         child: AppBar(
-          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
           toolbarHeight: 75,
           leading: Align(
             alignment: Alignment.centerLeft,

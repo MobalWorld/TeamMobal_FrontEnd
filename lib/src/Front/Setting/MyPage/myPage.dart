@@ -42,9 +42,9 @@ class _MyPageState extends State<MyPage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
-        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         automaticallyImplyLeading: false,
         title: Text(
           '마이페이지',

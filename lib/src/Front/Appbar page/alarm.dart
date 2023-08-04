@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:provider/provider.dart';
 
 import '../Setting/bottom.dart';
@@ -19,6 +20,7 @@ class _AlarmPageState extends State<AlarmPage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -27,7 +29,7 @@ class _AlarmPageState extends State<AlarmPage> {
 
         child: AppBar(
           toolbarHeight: 75,
-
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
 
           //뒤로가기 버튼
           leading: Row(
@@ -48,6 +50,7 @@ class _AlarmPageState extends State<AlarmPage> {
             "알림",
             textAlign: TextAlign.center,
             style: TextStyle(
+              color: isDarkMode ? Colors.white : Colors.black,
               fontWeight: FontWeight.w900,
               fontSize: 25,
             ),
@@ -57,10 +60,7 @@ class _AlarmPageState extends State<AlarmPage> {
 
       /////body - 리스트 시작
       body: ListView(
-        padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
-            EdgeInsets.symmetric(
-                horizontal: 0.005.sh, //일단 내가 임의로 바꿈
-                vertical: 0.04.sh),
+        padding: GetPadding(),//패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기,
         children: <Widget>[
           SingleChildScrollView(
             // 스크롤 가능하게
@@ -73,6 +73,7 @@ class _AlarmPageState extends State<AlarmPage> {
                   title: Text(
                     "행복하고 싶다에 대한 위로가 도착했습니다.",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -84,7 +85,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "23-1 한동 위로 팀",
                         style: TextStyle(
-
+                          color: isDarkMode ? Colors.white : Colors.black,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                         ),
@@ -92,7 +93,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "2023/07/18",
                         style: TextStyle(
-
+                          color: isDarkMode ? Colors.white : Colors.black,
                           fontSize: 12,
                           fontWeight: FontWeight.w200,
                         ),
@@ -117,6 +118,7 @@ class _AlarmPageState extends State<AlarmPage> {
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
                   thickness: 1,
+                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
 
                 //리스트 타일 사이에 여백 한번 만들어봄
@@ -131,7 +133,7 @@ class _AlarmPageState extends State<AlarmPage> {
                   title: Text(
                     "푸바오 없인 못살아에 대한 위로가 도착했습니다.",
                     style: TextStyle(
-
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -143,7 +145,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "푸바오 사랑해 팀",
                         style: TextStyle(
-
+                          color: isDarkMode ? Colors.white : Colors.black,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
                         ),
@@ -151,7 +153,7 @@ class _AlarmPageState extends State<AlarmPage> {
                       Text(
                         "2023/07/15",
                         style: TextStyle(
-
+                          color: isDarkMode ? Colors.white : Colors.black,
                           fontSize: 12,
                           fontWeight: FontWeight.w200,
                         ),
@@ -177,6 +179,7 @@ class _AlarmPageState extends State<AlarmPage> {
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
                   thickness: 1,
+                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
                 ),
               ],
             ),

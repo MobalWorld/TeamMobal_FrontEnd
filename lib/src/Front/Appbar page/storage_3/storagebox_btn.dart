@@ -34,10 +34,8 @@ class _StorageboxState extends State<Storagebox> {
             Get.to(nextPage);
           },
           style: ButtonStyle(
-            // 색 변경 - 분홍색으로
-            backgroundColor: MaterialStateProperty.all(
-              Theme.of(context).colorScheme.primaryContainer,
-            ),
+            backgroundColor: MaterialStateProperty.all(isDarkMode ? Color(0xFF242625) : Colors.white),
+            overlayColor: MaterialStateProperty.all(isDarkMode ? Color(0xFF242625) : Colors.white),
             foregroundColor: MaterialStateProperty.all(isDarkMode ? Colors.white : Colors.black),
             padding: //패딩
 
@@ -51,9 +49,7 @@ class _StorageboxState extends State<Storagebox> {
             side: MaterialStateProperty.all(BorderSide(
               width: 1.0, // 테두리의 두께를 조정하세요
               // 테두리 색상 분홍색으로 변경
-              color: Theme.of(context)
-                  .colorScheme
-                  .tertiaryContainer, // 테두리의 색상을 원하는 색상으로 변경하세요
+              color: isDarkMode ? Color(0xFF242625) : Colors.white, // 테두리의 색상을 원하는 색상으로 변경하세요
             )),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
@@ -62,7 +58,7 @@ class _StorageboxState extends State<Storagebox> {
               ),
             ),
           ),
-          child: Text(hint),
+          child: Text(hint,style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),),
         ));
   }
 
@@ -84,8 +80,9 @@ class _StorageboxState extends State<Storagebox> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: AppBar(
-
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_new,
@@ -111,9 +108,10 @@ class _StorageboxState extends State<Storagebox> {
               SizedBox(
                 height: 0.015.sh,
               ),
-              const Text(
+              Text(
                 '남극 펭귄',
                 style: TextStyle(
+                    color: isDarkMode ? Colors.white : Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.w600),
               ),

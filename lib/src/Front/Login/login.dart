@@ -119,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Center(
               child: ElevatedButton(
-                child: Text('Google 계정으로 로그인'),
+                child: Text('Google 계정으로 로그인',style: TextStyle(color: Colors.black),),
                 onPressed: () async {
                   final FirebaseAuth googleAuth = FirebaseAuth.instance;
                   final User? user = await _signInWithGoogle(googleAuth);

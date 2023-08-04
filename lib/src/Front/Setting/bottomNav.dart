@@ -18,6 +18,7 @@ class BottomNavi extends StatefulWidget {
 
 class _BottomNaviState extends State<BottomNavi> {
   int _selectedIndex = 0;
+  int selectedIndex = 0;
   final PageController _pageController = PageController();
 
   final List<Widget> _widgetOptions = <Widget>[
@@ -54,6 +55,7 @@ class _BottomNaviState extends State<BottomNavi> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.house),
@@ -73,10 +75,57 @@ class _BottomNaviState extends State<BottomNavi> {
           ),
         ],
         currentIndex: _selectedIndex,
-        unselectedItemColor: isDarkMode? Color(0xFF8E9399) : Color(0xFF62626B),
-        selectedItemColor: isDarkMode? Colors.white : Colors.black,
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFFFFFF),
+        unselectedItemColor: isDarkMode? Color(0xFF888C8A) : Color(0xFF888C8A),
+        selectedItemColor: isDarkMode? Color(0xFFF8C8C4) : Color(0xFF000000),
         onTap: _onItemTapped,
       ),
+      // body: Center(
+      //     child: IndexedStack(
+      //       index: selectedIndex,
+      //       children: const [GroupMain(), GroupSelect(), WorryWriting(), MyPage()],
+      //     )),
+      // bottomNavigationBar: NavigationBar(
+      //   selectedIndex: selectedIndex,
+      //   onDestinationSelected: (value) => setState(() {
+      //     selectedIndex = value;
+      //   }),
+      //   destinations: [
+      //     NavigationDestination(
+      //       icon: const Icon(Icons.home_filled),
+      //       label: '홈',
+      //       selectedIcon: Icon(
+      //         Icons.home_filled,
+      //         color: Theme.of(context).colorScheme.onPrimaryContainer,
+      //       ),
+      //     ),
+      //     NavigationDestination(
+      //       icon: const Icon(Icons.edit),
+      //       label: '리스트',
+      //       selectedIcon: Icon(
+      //         Icons.edit,
+      //         color: Theme.of(context).colorScheme.onTertiaryContainer,
+      //       ),
+      //     ),
+      //     NavigationDestination(
+      //       icon: const Icon(Icons.person),
+      //       label: '글쓰기',
+      //       selectedIcon: Icon(
+      //         Icons.person,
+      //         color: Theme.of(context).colorScheme.onSecondaryContainer,
+      //       ),
+      //     ),
+      //     NavigationDestination(
+      //       icon: const Icon(Icons.person),
+      //       label: '마이페이지',
+      //       selectedIcon: Icon(
+      //         Icons.person,
+      //         color: Theme.of(context).colorScheme.onSecondaryContainer,
+      //       ),
+      //     ),
+      //   ],
+      //   animationDuration: const Duration(milliseconds: 500),
+      // ),
     );
   }
 }

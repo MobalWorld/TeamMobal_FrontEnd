@@ -29,7 +29,7 @@ class _GroupSelectState extends State<GroupSelect> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -37,6 +37,7 @@ class _GroupSelectState extends State<GroupSelect> {
         ),
 
         child: AppBar(
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
           toolbarHeight: 75,
 
 
@@ -56,8 +57,10 @@ class _GroupSelectState extends State<GroupSelect> {
               Text(
                 "안녕하세요 남극펭귄님",
                 style: TextStyle(
+                  color: isDarkMode ? Colors.white : Colors.black,
                   fontWeight: FontWeight.w900,
                   fontSize: 21,
+
 
                 ),
               ),
@@ -92,7 +95,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   title: Text(
                     "23-1 한동 위로 팀",
                     style: TextStyle(
-
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),
@@ -100,7 +103,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   subtitle: Text(
                     "참여자 : 5명",
                     style: TextStyle(
-
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -119,7 +122,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   ),
                   //맨 우측에 오는 ... 버튼
                   trailing: PopupMenuButton<Item>(
-                    icon: Icon(Icons.more_horiz),
+                    icon: Icon(Icons.more_horiz,color: isDarkMode ? Colors.white : Colors.black.withOpacity(0.4),),
                     initialValue: selectedMenu,
                     // Callback that sets the selected popup menu item.
                     onSelected: (Item item) {
@@ -139,6 +142,7 @@ class _GroupSelectState extends State<GroupSelect> {
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
                   thickness: 1,
+                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4),
                 ),
                 // 푸바오 사랑해 팀
                 ListTile(
@@ -146,6 +150,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   title: Text(
                     "푸바오 사랑해 팀",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),
@@ -153,6 +158,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   subtitle: Text(
                     "참여자 : 125명",
                     style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -172,7 +178,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   ),
                   //맨 우측에 오는 ... 버튼
                   trailing: PopupMenuButton<Item>(
-                    icon: Icon(Icons.more_horiz),
+                    icon: Icon(Icons.more_horiz,color: isDarkMode ? Colors.white : Colors.black.withOpacity(0.4),),
                     initialValue: selectedMenu,
                     // Callback that sets the selected popup menu item.
                     onSelected: (Item item) {
@@ -193,6 +199,7 @@ class _GroupSelectState extends State<GroupSelect> {
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
                   thickness: 1,
+                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4),
                 ),
 
                 // 사랑아 시선해 팀
@@ -201,7 +208,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   title: Text(
                     "사랑아 시선해 팀",
                     style: TextStyle(
-
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),
@@ -209,7 +216,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   subtitle: Text(
                     "참여자 : 15명",
                     style: TextStyle(
-
+                      color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
@@ -229,7 +236,7 @@ class _GroupSelectState extends State<GroupSelect> {
                   ),
                   //맨 우측에 오는 ... 버튼
                   trailing: PopupMenuButton<Item>(
-                    icon: Icon(Icons.more_horiz),
+                    icon: Icon(Icons.more_horiz,color: isDarkMode ? Colors.white : Colors.black.withOpacity(0.4),),
                     initialValue: selectedMenu,
                     // Callback that sets the selected popup menu item.
                     onSelected: (Item item) {
@@ -249,6 +256,7 @@ class _GroupSelectState extends State<GroupSelect> {
                 // 각 팀 타일 사이에 구분선 추가
                 Divider(
                   thickness: 1,
+                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4),
                 ),
               ],
             ),

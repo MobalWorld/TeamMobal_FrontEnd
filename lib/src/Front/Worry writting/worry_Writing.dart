@@ -33,9 +33,11 @@ class _WorryWritingState extends State<WorryWriting> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(75.0),
         child: AppBar(
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
           toolbarHeight: 75,
           leading: Align(
             alignment: Alignment.centerLeft,
@@ -44,14 +46,20 @@ class _WorryWritingState extends State<WorryWriting> {
               child: TextButton(
                 child: Text(
                   '취소',
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontSize: 15,color: Color(0xFFED7D79)),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
                     context: context,
                     builder: (BuildContext context) {
                       return Container(
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
+                          ),
+                          color: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+                        ),
                         height: 0.3.sh,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -62,7 +70,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
+                                      MaterialStateProperty.all(isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2)),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
@@ -81,12 +89,12 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
+                                      MaterialStateProperty.all(isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2)),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
                                 onPressed: () {
-                                  _showDialog(context);
+                                  _showDialog(context, isDarkMode);
                                 },
                                 child: Text(
                                   '임시저장',
@@ -100,7 +108,7 @@ class _WorryWritingState extends State<WorryWriting> {
                               child: ElevatedButton(
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStateProperty.all(isDarkMode ? Colors.black : Colors.white),
+                                      MaterialStateProperty.all(isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2)),
                                   elevation:
                                       MaterialStateProperty.all<double>(0),
                                 ),
@@ -110,7 +118,7 @@ class _WorryWritingState extends State<WorryWriting> {
                                 child: Text(
                                   '취소',
                                   style: TextStyle(
-                                      color: Colors.black, fontSize: 14.sp),
+                                      color: isDarkMode? Colors.white : Colors.black, fontSize: 14.sp),
                                 ),
                               ),
                             ),
@@ -146,10 +154,10 @@ class _WorryWritingState extends State<WorryWriting> {
             TextButton(
               child: Text(
                 '등록',
-                style: TextStyle(color: Colors.red[400], fontSize: 15.sp),
+                style: TextStyle(color: isDarkMode? Colors.white : Colors.black , fontSize: 15.sp),
               ),
               onPressed: () {
-                _showDialog2(context);
+                _showDialog2(context,isDarkMode);
               },
 
             ),
@@ -164,7 +172,13 @@ class _WorryWritingState extends State<WorryWriting> {
             children: [
               TextField(
                 decoration: InputDecoration(
-                  labelText: '제목', labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black)
+                  labelText: '제목', labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: isDarkMode ? Colors.white : Colors.black), // 포커스될 때 테두리 색상
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: isDarkMode ? Colors.white : Colors.black), // 포커스될 때 테두리 색상
+                  ),
                 ),
                 onChanged: (value) {
                   setState(() {
@@ -178,7 +192,14 @@ class _WorryWritingState extends State<WorryWriting> {
               SizedBox(height: 16.0),
               TextField(
                 decoration: InputDecoration(
-                    labelText: '고민 내용', alignLabelWithHint: true, labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
+                    labelText: '고민 내용', alignLabelWithHint: true, labelStyle: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: isDarkMode ? Colors.white : Colors.black), // 포커스될 때 테두리 색상
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: isDarkMode ? Colors.white : Colors.black), // 포커스될 때 테두리 색상
+                    ),),
+
                 onChanged: (value) {
                   setState(() {
                     content = value;
@@ -196,20 +217,19 @@ class _WorryWritingState extends State<WorryWriting> {
     );
   }
 }
-
-void _showDialog(BuildContext context) {
+void _showDialog(BuildContext context, bool isDarkMode) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text('임시 저장'),
-        content: Text('임시 저장됩니다.'),
+        title: Text('임시 저장', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
+        content: Text('임시 저장됩니다.', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
         actions: [
           TextButton(
             onPressed: () {
               Get.offAll(() => BottomNavi());
             },
-            child: Text('확인'),
+            child: Text('확인', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
           ),
         ],
       );
@@ -217,19 +237,19 @@ void _showDialog(BuildContext context) {
   );
 }
 
-void _showDialog2(BuildContext context) {
+void _showDialog2(BuildContext context, bool isDarkMode) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text('고민 작성 완료'),
-        content: Text('고민 작성이 완료되었습니다.'),
+        title: Text('고민 작성 완료', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
+        content: Text('고민 작성이 완료되었습니다.', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
         actions: [
           TextButton(
             onPressed: () {
               Get.offAll(() => BottomNavi());
             },
-            child: Text('확인'),
+            child: Text('확인', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
           ),
         ],
       );

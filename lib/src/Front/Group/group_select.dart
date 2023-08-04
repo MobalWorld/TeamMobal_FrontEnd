@@ -29,7 +29,7 @@ class _GroupSelectState extends State<GroupSelect> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -37,7 +37,7 @@ class _GroupSelectState extends State<GroupSelect> {
         ),
 
         child: AppBar(
-          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
           toolbarHeight: 75,
 
 
@@ -53,17 +53,46 @@ class _GroupSelectState extends State<GroupSelect> {
           ),
           title: Row(
             children: [
-              //나중에 회원 이름 data 넣기
-              Text(
-                "안녕하세요 남극펭귄님",
-                style: TextStyle(
-                  color: isDarkMode ? Colors.white : Colors.black,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 21,
-
-
+              RichText(
+                text: TextSpan(
+                  text: '안녕하세요 ',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: isDarkMode ? Colors.white : Colors.black,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: '남극 펭귄',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: isDarkMode ? Color(0xFFFFC230) : Color(0xFFFFC230),
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    TextSpan(
+                      text: ' 님',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: isDarkMode ? Colors.white : Colors.black,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ],
                 ),
               ),
+              //나중에 회원 이름 data 넣기
+              // Text(
+              //   "안녕하세요 남극펭귄님",
+              //   style: TextStyle(
+              //     color: isDarkMode ? Color(0xFFFFC230) : Color(0xFFFFC230),
+              //     fontWeight: FontWeight.w900,
+              //     fontSize: 21,
+              //
+              //
+              //   ),
+              //
+              // ),
             ],
           ),
           // 우측 아이콘 - 알림 기능
@@ -271,7 +300,7 @@ class _GroupSelectState extends State<GroupSelect> {
           },
           child: FaIcon(FontAwesomeIcons.plus,color: isDarkMode? Colors.white : Colors.white,)
           ,
-          backgroundColor: isDarkMode? Color(0xFF62626B) : Colors.black,
+          backgroundColor: isDarkMode? Color(0xFF62626B) : Color(0xFFFF6105),
         ),
       ),
     );

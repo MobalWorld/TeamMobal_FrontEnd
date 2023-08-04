@@ -77,7 +77,7 @@ class _BottomNaviState extends State<BottomNavi> {
         currentIndex: _selectedIndex,
         backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFFFFFF),
         unselectedItemColor: isDarkMode? Color(0xFF888C8A) : Color(0xFF888C8A),
-        selectedItemColor: isDarkMode? Color(0xFFF8C8C4) : Color(0xFF000000),
+        selectedItemColor: isDarkMode? Color(0xFFFFC230) : Color(0xFF000000),
         onTap: _onItemTapped,
       ),
       // body: Center(

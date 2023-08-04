@@ -262,7 +262,7 @@ class _WiroWritingState extends State<WiroWriting> {
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              isDarkMode ? Color(0xFFFF6105) : Colors.white,
+                              isDarkMode ? Color(0xFFFF6105) : Color(0xFFFF6105),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
                         ),
@@ -271,7 +271,7 @@ class _WiroWritingState extends State<WiroWriting> {
                         },
                         child: Text(
                           '보내기',
-                          style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
+                          style: TextStyle(color: isDarkMode ? Colors.white : Colors.white),
                         ),
                       ),
                     ],

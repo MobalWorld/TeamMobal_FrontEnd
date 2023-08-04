@@ -33,11 +33,11 @@ class _WorryWritingState extends State<WorryWriting> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(75.0),
         child: AppBar(
-          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
           toolbarHeight: 75,
           leading: Align(
             alignment: Alignment.centerLeft,
@@ -46,7 +46,7 @@ class _WorryWritingState extends State<WorryWriting> {
               child: TextButton(
                 child: Text(
                   '취소',
-                  style: TextStyle(fontSize: 15,color: Color(0xFFED7D79)),
+                  style: TextStyle(fontSize: 15, color: Color(0xFFED7D79)),
                 ),
                 onPressed: () {
                   showModalBottomSheet(
@@ -154,7 +154,7 @@ class _WorryWritingState extends State<WorryWriting> {
             TextButton(
               child: Text(
                 '등록',
-                style: TextStyle(color: isDarkMode? Colors.white : Colors.black , fontSize: 15.sp),
+                style: TextStyle(color: isDarkMode? Colors.white : Colors.black , fontSize: 15),
               ),
               onPressed: () {
                 _showDialog2(context,isDarkMode);
@@ -222,6 +222,7 @@ void _showDialog(BuildContext context, bool isDarkMode) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        backgroundColor: isDarkMode ? Color(0xFF62626B) : Color(0xFFEFF0F2),
         title: Text('임시 저장', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
         content: Text('임시 저장됩니다.', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
         actions: [
@@ -242,6 +243,7 @@ void _showDialog2(BuildContext context, bool isDarkMode) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        backgroundColor: isDarkMode ? Color(0xFF62626B) : Color(0xFFEFF0F2),
         title: Text('고민 작성 완료', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
         content: Text('고민 작성이 완료되었습니다.', style: TextStyle(color : isDarkMode ? Colors.white : Colors.black)),
         actions: [

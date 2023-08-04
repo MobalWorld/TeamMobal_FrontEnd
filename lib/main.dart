@@ -49,6 +49,7 @@ class MyApp extends StatelessWidget {
                 useMaterial3: true,
                 brightness: Brightness.dark,
               ),
+
               debugShowCheckedModeBanner: false,
               home: OrientationBuilder(
                 builder: (context, orientation) {
@@ -62,7 +63,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
 class EmailUser {
   final String name;

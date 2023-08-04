@@ -108,9 +108,9 @@ class _WiroWritingState extends State<WiroWriting> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
-        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         centerTitle: true,
         leading: IconButton(
           icon: Icon(
@@ -253,13 +253,16 @@ class _WiroWritingState extends State<WiroWriting> {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 0.035.sh,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              isDarkMode ? Color(0xFF242625) : Colors.white,
+                              isDarkMode ? Color(0xFFFF6105) : Colors.white,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
                         ),
@@ -273,6 +276,7 @@ class _WiroWritingState extends State<WiroWriting> {
                       ),
                     ],
                   ),
+
                 ],
               ),
             ],

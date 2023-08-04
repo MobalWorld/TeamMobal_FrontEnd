@@ -184,7 +184,9 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
+        backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         toolbarHeight: 80,
         leading: IconButton(
           icon: Icon(
@@ -258,9 +260,8 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                         child: Text(
                           '중복확인',
                           style: TextStyle(
-
                             fontSize: 20,
-                            color: isDarkMode ? Colors.white : Colors.black,
+                            color: isDarkMode ? Colors.white : Colors.white,
                           ),
                         ),
                         style: ElevatedButton.styleFrom(
@@ -269,7 +270,8 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                               borderRadius: BorderRadius.circular(12),
                               // 버튼의 모서리를 둥글게 설정
                             ),
-                            backgroundColor: Theme.of(context).colorScheme.secondaryContainer),
+                            backgroundColor: isDarkMode ? Color(0xFFFF6105) : Color(0xFFFF6105),
+                        ),
                         onPressed: () async {
                           if (_nicknameController.text.length > 0) {
                             _isUserIdExists =
@@ -433,7 +435,7 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                                         fontSize: 20,
                                         color: isDarkMode
                                             ? Colors.white
-                                            : Colors.black,
+                                            : Colors.white,
                                       ),
                                     ),
                                     style: ElevatedButton.styleFrom(
@@ -442,9 +444,10 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                                           borderRadius: BorderRadius.circular(
                                               12), // 버튼의 모서리를 둥글게 설정
                                         ),
-                                        backgroundColor: Theme.of(context)
-                                            .colorScheme
-                                            .secondaryContainer),
+                                      backgroundColor: isDarkMode ? Color(0xFFFF6105) : Color(0xFFFF6105),
+
+
+                                    ),
                                     onPressed: () {
                                       _verifyPhoneNumber('+82 10-' +
                                           phoneNumberController1.text +
@@ -542,7 +545,7 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                               '회원가입',
                               style: TextStyle(
                                   color:
-                                      isDarkMode ? Colors.white : Colors.black,
+                                      isDarkMode ? Colors.white : Colors.white,
                                   fontSize: 20),
                             ),
                             style: ElevatedButton.styleFrom(
@@ -550,9 +553,9 @@ class _GoogleAdditionalPageState extends State<GoogleAdditionalPage> {
                                   borderRadius: BorderRadius.circular(
                                       12), // 버튼의 모서리를 둥글게 설정
                                 ),
-                                backgroundColor: Theme.of(context)
-                                    .colorScheme
-                                    .secondaryContainer),
+                              backgroundColor: isDarkMode ? Color(0xFFFF6105) : Color(0xFFFF6105),
+
+                            ),
                             onPressed: () {
                               if (_uidinvalid && smscheck) {
                                 // 여기에 회원가입 submit 버튼

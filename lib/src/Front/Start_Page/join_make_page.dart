@@ -26,6 +26,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+      backgroundColor: Color(0xFFFFC230),
       body: Center(
         child: Padding(
           // 전체 패딩 값 - 함수로 불러와서 쓰기
@@ -39,7 +40,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
                   child: Icon(
                 Icons.water_drop_outlined,
                 size: 0.2.sh,
-                color: Color(0xFFFCCAA9),
+                color: Color(0xFFFBF9F4),
               )),
               Container(
                 alignment: Alignment.bottomCenter,
@@ -56,7 +57,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.tertiaryContainer,
+                  color: Color(0xFFFBF9F4),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
@@ -92,11 +93,11 @@ class _JoinMakePageState extends State<JoinMakePage> {
                               '만들기',
                               style: TextStyle(
                                 fontWeight: FontWeight.w400,
-                                color: isDarkMode? Colors.white : Colors.black,
+                                color: isDarkMode? Colors.white : Colors.white,
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
-                                backgroundColor: isDarkMode? Color(0xFF17171C) : Color(0xFFFCCAA9),
+                                backgroundColor: isDarkMode? Color(0xFFFF6105) : Color(0xFFFF6105),
                                 shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               )
@@ -113,7 +114,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.tertiaryContainer,
+                  color: Color(0xFFFBF9F4),
                   borderRadius: BorderRadius.circular(20),
 
                 ),
@@ -151,12 +152,12 @@ class _JoinMakePageState extends State<JoinMakePage> {
                             child: Text(
                               '참여하기',
                               style: TextStyle(
-                                color: isDarkMode? Colors.white : Colors.black,
+                                color: isDarkMode? Colors.white : Colors.white,
                                 fontWeight: FontWeight.w400,
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: isDarkMode? Color(0xFF17171C) : Color(0xFFFCCAA9) ,
+                              backgroundColor: isDarkMode? Color(0xFFFF6105) : Color(0xFFFF6105) ,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               )

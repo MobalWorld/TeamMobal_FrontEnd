@@ -22,7 +22,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
 
     return Scaffold(
-      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: PreferredSize(
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
@@ -31,7 +31,7 @@ class _Worry_StoragePageState extends State<Worry_StoragePage> {
 
         child: AppBar(
           toolbarHeight: 75,
-          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFEFF0F2),
+          backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
           //뒤로가기 버튼
           leading: Row(
             children: [

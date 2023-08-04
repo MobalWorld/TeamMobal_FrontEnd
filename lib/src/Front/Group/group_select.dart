@@ -81,18 +81,6 @@ class _GroupSelectState extends State<GroupSelect> {
                   ],
                 ),
               ),
-              //나중에 회원 이름 data 넣기
-              // Text(
-              //   "안녕하세요 남극펭귄님",
-              //   style: TextStyle(
-              //     color: isDarkMode ? Color(0xFFFFC230) : Color(0xFFFFC230),
-              //     fontWeight: FontWeight.w900,
-              //     fontSize: 21,
-              //
-              //
-              //   ),
-              //
-              // ),
             ],
           ),
           // 우측 아이콘 - 알림 기능
@@ -300,7 +288,7 @@ class _GroupSelectState extends State<GroupSelect> {
           },
           child: FaIcon(FontAwesomeIcons.plus,color: isDarkMode? Colors.white : Colors.white,)
           ,
-          backgroundColor: isDarkMode? Color(0xFF62626B) : Color(0xFFFF6105),
+          backgroundColor: isDarkMode? Color(0xFFFF6105) : Color(0xFFFF6105),
         ),
       ),
     );

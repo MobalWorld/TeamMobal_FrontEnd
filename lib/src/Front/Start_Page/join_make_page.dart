@@ -26,7 +26,9 @@ class _JoinMakePageState extends State<JoinMakePage> {
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
+
       backgroundColor: Color(0xFFFFC230),
+
       body: Center(
         child: Padding(
           // 전체 패딩 값 - 함수로 불러와서 쓰기
@@ -57,6 +59,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
               ),
               Container(
                 decoration: BoxDecoration(
+
                   color: Color(0xFFFBF9F4),
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -97,6 +100,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
+
                                 backgroundColor: isDarkMode? Color(0xFFFF6105) : Color(0xFFFF6105),
                                 shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
@@ -114,6 +118,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
               ),
               Container(
                 decoration: BoxDecoration(
+
                   color: Color(0xFFFBF9F4),
                   borderRadius: BorderRadius.circular(20),
 

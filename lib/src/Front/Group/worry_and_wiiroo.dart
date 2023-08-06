@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
@@ -19,12 +20,32 @@ class FinStorage extends StatefulWidget {
 }
 
 class _FinStorageState extends State<FinStorage> {
+  bool isThumb =true;
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     return Scaffold(
       backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+
+            },
+            icon: FaIcon(FontAwesomeIcons.faceAngry, color: isDarkMode ? Colors.white : Colors.black,),
+          ),
+          IconButton(
+            onPressed: () {
+              setState(() { // 상태 업데이트를 위해 setState 사용
+                isThumb = !isThumb; // 상태 변경
+              });
+            },
+            icon: FaIcon(isThumb
+                ? FontAwesomeIcons.thumbsUp
+                : FontAwesomeIcons.solidThumbsUp,
+              color: isDarkMode ? Colors.white : Colors.black,),
+          ),
+        ],
         backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         centerTitle: true,
         leading: IconButton(

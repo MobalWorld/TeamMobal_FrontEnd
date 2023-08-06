@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +23,6 @@ class _AlarmPageState extends State<AlarmPage> {
     return Scaffold(
       backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       appBar: PreferredSize(
-
         //appbar 높이 조절
         preferredSize: Size.fromHeight(
           75.0,
@@ -31,7 +31,35 @@ class _AlarmPageState extends State<AlarmPage> {
         child: AppBar(
           toolbarHeight: 75,
           backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
-
+          actions: [
+            IconButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      title: Text('알림 삭제'),
+                      content: Text('알림 내용 전체를 삭제할까요?'),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: Text('취소',style: TextStyle(color: isDarkMode? Colors.white : Colors.black),),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                          },
+                          child: Text('삭제',style: TextStyle(color: isDarkMode? Colors.white : Colors.black),),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              icon: FaIcon(FontAwesomeIcons.trash, color: isDarkMode ? Colors.white : Colors.black,),
+            ),
+          ],
           //뒤로가기 버튼
           leading: Row(
             children: [

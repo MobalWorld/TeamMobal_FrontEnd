@@ -53,6 +53,8 @@ class _GroupSelectState extends State<GroupSelect> {
           ),
           title: Row(
             children: [
+
+
               RichText(
                 text: TextSpan(
                   text: '안녕하세요 ',
@@ -71,7 +73,9 @@ class _GroupSelectState extends State<GroupSelect> {
                       ),
                     ),
                     TextSpan(
+
                       text: ' 님',
+
                       style: TextStyle(
                         fontSize: 18,
                         color: isDarkMode ? Colors.white : Colors.black,

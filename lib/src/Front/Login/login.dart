@@ -2,13 +2,16 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 import '../../../home/home.dart';
 import '../../../main.dart';
 
+import '../Color_UI/padding.dart';
 import '../Setting/master_key.dart';
+import '../Setting/theme_provider.dart';
 import 'add_google_info.dart';
 
 class LoginPage extends StatefulWidget {
@@ -109,17 +112,78 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
     emailing = Provider.of<Email>(context);
     return Scaffold(
+      backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(
-              height: 300,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 0.2.sh,
+                ),
+
+                Container(
+                    child: Icon(
+                      Icons.water_drop_outlined,
+                      size: 0.2.sh,
+                      color: Color(0xFFFF6105),
+                    ),
+                ),
+
+                SizedBox(
+                  height: 0.02.sh,
+                ),
+
+                Container(
+                  alignment: Alignment.bottomCenter,
+                  child: const Text(
+                    '편지의 마음',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: "Yeongdeok Blueroad",
+                    ),
+                  ),
+                ),
+
+                SizedBox(
+                  height: 0.05.sh,
+                ),
+              ],
             ),
+
+            SizedBox(
+              height: 0.05.sh,
+            ),
+
+
             Center(
               child: ElevatedButton(
-                child: Text('Google 계정으로 로그인',style: TextStyle(color: Colors.black),),
+                // 버튼 스타일 지정
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.lightBlue,
+                  //width, height 순서
+                  fixedSize: Size(0.35.sh, 0.02.sh),
+
+                ),
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/google.webp',
+                      height: 20,),
+
+                    SizedBox(
+                      width: 10,
+                    ),
+
+                    Text('Google 계정으로 로그인',
+                      style: TextStyle(color: Colors.white,
+                      fontWeight: FontWeight.w400),),
+                  ],
+                ),
                 onPressed: () async {
                   final FirebaseAuth googleAuth = FirebaseAuth.instance;
                   final User? user = await _signInWithGoogle(googleAuth);
@@ -159,7 +223,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
             ),
-            MasterKey(margin: 300)
+            MasterKey(margin: 100)
           ],
         ),
       ),

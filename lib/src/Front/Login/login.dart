@@ -167,10 +167,11 @@ class _LoginPageState extends State<LoginPage> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.lightBlue,
                   //width, height 순서
-                  fixedSize: Size(0.35.sh, 0.02.sh),
+                  fixedSize: Size(240, 40),
 
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('assets/images/google.webp',
                       height: 20,),
@@ -181,7 +182,9 @@ class _LoginPageState extends State<LoginPage> {
 
                     Text('Google 계정으로 로그인',
                       style: TextStyle(color: Colors.white,
-                      fontWeight: FontWeight.w400),),
+                      fontWeight: FontWeight.w500),
+
+                    ),
                   ],
                 ),
                 onPressed: () async {

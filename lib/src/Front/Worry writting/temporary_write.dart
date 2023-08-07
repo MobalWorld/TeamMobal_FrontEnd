@@ -133,7 +133,7 @@ class _TemporaryWriteState extends State<TemporaryWrite> {
 
           title: Text(
             group,
-            style: TextStyle(fontSize: 25,color: isDarkMode ? Colors.white : Colors.black),
+            style: TextStyle(fontSize: 22,color: isDarkMode ? Colors.white : Colors.black),
             textAlign: TextAlign.center,
           ),
           actions: [

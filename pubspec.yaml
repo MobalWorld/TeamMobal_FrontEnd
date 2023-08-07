@@ -83,6 +83,7 @@ flutter:
     - assets/images/water52.jpg
     - assets/images/deer.jpg
     - assets/rive/splash.riv
+    - assets/images/google.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -110,3 +111,8 @@ flutter:
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/google_logo.png" # 사용자 정의 아이콘의 경로를 설정합니다.

@@ -39,12 +39,12 @@ class _StorageboxState extends State<Storagebox> {
             foregroundColor: MaterialStateProperty.all(isDarkMode ? Colors.white : Colors.black),
             padding: //패딩
 
-                MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
+            MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 14.h)),
 
             textStyle: MaterialStateProperty.all(TextStyle(
-              fontSize: FontSize(16.sp),
-              fontWeight: FontWeight.w700,
-              fontFamily: 'Yeongdeok Blueroad'
+                fontSize: FontSize(16.sp),
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Yeongdeok Blueroad'
             )),
             side: MaterialStateProperty.all(BorderSide(
               width: 1.0, // 테두리의 두께를 조정하세요
@@ -54,7 +54,7 @@ class _StorageboxState extends State<Storagebox> {
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius:
-                    BorderRadius.circular(20.0), // 원하는 모서리의 둥근 정도를 조정하세요
+                BorderRadius.circular(20.0), // 원하는 모서리의 둥근 정도를 조정하세요
               ),
             ),
           ),

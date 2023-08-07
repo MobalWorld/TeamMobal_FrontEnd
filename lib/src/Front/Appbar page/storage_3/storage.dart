@@ -20,6 +20,7 @@ class StoragePage extends StatefulWidget {
 // 위로 보관함
 
 class _StoragePageState extends State<StoragePage> {
+  final List<String> items = ["행복하고 싶다", "살고 싶지 않아", "왜 나만 이럴까"];
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
@@ -61,134 +62,107 @@ class _StoragePageState extends State<StoragePage> {
       ),
 
       /////body - 리스트 시작
-      body: ListView(
-        padding: //패딩 통일해서 위젯으로 사용하자는 말 나왓엇음, 어떻게 할건지 상의하기
-            GetPadding(),
-        children: <Widget>[
-          SingleChildScrollView(
-            // 스크롤 가능하게
-            child: Column(
-              children: [
-                // 위로 1st
-                ListTile(
-                  onTap: () {
-                    Get.to(WiroStorage());
-                  },
-                  dense: false,
-                  // 사용자가 작성한 고민 글 제목 으로 보여주기
-                  title: Text(
-                    "행복하고 싶다",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                  visualDensity: VisualDensity(
-                      // listview에서 각 항목 들의 여백
-                      vertical: 0,
-                      horizontal: 0),
-                  trailing: Text(
-                    "2023/07/16",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
-                ),
+      body: ListView.builder(
+        padding: GetPadding(),
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Column(
+            children: [
+              Dismissible(
+                key: Key(items[index]),
+                onDismissed: (direction) {
+                  if (direction == DismissDirection.endToStart) {
+                    // 저장하려는 아이템 정보를 임시 변수에 저장
+                    final removedItem = items[index];
 
-                // 각 팀 타일 사이에 구분선 추가
-                Divider(
-                    thickness: 1,
-                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
+                    setState(() {
+                      items.removeAt(index);
+                      final snackBar = SnackBar(
+                        content: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('위로 메세지가 삭제됨', style: TextStyle(
+                              color: isDarkMode ? Colors.white : Colors.black,
+                            )),
+                            TextButton(
+                              onPressed: () {
+                                // 실행 취소 동작을 수행하여 아이템을 다시 복원
+                                setState(() {
+                                  items.insert(index, removedItem);
+                                });
+                                ScaffoldMessenger.of(context).hideCurrentSnackBar(); // 스낵바 닫기
+                              },
+                              child: Text(
+                                '실행취소',
+                                style: TextStyle(
+                                  color: isDarkMode ? Colors.white : Colors.black,
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    });
+                  }
 
-                ),
-
-                //리스트 타일 사이에 여백 한번 만들어봄
-                SizedBox(
-                  height: 4,
-                ),
-
-                // 위로 2nd
-                ListTile(
-                  dense: false,
-                  // 사용자가 작성한 고민 글 제목 으로 보여주기
-                  title: Text(
-                    "살고 싶지 않아",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                  visualDensity: VisualDensity(
-                      // listview에서 각 항목 들의 여백
-                      vertical: 0,
-                      horizontal: 0),
-                  trailing: Text(
-                    "2023/07/12",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
+                },
+                direction: DismissDirection.endToStart,
+                background: Container(
+                  color: Colors.red,
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: EdgeInsets.all(8),
+                      child: Icon(
+                        Icons.delete,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
-
-                // 각 팀 타일 사이에 구분선 추가
-                Divider(
-                    thickness: 1,
-                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
-                ),
-
-                //리스트 타일 사이에 여백
-                SizedBox(
-                  height: 4,
-                ),
-
-                // 위로 3
-                ListTile(
-                  dense: false,
-                  // 사용자가 작성한 고민 글 제목 으로 보여주기
-                  title: Text(
-                    "왜 나만 이럴까",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w800,
+                child: Column(
+                  children: [
+                    ListTile(
+                      onTap: () {
+                        Get.to(WiroStorage());
+                      },
+                      dense: false,
+                      title: Text(
+                        items[index],
+                        style: TextStyle(
+                          color: isDarkMode ? Colors.white : Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      visualDensity: VisualDensity(
+                        vertical: 0,
+                        horizontal: 0,
+                      ),
+                      trailing: Text(
+                        "2023/07/16",
+                        style: TextStyle(
+                          color: isDarkMode ? Colors.white : Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
                     ),
-                  ),
-                  visualDensity: VisualDensity(
-                      // listview에서 각 항목 들의 여백
-                      vertical: 0,
-                      horizontal: 0),
-                  trailing: Text(
-                    "2023/07/10",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
-                ),
 
-                // 각 팀 타일 사이에 구분선 추가
-                Divider(
-                    thickness: 1,
-                    color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)
+                  ],
                 ),
-
-                //리스트 타일 사이에 여백
-                SizedBox(
-                  height: 4,
-                ),
-              ],
-            ),
-
-            // 새로운 리스트 항목 넣기
-          ),
-        ],
+              ),
+              Divider(
+                thickness: 1,
+                color: isDarkMode
+                    ? Colors.white.withOpacity(0.4)
+                    : Colors.black.withOpacity(0.4),
+              ),
+            ],
+          );
+        },
       ),
     );
 

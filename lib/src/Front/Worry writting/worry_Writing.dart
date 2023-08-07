@@ -132,11 +132,18 @@ class _WorryWritingState extends State<WorryWriting> {
             ),
           ),
           centerTitle: true,
+
+          // 드랍 다운 시작
           title: DropdownButton<String>(
             value: dropdownValue,
             icon: Icon(Icons.arrow_drop_down),
             elevation: 16,
-            style: TextStyle(color: isDarkMode ? Colors.white : Colors.black, fontSize: 17.sp),
+            style: TextStyle(
+                color: isDarkMode ? Colors.white : Colors.black,
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+                fontFamily: "Yeongdeok Blueroad",
+            ),
             onChanged: (String? value) {
               // This is called when the user selects an item.
               setState(() {

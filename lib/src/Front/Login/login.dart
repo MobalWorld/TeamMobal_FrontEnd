@@ -167,7 +167,7 @@ class _LoginPageState extends State<LoginPage> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.lightBlue,
                   //width, height 순서
-                  fixedSize: Size(220, 40),
+                  fixedSize: Size(240, 40),
 
                 ),
                 child: Row(

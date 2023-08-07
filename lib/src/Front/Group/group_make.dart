@@ -89,7 +89,7 @@ class _GroupMakeState extends State<GroupMake> {
                         maxLines: 1,
                         controller: _title,
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 18.0,
                             fontWeight: FontWeight.w600),
                         onChanged: (String text) {

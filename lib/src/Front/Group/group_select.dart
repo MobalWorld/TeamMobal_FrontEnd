@@ -25,6 +25,25 @@ class GroupSelect extends StatefulWidget {
 class _GroupSelectState extends State<GroupSelect> {
   Item? selectedMenu;
 
+  final List<Map<String, dynamic>> groups = [
+    {
+      'title': '23-1 한동 위로 팀',
+      'participants': '5명',
+      'image': 'assets/images/hgu.png',
+    },
+    {
+      'title': '푸바오 사랑해 팀',
+      'participants': '125명',
+      'image': 'assets/images/fubao.webp',
+    },
+    {
+      'title': '사랑아 시선해 팀',
+      'participants': '15명',
+      'image': 'assets/images/peng2.jpg',
+    },
+    // Add more groups as needed
+  ];
+
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Provider.of<ThemeProvider>(context).isDarkMode;
@@ -102,19 +121,20 @@ class _GroupSelectState extends State<GroupSelect> {
 
       /////body - 리스트 시작
       body: SafeArea(
-        child: ListView(
+        child: ListView.builder(
           padding: GetPadding(),
-          children: [
-            Column(
+          itemCount: groups.length,
+          itemBuilder: (context, index) {
+            final group = groups[index];
+            return Column(
               children: [
-                // 23-1 한동 위로 팀
                 ListTile(
                   onTap: () {
                     Get.to(BottomNavi());
                   },
                   dense: false,
                   title: Text(
-                    "23-1 한동 위로 팀",
+                    group['title'],
                     style: TextStyle(
                       color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
@@ -122,175 +142,73 @@ class _GroupSelectState extends State<GroupSelect> {
                     ),
                   ),
                   subtitle: Text(
-                    "참여자 : 5명",
+                    '참여자 : ${group['participants']}',
                     style: TextStyle(
                       color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.w800,
                     ),
                   ),
-                  //참여자 명수 변수 받아
-
-                  visualDensity: VisualDensity(
-                      // listview에서 각 항목 들의 여백
-                      vertical: 0,
-                      horizontal: 0),
-
-                  // 맨 앞에 오는 그룹의 프로필 이미지
                   leading: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/hgu.png'),
-                    radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
+                    backgroundImage: AssetImage(group['image']),
+                    radius: 30,
                   ),
-                  //맨 우측에 오는 ... 버튼
                   trailing: PopupMenuButton<Item>(
                     icon: Icon(Icons.more_horiz,color: isDarkMode ? Colors.white : Colors.black.withOpacity(0.4),),
                     initialValue: selectedMenu,
                     // Callback that sets the selected popup menu item.
                     onSelected: (Item item) {
-                      setState(() {
-                        selectedMenu = item;
-                      });
+                      if (item == Item.delete) {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('경고'),
+                              content: Text('정말로 삭제하시겠습니까?'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop(); // Close the alert
+                                  },
+                                  child: Text('취소'),
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      groups.removeAt(index); // Remove the selected group
+                                    });
+                                    Navigator.of(context).pop(); // Close the alert
+                                  },
+                                  child: Text('삭제'),
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      }
                     },
                     itemBuilder: (BuildContext context) =>
-                        <PopupMenuEntry<Item>>[
+                    <PopupMenuEntry<Item>>[
                       PopupMenuItem<Item>(
                         value: Item.delete,
-                        child: Text('삭제', style:
-                          TextStyle(
+                        child: Text('삭제',
+                          style: TextStyle(
                             color: Colors.red,
-                          ),),
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
-                // 각 팀 타일 사이에 구분선 추가
                 Divider(
                   thickness: 1,
-                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4),
-                ),
-                // 푸바오 사랑해 팀
-                ListTile(
-                  dense: false,
-                  title: Text(
-                    "푸바오 사랑해 팀",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  subtitle: Text(
-                    "참여자 : 125명",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                  //참여자 명수 변수 받아
-
-                  visualDensity: VisualDensity(
-                      // listview에서 각 항목 들의 여백
-                      vertical: 0,
-                      horizontal: 0),
-
-                  // 맨 앞에 오는 그룹의 프로필 이미지
-                  leading: CircleAvatar(
-
-                    backgroundImage: AssetImage('assets/images/fubao.webp'),
-                    radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
-                  ),
-                  //맨 우측에 오는 ... 버튼
-                  trailing: PopupMenuButton<Item>(
-                    icon: Icon(Icons.more_horiz,color: isDarkMode ? Colors.white : Colors.black.withOpacity(0.4),),
-                    initialValue: selectedMenu,
-                    // Callback that sets the selected popup menu item.
-                    onSelected: (Item item) {
-                      setState(() {
-                        selectedMenu = item;
-                      });
-                    },
-                    itemBuilder: (BuildContext context) =>
-                        <PopupMenuEntry<Item>>[
-                      PopupMenuItem<Item>(
-                        value: Item.delete,
-                        child: Text('삭제', style:
-                        TextStyle(
-                          color: Colors.red,
-                        ),),
-                      ),
-                    ],
-                  ),
-                ),
-
-                // 각 팀 타일 사이에 구분선 추가
-                Divider(
-                  thickness: 1,
-                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4),
-                ),
-
-                // 사랑아 시선해 팀
-                ListTile(
-                  dense: false,
-                  title: Text(
-                    "사랑아 시선해 팀",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  subtitle: Text(
-                    "참여자 : 15명",
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                  //참여자 명수 변수 받아
-
-                  visualDensity: VisualDensity(
-                      // listview에서 각 항목 들의 여백
-                      vertical: 0,
-                      horizontal: 0),
-
-                  // 맨 앞에 오는 그룹의 프로필 이미지
-                  leading: CircleAvatar(
-
-                    backgroundImage: AssetImage('assets/images/peng2.jpg'),
-                    radius: 30, //프로필 사진 원 사이즈 -> 30으로 고정
-                  ),
-                  //맨 우측에 오는 ... 버튼
-                  trailing: PopupMenuButton<Item>(
-                    icon: Icon(Icons.more_horiz,color: isDarkMode ? Colors.white : Colors.black.withOpacity(0.4),),
-                    initialValue: selectedMenu,
-                    // Callback that sets the selected popup menu item.
-                    onSelected: (Item item) {
-                      setState(() {
-                        selectedMenu = item;
-                      });
-                    },
-                    itemBuilder: (BuildContext context) =>
-                        <PopupMenuEntry<Item>>[
-                      PopupMenuItem<Item>(
-                        value: Item.delete,
-                        child: Text('삭제', style:
-                        TextStyle(
-                          color: Colors.red,
-                        ),),
-                      ),
-                    ],
-                  ),
-                ),
-                // 각 팀 타일 사이에 구분선 추가
-                Divider(
-                  thickness: 1,
-                  color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4),
+                  color: isDarkMode
+                      ? Colors.white.withOpacity(0.4)
+                      : Colors.black.withOpacity(0.4),
                 ),
               ],
-            ),
-          ],
+            );
+          },
         ),
       ),
       floatingActionButton: ClipOval(

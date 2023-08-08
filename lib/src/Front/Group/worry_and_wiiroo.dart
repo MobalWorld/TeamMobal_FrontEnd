@@ -8,6 +8,7 @@ import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
 import 'package:mobalworld/src/Front/Appbar%20page/storage_3/worry_storage.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:provider/provider.dart';
+import '../Setting/bottomNav.dart';
 import '../Setting/theme_provider.dart';
 import '../appbar page/storage_3/storagebox_btn.dart';
 import '../Setting/bottom.dart';
@@ -20,6 +21,7 @@ class FinStorage extends StatefulWidget {
 }
 
 class _FinStorageState extends State<FinStorage> {
+  final TextEditingController textEditingController = TextEditingController();
   bool isThumb =true;
   @override
   Widget build(BuildContext context) {
@@ -30,10 +32,160 @@ class _FinStorageState extends State<FinStorage> {
         actions: [
           IconButton(
             onPressed: () {
+              bool checkBoxValue = false; // Initial value is true for the Checkbox
+              bool checkBoxValue2 = false;
+              bool checkBoxValue3 = false;
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    title: Text('신고하기'),
+                    content: StatefulBuilder(
+                      builder: (BuildContext context, setState) {
+                        return Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('해당되는 항목을 체크해주세요'),
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
 
+                                    Checkbox(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(2.0),
+                                      ),
+                                      side: MaterialStateBorderSide.resolveWith(
+                                            (states) => BorderSide(width: 1.0, color: isDarkMode? Colors.white : Colors.black),
+                                      ),
+                                      checkColor: isDarkMode? Colors.black : Colors.white,
+                                      value: checkBoxValue,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkBoxValue = value!;
+                                        });
+                                      },
+                                    ),
+                                    GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            checkBoxValue = !checkBoxValue;
+                                          });
+                                        },
+                                        child: Text('부적절한 내용이 있어요')),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Checkbox(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(2.0),
+                                      ),
+                                      side: MaterialStateBorderSide.resolveWith(
+                                            (states) => BorderSide(width: 1.0, color: isDarkMode? Colors.white : Colors.black),
+                                      ),
+                                      checkColor: isDarkMode? Colors.black : Colors.white,
+                                      value: checkBoxValue2,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkBoxValue2 = value!;
+                                        });
+                                      },
+                                    ),
+                                    GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            checkBoxValue2 = !checkBoxValue2;
+                                          });
+                                        },
+                                        child: Text('고민과 맞지 않는 답변이 왔어요')),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Checkbox(
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(2.0),
+                                      ),
+                                      side: MaterialStateBorderSide.resolveWith(
+                                            (states) => BorderSide(
+                                          width: 1.0,
+                                          color: isDarkMode ? Colors.white : Colors.black,
+                                        ),
+                                      ),
+                                      checkColor: isDarkMode ? Colors.black : Colors.white,
+                                      value: checkBoxValue3,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          checkBoxValue3 = value!;
+                                        });
+                                      },
+                                    ),
+                                    GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          checkBoxValue3 = !checkBoxValue3;
+                                        });
+                                      },
+                                      child: Container(
+                                        width: 200, // Adjust width as needed
+                                        child: TextFormField(
+                                          controller: textEditingController, // Assign the controller
+                                          style: TextStyle(
+                                            color: isDarkMode ? Colors.white : Colors.black,
+                                          ),
+                                          decoration: InputDecoration(
+                                            hintText: '기타',
+                                            hintStyle: TextStyle(fontSize: 15),
+                                            border: InputBorder.none,
+                                          ),
+                                          onTap: () {
+                                            setState(() {
+                                              checkBoxValue3 = !checkBoxValue3;
+                                            });
+                                          },
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+
+
+                              ],
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () {
+                          Get.back();
+                        },
+                        child: Text('닫기'),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          if(checkBoxValue || checkBoxValue2 || checkBoxValue3) {
+                            Get.to(Worry_StoragePage());
+                            final snackBar = SnackBar(
+                              content: Text('🚨 신고가 완료되었습니다.',style: TextStyle(
+                                color: isDarkMode? Colors.white :Colors.black,
+                              ),),
+                            );
+                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                          }
+                        }, child: Text('확인'),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
             icon: FaIcon(FontAwesomeIcons.faceAngry, color: isDarkMode ? Colors.white : Colors.black,),
           ),
+
           IconButton(
             onPressed: () {
               setState(() { // 상태 업데이트를 위해 setState 사용

@@ -45,7 +45,9 @@ class _OverflowTextState extends State<OverflowText> {
       children: [
         Text(
           widget.text,
-          style: TextStyle(color: isDarkMode ? Colors.white : Colors.black,),
+          style: TextStyle(
+            color: isDarkMode ? Colors.white : Colors.black,
+          ),
           maxLines: _isTextOverflow && !_isMore
               ? 2
               : null, // Adjust the maxLines value as needed
@@ -65,8 +67,10 @@ class _OverflowTextState extends State<OverflowText> {
               child: Text(
                 '더보기',
                 style: TextStyle(
-                  color:
-                  isDarkMode ? Colors.white : Colors.black, // Set your desired color for the "더보기" text
+                  color: isDarkMode
+                      ? Colors.white
+                      : Colors
+                          .black, // Set your desired color for the "더보기" text
                 ),
               ),
             ),
@@ -83,8 +87,10 @@ class _OverflowTextState extends State<OverflowText> {
               child: Text(
                 '숨기기',
                 style: TextStyle(
-                  color:
-                  isDarkMode ? Colors.white : Colors.black, // Set your desired color for the "숨기기" text
+                  color: isDarkMode
+                      ? Colors.white
+                      : Colors
+                          .black, // Set your desired color for the "숨기기" text
                 ),
               ),
             ),
@@ -124,7 +130,10 @@ class _WiroWritingState extends State<WiroWriting> {
         ),
         title: Column(
           children: [
-            Text('2023년 07월 11일',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),),
+            Text(
+              '2023년 07월 11일',
+              style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),
+            ),
             Text('23-1 한동 위로팀',
                 style: TextStyle(
                   color: isDarkMode ? Colors.white : Colors.black,
@@ -152,13 +161,19 @@ class _WiroWritingState extends State<WiroWriting> {
                         children: [
                           Text(
                             '이름',
-                            style: TextStyle(fontSize: 14,color: isDarkMode ? Colors.white : Colors.black,),
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: isDarkMode ? Colors.white : Colors.black,
+                            ),
                           ),
                           // 이름과 날짜 사이 간격
                           SizedBox(width: 9),
                           Text(
                             '날짜',
-                            style: TextStyle(fontSize: 14,color: isDarkMode ? Colors.white : Colors.black,),
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: isDarkMode ? Colors.white : Colors.black,
+                            ),
                           ),
                         ],
                       ),
@@ -222,13 +237,22 @@ class _WiroWritingState extends State<WiroWriting> {
                           TextField(
                               decoration: InputDecoration(
                                 labelText: '제목',
-                                labelStyle: TextStyle(color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4),
+                                labelStyle: TextStyle(
+                                  color: isDarkMode
+                                      ? Colors.white.withOpacity(0.4)
+                                      : Colors.black.withOpacity(0.4),
                                 ),
                                 focusedBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black), // 포커스될 때 테두리 색상
+                                  borderSide: BorderSide(
+                                      color: isDarkMode
+                                          ? Colors.white.withOpacity(0.4)
+                                          : Colors.black), // 포커스될 때 테두리 색상
                                 ),
                                 enabledBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black), // 포커스될 때 테두리 색상
+                                  borderSide: BorderSide(
+                                      color: isDarkMode
+                                          ? Colors.white.withOpacity(0.4)
+                                          : Colors.black), // 포커스될 때 테두리 색상
                                 ),
                               ),
                               onTapOutside: (event) => //다른 화면 누를 때 키보드 down
@@ -236,16 +260,25 @@ class _WiroWritingState extends State<WiroWriting> {
                                       ?.unfocus()),
                           TextField(
                               decoration: InputDecoration(
-                                  labelText: '내용',
-                                  labelStyle: TextStyle(color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black.withOpacity(0.4)),
-                                  alignLabelWithHint: true,
-                                  focusedBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black), // 포커스될 때 테두리 색상
-                                  ),
-                                  enabledBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(color: isDarkMode ? Colors.white.withOpacity(0.4) : Colors.black), // 포커스될 때 테두리 색상
-                                  ),),
-
+                                labelText: '내용',
+                                labelStyle: TextStyle(
+                                    color: isDarkMode
+                                        ? Colors.white.withOpacity(0.4)
+                                        : Colors.black.withOpacity(0.4)),
+                                alignLabelWithHint: true,
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: isDarkMode
+                                          ? Colors.white.withOpacity(0.4)
+                                          : Colors.black), // 포커스될 때 테두리 색상
+                                ),
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: isDarkMode
+                                          ? Colors.white.withOpacity(0.4)
+                                          : Colors.black), // 포커스될 때 테두리 색상
+                                ),
+                              ),
                               maxLines: 5,
                               onTapOutside: (event) => //다른 화면 누를 때 키보드 down
                                   FocusManager.instance.primaryFocus?.unfocus())
@@ -261,22 +294,55 @@ class _WiroWritingState extends State<WiroWriting> {
                     children: [
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              isDarkMode ? Color(0xFFFF6105) : Color(0xFFFF6105),
+                          backgroundColor: isDarkMode
+                              ? Color(0xFFFF6105)
+                              : Color(0xFFFF6105),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10)),
                         ),
                         onPressed: () {
-                          Get.to(BottomNavi());
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                backgroundColor: isDarkMode
+                                    ? Color(0xFF62626B)
+                                    : Color(0xFFEFF0F2),
+                                title: Text('공감 보내기 완료',
+                                    style: TextStyle(
+                                        color: isDarkMode
+                                            ? Colors.white
+                                            : Colors.black)),
+                                content: Text('공감 작성이 완료되었습니다.',
+                                    style: TextStyle(
+                                        color: isDarkMode
+                                            ? Colors.white
+                                            : Colors.black)),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Get.to(BottomNavi());
+                                    },
+                                    child: Text('확인',
+                                        style: TextStyle(
+                                          color: isDarkMode
+                                              ? Colors.white
+                                              : Colors.black,
+                                        )),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
                         },
                         child: Text(
                           '보내기',
-                          style: TextStyle(color: isDarkMode ? Colors.white : Colors.white),
+                          style: TextStyle(
+                              color: isDarkMode ? Colors.white : Colors.white),
                         ),
                       ),
                     ],
                   ),
-
                 ],
               ),
             ],

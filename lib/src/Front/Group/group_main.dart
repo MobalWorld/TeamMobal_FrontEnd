@@ -48,9 +48,8 @@ class _GroupMainState extends State<GroupMain> {
         backgroundColor: isDarkMode ? Color(0xFF161817) : Color(0xFFFBF9F4),
         toolbarHeight: 80,
         leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios_new, color: isDarkMode ? Colors.white : Colors.black
-          ),
+          icon: Icon(Icons.arrow_back_ios_new,
+              color: isDarkMode ? Colors.white : Colors.black),
           onPressed: () {
             Get.to(GroupSelect());
           },
@@ -69,15 +68,17 @@ class _GroupMainState extends State<GroupMain> {
             onPressed: () {
               Get.to(Storagebox());
             },
-            icon: FaIcon(FontAwesomeIcons.envelope, color: isDarkMode ? Colors.white : Colors.black,),
+            icon: FaIcon(
+              FontAwesomeIcons.envelope,
+              color: isDarkMode ? Colors.white : Colors.black,
+            ),
           ),
           IconButton(
             onPressed: () {
               Get.to(AlarmPage());
             },
-            icon:
-              FaIcon(FontAwesomeIcons.solidBell, color: isDarkMode ? Colors.white : Colors.black),
-
+            icon: FaIcon(FontAwesomeIcons.solidBell,
+                color: isDarkMode ? Colors.white : Colors.black),
           ),
         ],
         centerTitle: true,
@@ -104,34 +105,36 @@ class _GroupMainState extends State<GroupMain> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                RichText(
-                text: TextSpan(
-                text: '우리 팀의 이번주 위로왕 ',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: isDarkMode ? Colors.white : Colors.black,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: '바다 표범',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: isDarkMode ? Color(0xFFFF6105) : Color(0xFFFF6105),
-                        fontWeight: FontWeight.w600,
+                    RichText(
+                      text: TextSpan(
+                        text: '우리 팀의 이번주 위로왕 ',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: isDarkMode ? Colors.white : Colors.black,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: '바다 표범',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: isDarkMode
+                                  ? Color(0xFFFF6105)
+                                  : Color(0xFFFF6105),
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          TextSpan(
+                            text: '님의 한마디!',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: isDarkMode ? Colors.white : Colors.black,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    TextSpan(
-                      text: '님의 한마디!',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: isDarkMode ? Colors.white : Colors.black,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
                     SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -147,7 +150,9 @@ class _GroupMainState extends State<GroupMain> {
                           style: TextStyle(
                               fontWeight: FontWeight.w800,
                               fontSize: 17.5,
-                              color: isDarkMode? Color(0xFFCDE5FF) : Colors.indigoAccent),
+                              color: isDarkMode
+                                  ? Color(0xFFCDE5FF)
+                                  : Colors.indigoAccent),
                         ),
                       ],
                     ),
@@ -179,24 +184,44 @@ class _GroupMainState extends State<GroupMain> {
                               showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
-                                  backgroundColor: isDarkMode ? Color(0xFF62626B) : Color(0xFFEFF0F2),
-                                  title: Text('알림',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black),),
+                                  backgroundColor: isDarkMode
+                                      ? Color(0xFF62626B)
+                                      : Color(0xFFEFF0F2),
+                                  title: Text(
+                                    '알림',
+                                    style: TextStyle(
+                                        color: isDarkMode
+                                            ? Colors.white
+                                            : Colors.black),
+                                  ),
                                   content: Text(
-                                      '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
+                                      '고민에 대한 응답은 한번밖에 할 수 없어요! 진심을 담은 고민 답변 부탁드립니다 🧡',
+                                      style: TextStyle(
+                                          color: isDarkMode
+                                              ? Colors.white
+                                              : Colors.black)),
                                   actions: [
                                     TextButton(
                                       onPressed: () {
                                         Get.back();
                                         // Close the AlertDialog
                                       },
-                                      child: Text('취소',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
+                                      child: Text('취소',
+                                          style: TextStyle(
+                                              color: isDarkMode
+                                                  ? Colors.white
+                                                  : Colors.black)),
                                     ),
                                     TextButton(
                                       onPressed: () {
                                         Get.to(
                                             WorryMiri()); // Close the AlertDialog
                                       },
-                                      child: Text('확인',style: TextStyle(color: isDarkMode ? Colors.white : Colors.black)),
+                                      child: Text('확인',
+                                          style: TextStyle(
+                                              color: isDarkMode
+                                                  ? Colors.white
+                                                  : Colors.black)),
                                     ),
                                   ],
                                 ),
@@ -224,7 +249,9 @@ class _GroupMainState extends State<GroupMain> {
                                         name[index],
                                         style: TextStyle(
                                             fontSize: 14,
-                                            color: isDarkMode ? Colors.white : Colors.black),
+                                            color: isDarkMode
+                                                ? Colors.white
+                                                : Colors.black),
                                       ),
                                       // 이름과 날짜 사이 간격
                                       SizedBox(width: 9),
@@ -232,7 +259,9 @@ class _GroupMainState extends State<GroupMain> {
                                         date[index],
                                         style: TextStyle(
                                             fontSize: 14,
-                                            color: isDarkMode ? Colors.white : Colors.black),
+                                            color: isDarkMode
+                                                ? Colors.white
+                                                : Colors.black),
                                       ),
                                     ],
                                   ),
@@ -247,10 +276,11 @@ class _GroupMainState extends State<GroupMain> {
                                         child: Text(
                                           title[index],
                                           style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                            color: isDarkMode ? Colors.white : Colors.black
-                                          ),
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold,
+                                              color: isDarkMode
+                                                  ? Colors.white
+                                                  : Colors.black),
                                           overflow: TextOverflow.ellipsis,
                                           maxLines: 1,
                                         ),
@@ -271,7 +301,9 @@ class _GroupMainState extends State<GroupMain> {
                                           content[index],
                                           style: TextStyle(
                                               fontSize: 12,
-                                              color: isDarkMode ? Colors.white : Colors.black),
+                                              color: isDarkMode
+                                                  ? Colors.white
+                                                  : Colors.black),
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                         ),

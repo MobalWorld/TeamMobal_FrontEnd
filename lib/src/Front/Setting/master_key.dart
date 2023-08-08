@@ -18,7 +18,6 @@ import '../Login/login.dart';
 import '../Start_Page/join_make_page.dart';
 import '../Worry writting/worry_Writing.dart';
 import 'MyPage/myPage.dart';
-import 'main_loading.dart';
 import 'toung.dart';
 
 class MasterKey extends StatelessWidget {
@@ -152,9 +151,6 @@ class MasterKey extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) => JoinMakePage()));
-                } else if (value == 'loading') {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoadingPage()));
                 } else if (value == 'MyPage') {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => MyPage()));

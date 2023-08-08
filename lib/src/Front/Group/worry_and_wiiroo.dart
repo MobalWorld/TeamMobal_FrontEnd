@@ -4,14 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:mobalworld/src/Front/Appbar%20page/storage_3/wiro_storage.dart';
 import 'package:mobalworld/src/Front/Appbar%20page/storage_3/worry_storage.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:provider/provider.dart';
 import '../Setting/bottomNav.dart';
 import '../Setting/theme_provider.dart';
-import '../appbar page/storage_3/storagebox_btn.dart';
-import '../Setting/bottom.dart';
 
 class FinStorage extends StatefulWidget {
   const FinStorage({Key? key}) : super(key: key);
@@ -19,6 +16,7 @@ class FinStorage extends StatefulWidget {
   @override
   State<FinStorage> createState() => _FinStorageState();
 }
+
 
 class _FinStorageState extends State<FinStorage> {
   final TextEditingController textEditingController = TextEditingController();
@@ -185,16 +183,14 @@ class _FinStorageState extends State<FinStorage> {
             },
             icon: FaIcon(FontAwesomeIcons.faceAngry, color: isDarkMode ? Colors.white : Colors.black,),
           ),
-
           IconButton(
             onPressed: () {
+           // 이 자리에 넣기 
               setState(() { // 상태 업데이트를 위해 setState 사용
                 isThumb = !isThumb; // 상태 변경
               });
             },
-            icon: FaIcon(isThumb
-                ? FontAwesomeIcons.thumbsUp
-                : FontAwesomeIcons.solidThumbsUp,
+            icon: FaIcon(isThumb ? FontAwesomeIcons.thumbsUp : FontAwesomeIcons.solidThumbsUp,
               color: isDarkMode ? Colors.white : Colors.black,),
           ),
         ],
@@ -219,6 +215,8 @@ class _FinStorageState extends State<FinStorage> {
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                 )),
+
+
           ],
         ),
       ),
@@ -283,10 +281,10 @@ class _FinStorageState extends State<FinStorage> {
                                       'assets/images/walrus.png',
                                     )),
                                 SizedBox(
-                                  width: 0.01.sh,
+                                  width: 0.02.sh,
                                 ),
                                 Text(
-                                  '위로 보낸 사람',
+                                  'From. 바다표범',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: isDarkMode ? Colors.white : Colors.black,),
@@ -314,4 +312,6 @@ class _FinStorageState extends State<FinStorage> {
       ),
     );
   }
+
 }
+

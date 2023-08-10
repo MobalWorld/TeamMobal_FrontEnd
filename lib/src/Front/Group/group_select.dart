@@ -127,16 +127,16 @@ class _GroupSelectState extends State<GroupSelect> {
           itemBuilder: (context, index) {
             final group = groups[index];
             return Column(
-              children: [
-                ListTile(
-                  onTap: () {
-                    Get.to(BottomNavi());
-                  },
-                  dense: false,
-                  title: Text(
-                    group['title'],
-                    style: TextStyle(
-                      color: isDarkMode ? Colors.white : Colors.black,
+            children: [
+            ListTile(
+            onTap: () {
+            Get.to(BottomNavi());
+            },
+            dense: false,
+            title: Text(
+            group['title'],
+            style: TextStyle(
+            color: isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
                     ),

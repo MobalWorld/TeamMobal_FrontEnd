@@ -28,7 +28,15 @@ class _JoinMakePageState extends State<JoinMakePage> {
     return Scaffold(
 
       backgroundColor: Color(0xFFFFC230),
-
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_new_outlined),
+          onPressed: (){
+            Get.back();
+          },
+        ),
+        backgroundColor: Color(0xFFFFC230),
+      ),
       body: Center(
         child: Padding(
           // 전체 패딩 값 - 함수로 불러와서 쓰기
@@ -36,7 +44,7 @@ class _JoinMakePageState extends State<JoinMakePage> {
           child: Column(
             children: [
               SizedBox(
-                height: 0.2.sh,
+                height: 0.1.sh,
               ),
               Container(
                   child: Icon(

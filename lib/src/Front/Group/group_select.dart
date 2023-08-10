@@ -5,9 +5,11 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:mobalworld/src/Front/Color_UI/padding.dart';
 import 'package:mobalworld/src/Front/Group/group_make.dart';
+import 'package:mobalworld/src/Front/Start_Page/join_make_page.dart';
 import 'package:mobalworld/src/Front/appbar%20page/alarm.dart';
 import 'package:provider/provider.dart';
 
+import '../../../main.dart';
 import '../Setting/bottom.dart';
 import '../Setting/bottomNav.dart';
 import '../Setting/theme_provider.dart';
@@ -215,7 +217,7 @@ class _GroupSelectState extends State<GroupSelect> {
         child: FloatingActionButton(
           onPressed: () {
             // Navigate to a new screen using Get
-            Get.to(GroupMake());
+            Get.to(JoinMakePage());
           },
           child: FaIcon(FontAwesomeIcons.plus,color: isDarkMode? Colors.white : Colors.white,)
           ,

@@ -3,7 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:mobalworld/src/Front/Group/group_select.dart';
 import 'package:provider/provider.dart';
 
 import '../../../home/home.dart';
@@ -67,10 +70,7 @@ class _LoginPageState extends State<LoginPage> {
     if (querySnapshot.docs.length > 0) {
       // 동일한 이메일을 가진 문서가 존재하는 경우
       for (DocumentSnapshot doc in querySnapshot.docs) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => HomePage()),
-        );
+        Get.to(GroupSelect());
       }
     } else {
       // 일치하는 문서가 없는 경우
@@ -95,10 +95,8 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   setState(() {
                     Navigator.pop(context);
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => GoogleAdditionalPage()),
+                    Get.to(
+                        GoogleAdditionalPage()
                     );
                   });
                 },
